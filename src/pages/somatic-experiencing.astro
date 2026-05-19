@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const supports = [
+  ['Stress and overwhelm', 'When your system feels stuck on high alert, shut down, or cycling between the two.'],
+  ['Trauma and old survival responses', 'For experiences that still seem to live in the body as tension, bracing, vigilance, numbness, or fear.'],
+  ['Accidents and physical injury', 'When the body still carries the speed, shock, bracing, or helplessness of an impact, fall, surgery, or injury.'],
+  ['Anxiety and nervous-system dysregulation', 'A body-oriented way to work with activation, panic, restlessness, and difficulty settling.'],
+  ['Chronic tension and pain patterns', 'Especially when protective holding, breath restriction, or stress physiology are part of the picture.'],
+  ['Embodiment and resilience', 'For people who want more capacity, presence, boundaries, and trust in their own sensations.'],
+];
+
+const sessionQualities = [
+  ['Contain', 'We begin by creating enough stability, orientation, and pacing for your system to stay present.'],
+  ['Listen', 'Ryan tracks your words, body signals, breath, movement impulses, boundaries, and nervous-system shifts.'],
+  ['Follow', 'When there is enough steadiness, the session follows what your body is ready to complete, soften, or reorganize.'],
+  ['Integrate', 'The work returns to simple resources: breath, sensation, support, choice, and connection to the room.'],
+];
+
+const bodyChannels = [
+  ['Sensation', 'Temperature, breath, tension, pressure, movement impulse, heart rate, gut sensation, or inner space.'],
+  ['Image + impression', 'Memory, symbol, dreamlike image, felt impression, or sensory association that arises in the moment.'],
+  ['Behavior + movement', 'Posture, gesture, orienting, reaching, pushing away, turning, bracing, softening, or settling.'],
+  ['Emotion + meaning', 'The feelings and personal meaning that may be linked with body sensation and survival response.'],
+];
+---
+<Layout title="Somatic Experiencing in Folsom, CA | Ryan’s Rolfing" description="Somatic Experiencing in Folsom, CA with Ryan Caputi. Gentle body-oriented support for stress, trauma, overwhelm, accidents, boundaries, and nervous-system regulation.">
+  <section class="px-5 py-20 md:py-28">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Somatic Experiencing</p>
+        <h1 class="mt-5 text-6xl leading-none md:text-8xl">Listen to the story your nervous system is telling.</h1>
+        <div class="prose mt-8 text-xl text-[#545454]/85">
+          <p>Somatic Experiencing is a body-oriented approach to stress, trauma, and overwhelm. It works with the nervous system through sensation, orientation, boundaries, movement impulses, and the body’s natural capacity to settle.</p>
+          <p>Instead of forcing a story, pushing through pain, or trying to think your way out of survival responses, SE helps you notice what is happening in the body — slowly, safely, and with support.</p>
+        </div>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href="https://rolfing-106793.square.site" class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">Book a session</a>
+          <a href="/contact" class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]">Ask a question</a>
+        </div>
+      </div>
+      <img src="/images/hero-outdoor.jpg" alt="Ryan outdoors in a calm natural setting" class="aspect-[4/5] w-full rounded-t-full object-cover shadow-xl" />
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.85fr_1.15fr] md:items-start">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Why the body matters</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">Protective responses can outlast the event.</h2>
+      </div>
+      <div class="prose text-xl text-[#545454]/85">
+        <p>When something is too much, too fast, or too soon, the body may continue to organize around protection long after the original event has passed. Fight, flight, freeze, collapse, vigilance, bracing, and numbness are not character flaws — they are survival physiology.</p>
+        <p>Somatic Experiencing works with self-protection rather than against it. The goal is not to relive the past. The goal is to help the body recover orientation, choice, boundary, movement, and the ability to return to the present.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 py-20">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Who it can support</p>
+      <h2 class="mt-4 text-5xl md:text-6xl">For stress patterns that live below words.</h2>
+    </div>
+    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+      {supports.map(([title, text]) => (
+        <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+          <h3 class="text-3xl">{title}</h3>
+          <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_1fr] md:items-center">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">What sessions are like</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">Contain. Listen. Follow.</h2>
+        <p class="mt-7 text-xl leading-9 text-[#545454]/85">A Somatic Experiencing session may include conversation, body awareness, tracking sensation, noticing breath and impulse, small movements, orienting to the room, or gentle touch when appropriate. The work is subtle, but it can be deeply reorganizing.</p>
+      </div>
+      <div class="grid gap-px overflow-hidden border border-[#e8e1d7] bg-[#e8e1d7]">
+        {sessionQualities.map(([title, text]) => (
+          <article class="bg-[#f8f6f2] p-7">
+            <h3 class="text-3xl">{title}</h3>
+            <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f8f6f2] px-5 py-20">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">A fuller map of experience</p>
+      <h2 class="mt-4 text-5xl md:text-6xl">More than thoughts. More than symptoms.</h2>
+      <p class="mx-auto mt-6 max-w-3xl text-xl leading-9 text-[#545454]/85">SE listens across multiple channels of experience. The body may speak through sensation, image, posture, impulse, emotion, or meaning. Bringing gentle awareness to those channels can help the system become less stuck and more flexible.</p>
+    </div>
+    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-4">
+      {bodyChannels.map(([title, text]) => (
+        <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+          <h3 class="text-3xl">{title}</h3>
+          <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.85fr_1.15fr] md:items-start">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Safety, boundaries, consent</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">The right amount, at the right pace.</h2>
+      </div>
+      <div class="prose text-xl text-[#545454]/85">
+        <p>SE is not about pushing you past your limits. Sessions are paced through titration — working with small, manageable amounts of activation so your system can stay connected to support, choice, and the present moment.</p>
+        <p>Because Ryan is also a bodyworker, touch may be part of a session when it is appropriate and clearly consented to. SE-informed touch is not about forcing release. It can be a way of listening, supporting containment, clarifying boundaries, and helping the body feel accompanied.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 py-20">
+    <div class="mx-auto max-w-4xl rounded-[2rem] bg-[#545454] p-8 text-center text-white md:p-12">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Begin gently</p>
+      <h2 class="mt-4 text-5xl text-white md:text-6xl">You do not have to push through.</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-xl leading-9 text-white/80">If you are curious whether Somatic Experiencing is a good fit, book a session or reach out with questions. The work can begin simply: with breath, sensation, orientation, boundary, and a little more room to be here.</p>
+      <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+        <a href="https://rolfing-106793.square.site" class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">Book online</a>
+        <a href="/contact" class="rounded-full border border-white/35 px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-white/10">Contact Ryan</a>
+      </div>
+      <p class="mx-auto mt-7 max-w-2xl text-sm leading-6 text-white/60">Somatic Experiencing is a wellness and nervous-system support approach. It is not a substitute for medical care, psychotherapy, or emergency mental health support.</p>
+    </div>
+  </section>
+</Layout>

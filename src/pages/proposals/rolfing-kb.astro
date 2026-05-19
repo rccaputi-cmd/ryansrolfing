@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const principles = [
+  ['Adaptability', 'Prepare the body to receive and sustain change, rather than forcing a posture from the outside.'],
+  ['Support', 'Help the body find ground through the feet, legs, pelvis, breath, and inner sense of orientation.'],
+  ['Palintonicity', 'Cultivate balanced span, tone, and length through the whole body — front/back, left/right, upper/lower.'],
+  ['Holism', 'Treat each local symptom as part of a larger body-wide relationship.'],
+  ['Closure', 'Give each phase enough integration so the work becomes usable in daily life.'],
+];
+
+const pageUpdates = [
+  ['Homepage', 'Add one clearer paragraph explaining Rolfing as adaptability, support, and integration — not just “fascia release.”'],
+  ['Method page', 'Expand “The classic Rolfing recipe” into a plain-English explanation of why the Ten-Series is sequenced.'],
+  ['Services page', 'Clarify single sessions vs series work, so people understand when a focused session is appropriate and when a series is more powerful.'],
+  ['FAQ section', 'Add answers for: Is it like massage? Does it hurt? How many sessions? What do I wear? What if I only have one problem area?'],
+  ['Event / networking copy', 'Use a simple elevator pitch that explains Rolfing without jargon and invites curiosity.'],
+  ['Future blog posts', 'Create articles like “Why Rolfing is usually done as a series” and “How feet, pelvis, ribs, and neck relate to chronic pain.”'],
+];
+
+const tenSeries = [
+  ['1', 'Breath + front body', 'More room for breathing, orientation, and the first layer of ease.'],
+  ['2', 'Feet + lower legs', 'Support from the ground up so the body does not have to brace as much.'],
+  ['3', 'Side body + depth', 'Relating front and back, and giving the body more three-dimensional space.'],
+  ['4', 'Inner legs + pelvis', 'Support through the pelvic floor and inner line.'],
+  ['5', 'Abdomen + psoas + diaphragm', 'Organizing deeper front-body support, breath, and spinal relationship.'],
+  ['6', 'Back body + sacrum', 'Helping movement transmit through the pelvis, sacrum, and spine.'],
+  ['7', 'Neck + head + jaw', 'Balancing the head on the spine and freeing upper-body strain patterns.'],
+  ['8–9', 'Integration sessions', 'Refining structure and function so change shows up in movement and daily life.'],
+  ['10', 'Closure + wholeness', 'Helping the system leave with coherence, ownership, and practical integration.'],
+];
+---
+<Layout title="Rolfing Website Proposal | Ryan’s Rolfing" description="Private proposal for Ryan’s Rolfing website updates based on the expanded Rolfing knowledge base.">
+  <section class="px-5 py-16 md:py-24">
+    <div class="mx-auto max-w-5xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Private proposal</p>
+      <h1 class="mt-5 text-5xl leading-none md:text-7xl">Making Rolfing easier to understand.</h1>
+      <p class="mt-7 max-w-3xl text-xl leading-9 text-[#545454]/85">I reviewed the expanded Rolfing knowledge base and pulled out public-facing themes that can strengthen the website without copying training material. The opportunity is to explain Rolfing as a principled process of adaptability, support, balance, and integration — not just deep tissue or fascia work.</p>
+      <div class="mt-8 rounded-3xl border border-[#e8e1d7] bg-[#f8f6f2] p-6 text-[#545454]/85">
+        <p><strong>Recommendation:</strong> update the Method page first, then add supporting homepage and Services copy. Keep this language plain and client-centered; use the depth of the training material as Ryan’s internal map, not as dense public jargon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-16">
+    <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.85fr_1.15fr]">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Updated understanding</p>
+        <h2 class="mt-4 text-4xl md:text-6xl">Rolfing as a whole-body reorganization process.</h2>
+      </div>
+      <div class="space-y-6 text-lg leading-8 text-[#545454]/85">
+        <p>Rolfing is not simply releasing tight tissue. It is a way of helping the body become more adaptable, balanced, and comfortable in daily movement. Pain and restriction are treated as part of a larger relationship: feet, legs, pelvis, spine, ribs, breath, neck, head, nervous system, old injuries, and the client’s own body awareness.</p>
+        <p>The Ten-Series is valuable because it gives the body time to reorganize in stages. Early sessions create breath, orientation, and support. Middle sessions work with deeper core relationships through the pelvis, diaphragm, psoas, spine, neck, and head. Later sessions help the changes become integrated in movement and daily life.</p>
+        <p>Ryan’s strongest public positioning is: <strong>precise, body-literate Rolfing that blends structural integration, osteopathic influence, movement, embodiment, and nervous-system sensitivity.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f8f6f2] px-5 py-16">
+    <div class="mx-auto max-w-5xl text-center">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Core principles</p>
+      <h2 class="mt-4 text-4xl md:text-6xl">The principles behind the work.</h2>
+    </div>
+    <div class="mx-auto mt-10 grid max-w-6xl gap-px overflow-hidden rounded-[2rem] border border-[#e8e1d7] bg-[#e8e1d7] md:grid-cols-5">
+      {principles.map(([title, text]) => (
+        <article class="bg-white p-6">
+          <h3 class="text-2xl">{title}</h3>
+          <p class="mt-4 leading-7 text-[#545454]/80">{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-5 py-16">
+    <div class="mx-auto max-w-5xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Draft website copy</p>
+      <h2 class="mt-4 text-4xl md:text-6xl">Why Rolfing is often done as a series.</h2>
+      <div class="prose mt-8 max-w-none text-xl text-[#545454]/85">
+        <p>Rolfing is often received as a series because the body changes best when it has time to reorganize in stages.</p>
+        <p>A painful shoulder, low back, neck, or hip rarely exists in isolation. The body is a relationship: feet, legs, pelvis, ribs, spine, head, breath, movement, and old injuries all influence one another. If we only work where the symptom is, the body may feel better for a short time but return to the familiar pattern.</p>
+        <p>The Rolfing Ten-Series gives the work an intelligent sequence. Early sessions help the body find breath, support, and more freedom in the outer layers. Middle sessions address deeper support through the pelvis, spine, diaphragm, psoas, neck, and head. Later sessions help integrate the whole system so the changes can show up in movement, posture, and daily life.</p>
+        <p>The series is not a rigid formula. It is a map. Each session has a theme, but Ryan adapts the work to the person in front of him — their history, structure, nervous system, goals, and capacity for change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-16">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Plain-English Ten-Series map</p>
+      <h2 class="mt-4 text-4xl md:text-6xl">A better visitor-facing series overview.</h2>
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        {tenSeries.map(([num, title, text]) => (
+          <article class="rounded-3xl border border-[#e8e1d7] p-6">
+            <p class="text-[#c4924a]">{num}</p>
+            <h3 class="mt-2 text-2xl">{title}</h3>
+            <p class="mt-3 leading-7 text-[#545454]/80">{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f8f6f2] px-5 py-16">
+    <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.9fr_1.1fr]">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Recommended updates</p>
+        <h2 class="mt-4 text-4xl md:text-6xl">What I would change next.</h2>
+      </div>
+      <div class="grid gap-4">
+        {pageUpdates.map(([title, text]) => (
+          <article class="rounded-3xl bg-white p-6 shadow-sm">
+            <h3 class="text-2xl">{title}</h3>
+            <p class="mt-3 leading-7 text-[#545454]/80">{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 py-16">
+    <div class="mx-auto max-w-5xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Event language</p>
+      <h2 class="mt-4 text-4xl md:text-6xl">Elevator pitch for this weekend.</h2>
+      <div class="mt-8 rounded-[2rem] border border-[#e8e1d7] bg-white p-8 text-2xl leading-10 text-[#545454]/90">
+        <p>I’m a Certified Rolfer in Folsom, and I help people who feel stuck in chronic pain, tension, or old injury patterns. Rolfing is hands-on bodywork, but it’s not just chasing tight muscles. It looks at how your whole body is organized — your feet, pelvis, spine, ribs, shoulders, and neck — and helps everything relate better so movement feels easier and you feel more supported in your body.</p>
+      </div>
+      <div class="mt-6 rounded-[2rem] bg-[#f8f6f2] p-6 text-lg leading-8 text-[#545454]/85">
+        <p><strong>If someone asks, “Is it like massage?”</strong> Kind of, but the intention is different. Massage often focuses on relaxing muscles and helping you feel better that day. Rolfing is more structural. We look at how your whole body is organized and how one area may be affecting another — like how your feet, pelvis, ribs, or neck influence the pain you came in with.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-[#e8e1d7] bg-white px-5 py-16">
+    <div class="mx-auto max-w-4xl text-[#545454]/80">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Caution</p>
+      <p class="mt-4 text-lg leading-8">The Rolfing source material is training material. I recommend using it to inform Ryan’s language and internal understanding, while keeping public copy original, plain-language, and client-centered. Avoid dense jargon and avoid quoting proprietary course material heavily.</p>
+    </div>
+  </section>
+</Layout>

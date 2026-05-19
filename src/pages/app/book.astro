@@ -1,0 +1,16 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+const links = [
+  ['Book online', 'Schedule through Square.', 'https://rolfing-106793.square.site', '↗'],
+  ['Email Ryan', 'Questions, concerns, or follow-up.', 'mailto:info@ryansrolfing.com', '✉'],
+  ['Leave a review', 'If the work has helped, reviews help others find it.', 'https://search.google.com/local/writereview?placeid=ChIJAYinBMHQmoARx9ruSYJx7yU', '★'],
+];
+---
+<AppLayout title="Book | Ryan’s Rolfing Companion" active="book">
+  <section class="rounded-[2rem] bg-white p-5 shadow-sm">
+    <p class="text-xs uppercase tracking-[0.26em] text-[var(--gold-dark)]">Next step</p>
+    <h1 class="mt-2 font-display text-4xl leading-tight">Book, ask, or share.</h1>
+    <p class="mt-3 leading-7 text-[var(--gray)]">Quick links when you’re ready for what’s next.</p>
+  </section>
+  <section class="mt-5 space-y-3">{links.map(([title, body, href, icon]) => <a href={href} class="flex items-center gap-4 rounded-[1.5rem] bg-white p-4 shadow-sm active:scale-[0.98]"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[var(--soft)] text-2xl text-[var(--gold-dark)]">{icon}</span><span><span class="block font-display text-2xl">{title}</span><span class="block text-sm leading-6 text-[var(--gray)]">{body}</span></span></a>)}</section>
+</AppLayout>

@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const infographics = [
+  {
+    title: 'Rolfing works with the whole body',
+    src: '/images/infographics/rolfing-whole-body-map.svg',
+    alt: 'Infographic showing fascia, posture, movement, and nervous system as connected parts of Rolfing.',
+  },
+  {
+    title: 'Gravity is always part of the conversation',
+    src: '/images/infographics/rolfing-gravity-alignment.svg',
+    alt: 'Infographic comparing more effortful body organization with more supported alignment in gravity.',
+  },
+  {
+    title: 'What happens in a Rolfing session',
+    src: '/images/infographics/rolfing-session-process.svg',
+    alt: 'Four-step infographic explaining assess, hands-on work, movement education, and integration.',
+  },
+  {
+    title: 'Why one area can affect another',
+    src: '/images/infographics/rolfing-ripple-effect.svg',
+    alt: 'Infographic showing how feet, pelvis, ribs, neck, and jaw can influence one another.',
+  },
+  {
+    title: 'Rolfing works in layers',
+    src: '/images/infographics/rolfing-layered-series.svg',
+    alt: 'Layered infographic showing opening, support, core support, and integration.',
+  },
+  {
+    title: 'The painful place may not be the whole story',
+    src: '/images/infographics/rolfing-symptom-vs-pattern.svg',
+    alt: 'Infographic comparing symptom focus with whole-pattern focus.',
+  },
+  {
+    title: 'Your body and brain are in constant conversation',
+    src: '/images/infographics/rolfing-body-brain-loop.svg',
+    alt: 'Infographic showing touch, awareness, movement, and regulation in a body-brain loop.',
+  },
+];
+---
+
+<Layout title="Rolfing Infographic Drafts | Ryan's Rolfing" description="Draft educational infographics for Ryan's Rolfing website.">
+  <main class="mx-auto max-w-6xl px-6 py-16">
+    <p class="mb-3 text-sm uppercase tracking-[0.35em] text-[var(--gold-dark)]">Draft assets</p>
+    <h1 class="font-display text-5xl md:text-6xl">Rolfing infographic drafts</h1>
+    <p class="mt-6 max-w-3xl leading-8">
+      These are editable SVG concepts designed to help prospective clients visually understand Rolfing without feeling clinical, generic, or gimmicky.
+    </p>
+
+    <div class="mt-12 grid gap-10">
+      {infographics.map((item) => (
+        <section class="rounded-[2rem] border border-[var(--line)] bg-white p-5 shadow-sm">
+          <div class="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <h2 class="font-display text-3xl">{item.title}</h2>
+            <a class="text-sm uppercase tracking-[0.22em] text-[var(--gold-dark)]" href={item.src} download>Download SVG</a>
+          </div>
+          <img src={item.src} alt={item.alt} class="w-full rounded-[1.5rem] border border-[var(--line)] bg-[var(--soft)]" loading="lazy" />
+        </section>
+      ))}
+    </div>
+  </main>
+</Layout>

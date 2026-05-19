@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Rolfing works in layers</title><desc id="desc">Infographic showing breath, support, core, and integration as layers of structural work.</desc>
+<rect width="1200" height="900" rx="36" fill="#f8f6f2"/>
+<text x="600" y="85" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#545454">Rolfing works in layers</text>
+<text x="600" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#545454">Each session builds context for the next.</text>
+<g transform="translate(170 230)" font-family="Arial, sans-serif">
+  <rect x="0" y="360" width="860" height="105" rx="26" fill="white" stroke="#e8e1d7"/><text x="42" y="425" font-size="30" fill="#9b7139" font-weight="700">4</text><text x="105" y="405" font-size="28" fill="#545454">Integration</text><text x="105" y="438" font-size="20" fill="#545454">the body learns to coordinate the changes</text>
+  <rect x="0" y="240" width="760" height="105" rx="26" fill="white" stroke="#e8e1d7"/><text x="42" y="305" font-size="30" fill="#9b7139" font-weight="700">3</text><text x="105" y="285" font-size="28" fill="#545454">Core support</text><text x="105" y="318" font-size="20" fill="#545454">pelvis, spine, ribs, breath, and deeper organization</text>
+  <rect x="0" y="120" width="660" height="105" rx="26" fill="white" stroke="#e8e1d7"/><text x="42" y="185" font-size="30" fill="#9b7139" font-weight="700">2</text><text x="105" y="165" font-size="28" fill="#545454">Support</text><text x="105" y="198" font-size="20" fill="#545454">feet, legs, and how weight moves through you</text>
+  <rect x="0" y="0" width="560" height="105" rx="26" fill="white" stroke="#e8e1d7"/><text x="42" y="65" font-size="30" fill="#9b7139" font-weight="700">1</text><text x="105" y="45" font-size="28" fill="#545454">Opening</text><text x="105" y="78" font-size="20" fill="#545454">breath, surface tissues, and first changes in ease</text>
+</g>
+<g transform="translate(930 300)">
+  <circle cx="0" cy="0" r="92" fill="white" stroke="#c4924a" stroke-width="5"/><circle cx="0" cy="0" r="60" fill="none" stroke="#c4924a" stroke-width="4" opacity=".55"/><circle cx="0" cy="0" r="28" fill="none" stroke="#c4924a" stroke-width="4" opacity=".35"/>
+  <text x="0" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#545454">layer by layer</text>
+</g>
+<text x="600" y="805" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#545454">A series is not about “fixing parts” — it is about changing the whole body’s organization.</text>
+</svg>

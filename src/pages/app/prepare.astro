@@ -1,0 +1,14 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+const items = ['Wear comfortable clothing you can move and breathe in.', 'Eat lightly enough that your body feels comfortable on the table.', 'Bring relevant history, but you do not need a perfect explanation.', 'Ask for more pressure, less pressure, or a slower pace at any time.', 'Arrive with curiosity rather than a performance goal.'];
+---
+<AppLayout title="Prepare | Ryan’s Rolfing Companion" active="home">
+  <section class="rounded-[2rem] bg-white p-5 shadow-sm">
+    <p class="text-xs uppercase tracking-[0.26em] text-[var(--gold-dark)]">Before session</p>
+    <h1 class="mt-2 font-display text-4xl leading-tight">Prepare without over-preparing.</h1>
+    <p class="mt-3 leading-7 text-[var(--gray)]">The best preparation is simple: arrive present, comfortable, and willing to notice.</p>
+  </section>
+  <section class="mt-5 space-y-3">
+    {items.map((item, i) => <div class="rounded-[1.5rem] bg-white p-4 shadow-sm"><p class="text-xs uppercase tracking-[0.2em] text-[var(--gold-dark)]">{String(i + 1).padStart(2, '0')}</p><p class="mt-2 leading-7">{item}</p></div>)}
+  </section>
+</AppLayout>

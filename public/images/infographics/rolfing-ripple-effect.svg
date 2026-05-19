@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Why one area can affect another</title><desc id="desc">Infographic showing how feet, pelvis, ribs, neck, and jaw can affect one another through whole-body organization.</desc>
+<rect width="1200" height="900" rx="36" fill="#f8f6f2"/>
+<text x="600" y="85" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#545454">Why one area can affect another</text>
+<text x="600" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#545454">The body is a relationship — not a pile of separate parts.</text>
+<g transform="translate(600 475)">
+  <path d="M0 -250 C-55 -215 -62 -150 -20 -95 C-82 -35 -86 72 -23 125 L-58 265 M0 -250 C55 -215 62 -150 20 -95 C82 -35 86 72 23 125 L58 265 M-20 -95 C-5 -82 5 -82 20 -95 M-23 125 C-8 140 8 140 23 125" fill="none" stroke="#545454" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="0" cy="-300" r="38" fill="none" stroke="#545454" stroke-width="12"/>
+  <g fill="#c4924a" opacity=".9"><circle cx="0" cy="-220" r="11"/><circle cx="0" cy="-95" r="11"/><circle cx="0" cy="40" r="11"/><circle cx="-55" cy="260" r="11"/><circle cx="55" cy="260" r="11"/></g>
+  <path d="M-55 260 C-140 180 -130 70 0 40 C130 10 150 -105 0 -220" fill="none" stroke="#c4924a" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 12" opacity=".75"/>
+</g>
+<g font-family="Arial, sans-serif" fill="#545454">
+  <g transform="translate(105 645)"><rect width="285" height="92" rx="22" fill="white" stroke="#e8e1d7"/><text x="142" y="37" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Feet</text><text x="142" y="66" text-anchor="middle" font-size="18">support &amp; ground reaction</text></g>
+  <g transform="translate(120 360)"><rect width="285" height="92" rx="22" fill="white" stroke="#e8e1d7"/><text x="142" y="37" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Pelvis</text><text x="142" y="66" text-anchor="middle" font-size="18">balance &amp; weight transfer</text></g>
+  <g transform="translate(815 360)"><rect width="285" height="92" rx="22" fill="white" stroke="#e8e1d7"/><text x="142" y="37" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Ribs &amp; breath</text><text x="142" y="66" text-anchor="middle" font-size="18">space, motion, regulation</text></g>
+  <g transform="translate(805 160)"><rect width="285" height="92" rx="22" fill="white" stroke="#e8e1d7"/><text x="142" y="37" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Neck &amp; jaw</text><text x="142" y="66" text-anchor="middle" font-size="18">orientation &amp; expression</text></g>
+</g>
+<line x1="390" y1="690" x2="520" y2="710" stroke="#e8e1d7" stroke-width="4"/><line x1="405" y1="405" x2="525" y2="495" stroke="#e8e1d7" stroke-width="4"/><line x1="815" y1="405" x2="675" y2="400" stroke="#e8e1d7" stroke-width="4"/><line x1="805" y1="205" x2="648" y2="215" stroke="#e8e1d7" stroke-width="4"/>
+<text x="600" y="830" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#545454">Rolfing often works where the pattern is organized — not only where symptoms show up.</text>
+</svg>

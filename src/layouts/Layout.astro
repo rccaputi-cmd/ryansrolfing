@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+
+const {
+  title = "Ryan’s Rolfing | Folsom Structural Bodywork",
+  description = "Rolfing and Somatic Experiencing in Folsom, CA with Ryan Caputi. Structural bodywork for pain, posture, movement, stress, and whole-person change.",
+  image = "/images/hero-outdoor.jpg",
+} = Astro.props;
+
+const siteUrl = "https://ryansrolfing.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const imageUrl = new URL(image, siteUrl).toString();
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${siteUrl}/#business`,
+  name: "Ryan’s Rolfing",
+  url: siteUrl,
+  image: imageUrl,
+  description,
+  email: "info@ryansrolfing.com",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "101 Parkshore Drive",
+    addressLocality: "Folsom",
+    addressRegion: "CA",
+    postalCode: "95630",
+    addressCountry: "US",
+  },
+  areaServed: ["Folsom", "El Dorado Hills", "Shingle Springs", "Placerville", "Sacramento"],
+  knowsAbout: ["Rolfing Structural Integration", "Somatic Experiencing", "Structural bodywork", "Chronic pain", "Posture", "Embodiment"],
+  sameAs: [
+    "https://g.co/kgs/uVF626Q",
+    "https://www.yelp.com/biz/ryans-rolfing-folsom",
+  ],
+};
+
+const nav = [
+  ["/", "Home"],
+  ["/method", "Method"],
+  ["/services", "Services"],
+  ["/somatic-experiencing", "SE"],
+  ["/about", "About"],
+  ["/contact", "Contact"],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ryan’s Rolfing" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bellefair&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <div class="min-h-screen overflow-hidden">
+      <header class="sticky top-0 z-50 border-b border-[#e8e1d7] bg-white/92 backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+          <a href="/" class="font-display text-2xl tracking-[0.16em] text-[#545454]">RYAN’S ROLFING</a>
+          <div class="hidden items-center gap-7 text-sm uppercase tracking-[0.16em] text-[#545454] md:flex">
+            {nav.map(([href, label]) => <a class="transition hover:text-[#c4924a]" href={href}>{label}</a>)}
+          </div>
+          <a href="https://rolfing-106793.square.site" class="rounded-full bg-[#c4924a] px-5 py-2 text-sm uppercase tracking-[0.14em] text-white shadow-sm transition hover:bg-[#9b7139]">Book</a>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="border-t border-[#e8e1d7] bg-[#545454] text-white">
+        <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <p class="font-display text-2xl tracking-[0.12em]">Ryan’s Rolfing</p>
+            <p class="mt-3 max-w-md text-sm leading-7 text-white/75">Structural bodywork and nervous-system-informed care in Folsom, CA.</p>
+          </div>
+          <div class="text-sm leading-7 text-white/75">
+            <p class="text-white">Visit</p>
+            <a class="hover:text-white" href="https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630">101 Parkshore Drive<br />Folsom, CA 95630</a>
+          </div>
+          <div class="text-sm leading-7 text-white/75">
+            <p class="text-white">Connect</p>
+            <a class="hover:text-white" href="mailto:info@ryansrolfing.com">info@ryansrolfing.com</a><br />
+            <a class="hover:text-white" href="https://rolfing-106793.square.site">Book online</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryan's Rolfing Review Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bellefair&display=swap" rel="stylesheet">
+  <style>
+    :root { --gold:#C4924A; --gray:#545454; --paper:#fffdf8; --soft:#f8f6f2; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#eee; color:var(--gray); font-family: Abel, Arial, sans-serif; }
+    .toolbar { max-width: 900px; margin: 24px auto; padding: 0 16px; display:flex; gap:12px; align-items:center; justify-content:space-between; }
+    .toolbar button { border:0; background:var(--gold); color:white; border-radius:999px; padding:10px 18px; text-transform:uppercase; letter-spacing:.12em; cursor:pointer; }
+    .toolbar p { margin:0; color:#666; }
+    .sheet { width: 8.5in; min-height: 11in; margin: 0 auto 40px; padding: .5in; background:white; display:grid; grid-template-columns: repeat(2, 3.5in); grid-auto-rows: 2in; gap: .18in .35in; align-content:start; justify-content:center; box-shadow: 0 10px 40px rgba(0,0,0,.14); }
+    .card { width:3.5in; height:2in; border:1px solid #e8e1d7; background:var(--paper); display:grid; grid-template-columns: 1.05fr .78fr; overflow:hidden; break-inside: avoid; }
+    .copy { padding:.20in .12in .18in .23in; display:flex; flex-direction:column; justify-content:center; }
+    .eyebrow { color:var(--gold); font-size:8.4pt; letter-spacing:.22em; text-transform:uppercase; margin:0 0 .06in; }
+    h1 { font-family:Bellefair, Georgia, serif; font-weight:400; font-size:23pt; line-height:.9; margin:0; color:var(--gray); }
+    .body { margin:.10in 0 0; font-size:10.2pt; line-height:1.22; color:rgba(84,84,84,.86); }
+    .brand { margin:.12in 0 0; font-size:8.8pt; letter-spacing:.15em; text-transform:uppercase; color:var(--gray); }
+    .qr-wrap { background:var(--soft); display:flex; flex-direction:column; align-items:center; justify-content:center; border-left:1px solid #e8e1d7; padding:.12in; }
+    img { width:1.05in; height:1.05in; display:block; }
+    .scan { margin:.06in 0 0; color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:7pt; text-align:center; }
+    .url { margin:.03in 0 0; font-size:6.5pt; color:rgba(84,84,84,.65); text-align:center; }
+    @media print {
+      body { background:white; }
+      .toolbar { display:none; }
+      .sheet { margin:0; box-shadow:none; padding:.5in; width:8.5in; min-height:11in; }
+      @page { size: letter; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p>Print on letter paper, ideally cardstock. Use “actual size” / 100% scale.</p>
+    <button onclick="window.print()">Print cards</button>
+  </div>
+  <main class="sheet">
+    <template id="card-template">
+      <section class="card">
+        <div class="copy">
+          <p class="eyebrow">Thank you</p>
+          <h1>Feeling better?</h1>
+          <p class="body">Your Google review helps others find skilled structural bodywork in Folsom.</p>
+          <p class="brand">Ryan’s Rolfing</p>
+        </div>
+        <div class="qr-wrap">
+          <img src="/review-card/review-qr.png" alt="QR code to leave a Google review for Ryan's Rolfing" />
+          <p class="scan">Scan to review</p>
+          <p class="url">ryansrolfing.com/review</p>
+        </div>
+      </section>
+    </template>
+  </main>
+  <script>
+    const sheet = document.querySelector('.sheet');
+    const template = document.querySelector('#card-template');
+    for (let i = 0; i < 10; i++) sheet.appendChild(template.content.cloneNode(true));
+  </script>
+</body>
+</html>

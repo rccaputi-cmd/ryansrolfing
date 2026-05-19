@@ -1,0 +1,59 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+const lessons = [
+  {
+    title: 'The whole-body system',
+    image: '/images/app-concepts/whole-body-system.png',
+    body: 'Your body is not a stack of separate parts. Feet, pelvis, ribs, shoulders, neck, and breath all participate in how you organize.',
+  },
+  {
+    title: 'Symptoms vs patterns',
+    image: '/images/app-concepts/symptom-vs-pattern.png',
+    body: 'The place that hurts may be only one part of the pattern. Rolfing looks for how the whole body distributes strain, support, and movement.',
+  },
+  {
+    title: 'Gravity and support',
+    image: '/images/app-concepts/gravity-support.png',
+    body: 'Gravity is not the enemy. When the body finds better support, effort can decrease and movement can feel less forced.',
+  },
+  {
+    title: 'The body-brain loop',
+    image: '/images/app-concepts/body-brain-loop.png',
+    body: 'Touch, movement, perception, and nervous-system feedback can change how your brain maps your body.',
+  },
+  {
+    title: 'The ripple effect',
+    image: '/images/app-concepts/ripple-effect.png',
+    body: 'A change in one area can ripple through posture, gait, breathing, and how you feel yourself in space.',
+  },
+  {
+    title: 'The session process',
+    image: '/images/app-concepts/session-process.png',
+    body: 'A session is not just pressure on tissue. It is assessment, contact, response, movement, and integration.',
+  },
+  {
+    title: 'The work in stages',
+    image: '/images/app-concepts/series-stages.png',
+    body: 'A Rolfing series gives your body time to reorganize and integrate change layer by layer.',
+  },
+];
+---
+<AppLayout title="Learn | Ryan’s Rolfing Companion" active="learn">
+  <section class="rounded-[2rem] bg-white p-5 shadow-sm">
+    <p class="text-xs uppercase tracking-[0.26em] text-[var(--gold-dark)]">Learn</p>
+    <h1 class="mt-2 font-display text-4xl leading-tight">A system, not a pile of parts.</h1>
+    <p class="mt-3 leading-7 text-[var(--gray)]">Short visual lessons to help you understand why Ryan may work somewhere other than where you hurt.</p>
+  </section>
+
+  <section class="mt-5 space-y-4">
+    {lessons.map((lesson) => (
+      <article class="overflow-hidden rounded-[1.6rem] bg-white shadow-sm">
+        <img src={lesson.image} alt="" loading="lazy" class="aspect-[4/5] w-full bg-[var(--soft)] object-cover" />
+        <div class="p-4">
+          <h2 class="font-display text-3xl">{lesson.title}</h2>
+          <p class="mt-2 text-sm leading-7 text-[var(--gray)]">{lesson.body}</p>
+        </div>
+      </article>
+    ))}
+  </section>
+</AppLayout>

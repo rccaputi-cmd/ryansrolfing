@@ -1,0 +1,44 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+
+const actions = [
+  { href: '/app/prepare', title: 'Prepare', body: 'Before-session basics', icon: '↟' },
+  { href: '/app/integrate', title: 'Integrate', body: 'After-session support', icon: '◡' },
+  { href: '/app/check-in', title: 'Check in', body: '2-minute reflection', icon: '◌' },
+  { href: '/app/learn', title: 'Learn', body: 'Rolfing explained', icon: '✦' },
+  { href: '/app/series', title: 'Series', body: 'The work in stages', icon: '◎' },
+  { href: '/app/book', title: 'Book', body: 'Schedule / contact', icon: '↗' },
+];
+---
+
+<AppLayout title="Ryan’s Rolfing Companion" active="home">
+  <section class="rounded-[2rem] bg-white p-5 shadow-sm">
+    <p class="text-xs uppercase tracking-[0.26em] text-[var(--gold-dark)]">Today</p>
+    <h1 class="mt-2 font-display text-4xl leading-tight">Notice, don’t force.</h1>
+    <p class="mt-3 leading-7 text-[var(--gray)]">
+      A simple companion for preparing, integrating, checking in, and finding your way back to the work.
+    </p>
+    <a href="/app/check-in" class="mt-5 block rounded-2xl bg-[var(--gold)] px-5 py-4 text-center text-white shadow-sm">Start 2-minute check-in</a>
+  </section>
+
+  <section class="mt-5 grid grid-cols-2 gap-3">
+    {actions.map((item) => (
+      <a href={item.href} class="rounded-[1.6rem] border border-[var(--line)] bg-white p-4 shadow-sm active:scale-[0.98]">
+        <span class="grid h-11 w-11 place-items-center rounded-full bg-[var(--soft)] text-2xl text-[var(--gold-dark)]">{item.icon}</span>
+        <h2 class="mt-4 font-display text-2xl">{item.title}</h2>
+        <p class="mt-1 text-sm leading-6 text-[var(--gray)]">{item.body}</p>
+      </a>
+    ))}
+  </section>
+
+  <section class="mt-5 rounded-[2rem] bg-[#efe6d8] p-5">
+    <p class="text-xs uppercase tracking-[0.24em] text-[var(--gold-dark)]">Reminder</p>
+    <p class="mt-2 leading-7">You do not need to figure out your body. Start by noticing what feels easier, different, or more supported.</p>
+  </section>
+
+  <section class="mt-5 rounded-[2rem] border border-[var(--line)] bg-white p-5 shadow-sm">
+    <p class="text-xs uppercase tracking-[0.24em] text-[var(--gold-dark)]">Install</p>
+    <h2 class="mt-2 font-display text-3xl">Add it to your phone.</h2>
+    <p class="mt-2 text-sm leading-7 text-[var(--gray)]">On iPhone: tap Share → Add to Home Screen. It will open like a small app when installed.</p>
+  </section>
+</AppLayout>

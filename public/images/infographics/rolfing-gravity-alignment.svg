@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Rolfing helps the body relate to gravity with less strain</title><desc id="desc">Before and after educational illustration of body organization around gravity.</desc>
+<rect width="1200" height="900" rx="36" fill="#f8f6f2"/>
+<text x="600" y="85" text-anchor="middle" font-family="Georgia, serif" font-size="50" fill="#545454">Gravity is always part of the conversation</text>
+<text x="600" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#545454">Rolfing looks at how support moves through the whole structure.</text>
+<g font-family="Arial, sans-serif">
+ <g transform="translate(170 220)">
+  <text x="190" y="0" text-anchor="middle" font-size="30" fill="#9b7139" font-weight="700">More effort</text>
+  <rect x="0" y="35" width="380" height="520" rx="28" fill="white" stroke="#e8e1d7"/>
+  <line x1="190" y1="70" x2="190" y2="520" stroke="#c4924a" stroke-width="4" stroke-dasharray="10 12" opacity=".45"/>
+  <text x="214" y="92" font-size="16" fill="#9b7139">gravity</text>
+  <circle cx="205" cy="100" r="31" fill="none" stroke="#545454" stroke-width="10"/>
+  <path d="M190 140 C155 190 158 245 205 295 C170 350 178 420 225 490" fill="none" stroke="#545454" stroke-width="13" stroke-linecap="round"/>
+  <path d="M198 250 L116 310 M198 250 L282 302 M204 296 L146 452 M204 296 L272 452" fill="none" stroke="#545454" stroke-width="11" stroke-linecap="round"/>
+  <text x="190" y="500" text-anchor="middle" font-size="21" fill="#545454">When segments compensate,</text><text x="190" y="528" text-anchor="middle" font-size="21" fill="#545454">the body works harder.</text>
+ </g>
+ <g transform="translate(650 220)">
+  <text x="190" y="0" text-anchor="middle" font-size="30" fill="#9b7139" font-weight="700">More support</text>
+  <rect x="0" y="35" width="380" height="520" rx="28" fill="white" stroke="#e8e1d7"/>
+  <line x1="190" y1="70" x2="190" y2="520" stroke="#c4924a" stroke-width="4" stroke-dasharray="10 12" opacity=".45"/>
+  <text x="214" y="92" font-size="16" fill="#9b7139">gravity</text>
+  <circle cx="190" cy="100" r="31" fill="none" stroke="#545454" stroke-width="10"/>
+  <path d="M190 140 C188 205 190 245 190 300 C190 360 190 425 190 490" fill="none" stroke="#545454" stroke-width="13" stroke-linecap="round"/>
+  <path d="M190 250 L112 316 M190 250 L268 316 M190 300 L146 452 M190 300 L236 452" fill="none" stroke="#545454" stroke-width="11" stroke-linecap="round"/>
+  <path d="M105 360 C155 335 225 335 275 360" fill="none" stroke="#c4924a" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  <text x="190" y="500" text-anchor="middle" font-size="21" fill="#545454">When support stacks better,</text><text x="190" y="528" text-anchor="middle" font-size="21" fill="#545454">movement can feel easier.</text>
+ </g>
+</g>
+<text x="600" y="835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#545454">Small changes in feet, pelvis, ribs, neck, or breath can change the whole pattern.</text>
+</svg>

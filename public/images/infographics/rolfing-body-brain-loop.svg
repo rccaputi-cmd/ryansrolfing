@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Rolfing supports the body-brain loop</title><desc id="desc">Infographic showing touch, awareness, movement, and regulation as a body-brain feedback loop.</desc>
+<rect width="1200" height="900" rx="36" fill="#f8f6f2"/>
+<text x="600" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#545454">Your body and brain are in constant conversation</text>
+<text x="600" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#545454">Rolfing can change the information your system is working with.</text>
+<g transform="translate(600 430)" font-family="Arial, sans-serif">
+  <circle r="210" fill="white" stroke="#e8e1d7" stroke-width="4"/>
+  <path d="M-78 -72 C-115 -118 -60 -165 -10 -128 C25 -170 95 -128 74 -70 C128 -50 111 40 50 38 C45 94 -55 97 -60 40 C-125 45 -132 -45 -78 -72Z" fill="none" stroke="#c4924a" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M-24 30 C-5 65 15 98 0 145" fill="none" stroke="#545454" stroke-width="10" stroke-linecap="round"/>
+  <path d="M0 145 C-36 178 -34 220 -18 252 M0 145 C36 178 34 220 18 252 M-4 90 L-64 145 M4 90 L64 145" fill="none" stroke="#545454" stroke-width="10" stroke-linecap="round"/>
+  <path d="M-185 -35 A190 190 0 0 1 120 -150" fill="none" stroke="#c4924a" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M185 35 A190 190 0 0 1 -120 150" fill="none" stroke="#c4924a" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+</g>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#c4924a"/></marker></defs>
+<g font-family="Arial, sans-serif" fill="#545454">
+  <g transform="translate(95 270)"><rect width="270" height="96" rx="22" fill="white" stroke="#e8e1d7"/><text x="135" y="38" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Touch</text><text x="135" y="67" text-anchor="middle" font-size="18">clear, respectful input</text></g>
+  <g transform="translate(835 270)"><rect width="270" height="96" rx="22" fill="white" stroke="#e8e1d7"/><text x="135" y="38" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Awareness</text><text x="135" y="67" text-anchor="middle" font-size="18">new body maps</text></g>
+  <g transform="translate(95 580)"><rect width="270" height="96" rx="22" fill="white" stroke="#e8e1d7"/><text x="135" y="38" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Movement</text><text x="135" y="67" text-anchor="middle" font-size="18">more options</text></g>
+  <g transform="translate(835 580)"><rect width="270" height="96" rx="22" fill="white" stroke="#e8e1d7"/><text x="135" y="38" text-anchor="middle" font-size="24" fill="#9b7139" font-weight="700">Regulation</text><text x="135" y="67" text-anchor="middle" font-size="18">less guarding</text></g>
+</g>
+<text x="600" y="815" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#545454">Better information can help the system choose less effortful patterns.</text>
+</svg>

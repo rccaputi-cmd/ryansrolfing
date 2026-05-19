@@ -1,0 +1,19 @@
+{
+  "name": "Ryan’s Rolfing Companion",
+  "short_name": "Rolfing",
+  "description": "Client support companion for Ryan’s Rolfing.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#f8f6f2",
+  "theme_color": "#f8f6f2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
