@@ -3,6 +3,7 @@ const pages = [
   ['method/', '0.9'],
   ['services/', '0.9'],
   ['somatic-experiencing/', '0.9'],
+  ['craniosacral-therapy-folsom/', '0.9'],
   ['neuroaffective-touch/', '0.85'],
   ['about/', '0.7'],
   ['contact/', '0.8'],
@@ -24,7 +25,7 @@ const pages = [
   ['serving/shingle-springs-rolfing/', '0.75'],
   ['serving/cameron-park-rolfing/', '0.75'],
   ['serving/placerville-rolfing/', '0.75'],
-  ['serving/sacramento-rolfing/', '0.75'],
+  ['serving/sacramento-rolfing/', '0.5'],
 ];
 
 export async function GET() {

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const book = 'https://rolfing-106793.square.site';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Craniosacral Therapy in Folsom',
+  serviceType: 'Craniosacral Therapy',
+  url: 'https://ryansrolfing.com/craniosacral-therapy-folsom/',
+  areaServed: { '@type': 'City', name: 'Folsom' },
+  provider: { '@id': 'https://ryansrolfing.com/#business' },
+  description: 'Light, quiet craniosacral therapy in Folsom with Ryan Caputi, alongside Rolfing Structural Integration and Somatic Experiencing.',
+};
+---
+<Layout
+  title="Craniosacral Therapy in Folsom, CA | Ryan’s Rolfing"
+  description="Craniosacral therapy in Folsom with Ryan Caputi. Light, quiet hands-on work alongside Rolfing and Somatic Experiencing. Book a session online."
+  schema={schema}
+>
+  <section class="px-5 py-20 md:py-28">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.05fr_.95fr] md:items-center">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Craniosacral therapy</p>
+        <h1 class="mt-5 text-6xl leading-none md:text-7xl">Quiet work, light touch.</h1>
+        <div class="prose mt-8 text-xl text-[#545454]/85">
+          <p>Craniosacral therapy is a gentle hands-on approach. The contact is light. Much of it is around the head, the spine, and the sacrum. The aim is to listen, and to give your system a chance to settle. It is not a forceful adjustment, and it is not a usual massage.</p>
+          <p>Ryan offers it in Folsom, at the same office as his Rolfing practice: 101 Parkshore Drive.</p>
+        </div>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href={book} class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">Book a session</a>
+          <a href="/contact/" class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]">Ask a question</a>
+        </div>
+      </div>
+      <img src="/images/braille-touch-rolfing-concept.jpg" alt="Close view of a careful, listening touch" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl" />
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.85fr_1.15fr] md:items-start">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">How it fits</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">Beside Rolfing, not instead of it.</h2>
+      </div>
+      <div class="prose text-xl text-[#545454]/85">
+        <p>Ryan is a Certified Rolfer. He has also completed Levels 1 and 2 of Upledger Craniosacral Therapy. That training sits next to his Somatic Experiencing certification and his NeuroAffective Touch certification.</p>
+        <p>Rolfing looks at posture, fascia, and how the whole body is organized in gravity. <a href="/somatic-experiencing/">Somatic Experiencing</a> works with stress and overwhelm through sensation, pacing, and the body’s own settling. Craniosacral therapy is the quieter end of that same interest: less pressure, more listening.</p>
+        <p>It is not medical care, and it is not a promise to fix a diagnosis. If something is severe, new, or worrying, see the right medical provider. This work can be a calm complement. It is not a replacement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 py-20">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Who it may help</p>
+      <h2 class="mt-4 text-5xl md:text-6xl">When you want less pressure.</h2>
+    </div>
+    <div class="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
+      {[
+        ['A braced system', 'For people who feel held, guarded, or worn out by tension, and who want a session that does not push.'],
+        ['Alongside other work', 'Some people already receive Rolfing and want a lighter visit. Others start here because deep pressure is not what they want today.'],
+        ['Curiosity, not a cure', 'A fit if you want to feel more settled and more present. Not a fit if you need a medical or dental treatment plan.'],
+      ].map(([title, text]) => (
+        <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+          <h3 class="text-3xl">{title}</h3>
+          <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-start">
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">What it feels like</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">Still, light, and unhurried.</h2>
+      </div>
+      <div class="prose text-xl text-[#545454]/85">
+        <p>You rest. The contact stays light. There is time, and there is no push to make a particular thing happen. You can talk, or you can stay quiet.</p>
+        <p>If you want less touch, or you want to stop, say so. The same rule as the rest of the practice: the pace stays workable.</p>
+        <p>Wear comfortable clothes. The office is at <a href="/serving/folsom-rolfing/">101 Parkshore Drive in Folsom</a>. Practical questions are on the <a href="/faq/">FAQ</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 py-20">
+    <div class="mx-auto max-w-4xl rounded-[2rem] bg-[#545454] p-8 text-center text-white md:p-12">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Book</p>
+      <h2 class="mt-4 text-5xl text-white md:text-6xl">Use the same booking page.</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-xl leading-9 text-white/80">Book a session online through Square. If you are not sure whether to ask for craniosacral work, Rolfing, or Somatic Experiencing, email Ryan and he can help you choose.</p>
+      <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+        <a href={book} class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">Book a session</a>
+        <a href="mailto:info@ryansrolfing.com" class="rounded-full border border-white/35 px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-white/10">Email Ryan</a>
+      </div>
+    </div>
+  </section>
+</Layout>
