@@ -35,7 +35,7 @@ const listId = `more-reviews-${Math.random().toString(36).slice(2, 8)}`;
       >
         Show {more.length} more reviews
       </button>
-      <div id={listId} class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-review-extra hidden>
+      <div id={listId} class="mt-6 gap-6 md:grid-cols-2 lg:grid-cols-3" data-review-extra hidden>
         {more.map((review) => <GoogleReviewCard quote={review.quote} attribution={review.attribution} rounded={rounded} />)}
       </div>
     </div>
@@ -50,8 +50,13 @@ const listId = `more-reviews-${Math.random().toString(36).slice(2, 8)}`;
     const moreLabel = button.textContent?.trim() ?? "Show more reviews";
     button.addEventListener("click", () => {
       const willOpen = extra.hasAttribute("hidden");
-      if (willOpen) extra.removeAttribute("hidden");
-      else extra.setAttribute("hidden", "");
+      if (willOpen) {
+        extra.removeAttribute("hidden");
+        extra.classList.add("grid");
+      } else {
+        extra.setAttribute("hidden", "");
+        extra.classList.remove("grid");
+      }
       button.setAttribute("aria-expanded", String(willOpen));
       button.textContent = willOpen ? "Show fewer reviews" : moreLabel;
     });
