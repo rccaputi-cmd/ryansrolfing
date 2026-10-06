@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
-import GoogleReviewsSection from '../components/GoogleReviewsSection.astro';
+import ReviewQuoteList from '../components/ReviewQuoteList.astro';
+import { googleReviews, homepageQuotes } from '../data/google-reviews';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -259,17 +260,20 @@ const schema = [
      </figcaption>
     </figure>
    </div>
-   <div class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
-    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://g.co/kgs/uVF626Q">
-     More Google reviews
+   <div class="mt-6">
+    <ReviewQuoteList quotes={homepageQuotes} initial={3} />
+   </div>
+   <GoogleRatingBadge align="center" class="mt-10" />
+   <div class="mx-auto mt-6 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8b642f]" href={googleReviews.url} target="_blank" rel="noopener noreferrer">
+     Read all {googleReviews.reviewCount} reviews on Google
+     <span class="sr-only"> (opens in a new tab)</span>
     </a>
     <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://www.yelp.com/biz/ryans-rolfing-folsom">
      Yelp reviews
     </a>
    </div>
   </section>
-
-  <GoogleReviewsSection />
 
   <section class="border-t border-[#e8e1d7] bg-white px-5 py-20">
    <div class="mx-auto max-w-4xl">

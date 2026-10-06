@@ -2,12 +2,13 @@
 interface Props {
   quote: string;
   attribution: string;
+  rounded?: boolean;
 }
 
-const { quote, attribution } = Astro.props;
+const { quote, attribution, rounded = false } = Astro.props;
 ---
 
-<figure class="flex h-full flex-col justify-between bg-white p-5 shadow-sm md:p-7">
+<figure class:list={["flex h-full flex-col justify-between bg-white p-5 shadow-sm md:p-7", rounded && "rounded-3xl"]}>
   <blockquote class="text-lg leading-8 text-[#545454] md:text-xl">
     <p>“{quote}”</p>
   </blockquote>
