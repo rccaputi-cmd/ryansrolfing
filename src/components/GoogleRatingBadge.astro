@@ -20,14 +20,14 @@ const starLabel = `${ratingText} out of 5 stars`;
     "flex w-fit max-w-full items-center gap-2 rounded-full border px-4 py-2 text-sm leading-5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
     tone === "dark"
       ? "border-white/30 bg-white/10 text-white hover:bg-white/15 focus-visible:outline-white"
-      : "border-[#e8e1d7] bg-[#f8f6f2] text-[#545454] hover:border-[#9b7139] focus-visible:outline-[#9b7139]",
+      : "border-[#e8e1d7] bg-[#f8f6f2] text-[#545454] hover:border-[#8b642f] focus-visible:outline-[#8b642f]",
     align === "center" && "mx-auto",
     className,
   ]}
 >
   <svg
     viewBox="0 0 20 20"
-    class:list={["h-4 w-4 shrink-0", tone === "dark" ? "text-white" : "text-[#9b7139]"]}
+    class:list={["h-4 w-4 shrink-0", tone === "dark" ? "text-white" : "text-[#8b642f]"]}
     role="img"
     aria-label={starLabel}
   >
