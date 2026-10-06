@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "I came to Ryan with a list of about 10 things I wanted to work on with my body and signed up for 10 sessions. During each session, Ryan went above and beyond. He took the time to explain what he was doing and how it would benefit me. I found it very relaxing with no pain or discomfort.",
+          "author": {
+            "@type": "Person",
+            "name": "Chris F."
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "Ryan is helping me to recover function from previous injuries and effects of aging. 3 sessions in and so much progress. He is very professional and talented at what he does. Much more than a massage or chiropractor can do for me.",
+          "author": {
+            "@type": "Person",
+            "name": "Lianne V."
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "Ryan is an excellent practitioner. I was highly referred to Ryan for chronic pain. He is professional and I feel comfortable when being worked on. I have felt relief for longer duration.",
+          "author": {
+            "@type": "Person",
+            "name": "Alejandra G."
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "Calm, supportive energy from Ryan and a clean, pleasing environment.",
+          "author": {
+            "@type": "Person",
+            "name": "Google review"
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "Ryan’s healing work helped me recover from a shoulder injury.",
+          "author": {
+            "@type": "Person",
+            "name": "Google review"
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Review",
+          "reviewBody": "10/10 service I would highly recommend.",
+          "author": {
+            "@type": "Person",
+            "name": "Google review"
+          },
+          "itemReviewed": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      }
+    ]
+  }
+];
+---
+<Layout title="Rolfing Reviews & Testimonials in Folsom | Ryan’s Rolfing" description="Read client testimonials and reviews for Ryan’s Rolfing in Folsom, CA. Rolfing Structural Integration, posture support, chronic pain bodywork, and somatic care." schema={schema}>
+  <section class="px-5 py-20 md:py-28">
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Client experiences
+    </p>
+    <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
+     What clients say about working with Ryan.
+    </h1>
+    <p class="mx-auto mt-7 max-w-3xl text-xl leading-9 text-[#545454]/85">
+     People come to Ryan’s Rolfing for chronic pain, posture, recovery from old injuries, better movement, nervous-system support, and a more embodied relationship with their body.
+    </p>
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+   <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “I came to Ryan with a list of about 10 things I wanted to work on with my body and signed up for 10 sessions. During each session, Ryan went above and beyond. He took the time to explain what he was doing and how it would benefit me. I found it very relaxing with no pain or discomfort.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Chris F.
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Ryan is helping me to recover function from previous injuries and effects of aging. 3 sessions in and so much progress. He is very professional and talented at what he does. Much more than a massage or chiropractor can do for me.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Lianne V.
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Ryan is an excellent practitioner. I was highly referred to Ryan for chronic pain. He is professional and I feel comfortable when being worked on. I have felt relief for longer duration.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Alejandra G.
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Calm, supportive energy from Ryan and a clean, pleasing environment.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Google review
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Ryan’s healing work helped me recover from a shoulder injury.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Google review
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between rounded-3xl bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “10/10 service I would highly recommend.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Google review
+     </figcaption>
+    </figure>
+   </div>
+   <div class="mx-auto mt-12 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://g.co/kgs/uVF626Q">
+     Read Google reviews
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://www.yelp.com/biz/ryans-rolfing-folsom">
+     Read Yelp reviews
+    </a>
+    <a class="rounded-full bg-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     Book online
+    </a>
+   </div>
+  </section>
+</Layout>

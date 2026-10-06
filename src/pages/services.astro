@@ -1,37 +1,177 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const services = [
-  ['Individual Rolfing Sessions', 'Try Rolfing, work on a particular issue, or receive maintenance to keep your body healthy and feeling good.'],
-  ['Rolfing Ten Series', 'For people who want to invest in their health and body in a big way — the pinnacle sequence of Rolfing Structural Integration.'],
-  ['Somatic Experiencing', 'For fight/flight, chronic stress, anxiety, depression, or trauma that you want to address through a body-oriented approach.'],
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Individual Rolfing Sessions",
+          "description": "Try Rolfing, work on a particular issue, or receive maintenance to keep your body healthy and feeling good.",
+          "areaServed": [
+            "Folsom",
+            "El Dorado Hills",
+            "Shingle Springs",
+            "Cameron Park",
+            "Placerville",
+            "Sacramento"
+          ],
+          "provider": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Rolfing Ten Series",
+          "description": "For people who want to invest in their health and body in a big way — the pinnacle sequence of Rolfing Structural Integration.",
+          "areaServed": [
+            "Folsom",
+            "El Dorado Hills",
+            "Shingle Springs",
+            "Cameron Park",
+            "Placerville",
+            "Sacramento"
+          ],
+          "provider": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Somatic Experiencing",
+          "description": "For fight/flight, chronic stress, anxiety, depression, or trauma that you want to address through a body-oriented approach.",
+          "areaServed": [
+            "Folsom",
+            "El Dorado Hills",
+            "Shingle Springs",
+            "Cameron Park",
+            "Placerville",
+            "Sacramento"
+          ],
+          "provider": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "NeuroAffective Touch",
+          "description": "For gentle, consent-based somatic touch focused on regulation, embodiment, developmental patterns, and relational repair.",
+          "areaServed": [
+            "Folsom",
+            "El Dorado Hills",
+            "Shingle Springs",
+            "Cameron Park",
+            "Placerville",
+            "Sacramento"
+          ],
+          "provider": {
+            "@id": "https://ryansrolfing.com/#business"
+          }
+        }
+      }
+    ]
+  }
 ];
 ---
-<Layout title="Rolfing & Somatic Experiencing Services in Folsom | Ryan’s Rolfing" description="Book individual Rolfing sessions, the Rolfing Ten Series, and Somatic Experiencing with Ryan Caputi in Folsom, CA.">
+<Layout title="Rolfing, Somatic Experiencing & NeuroAffective Touch in Folsom | Ryan’s Rolfing" description="Book Rolfing Structural Integration, the Rolfing Ten Series, Somatic Experiencing, and NeuroAffective Touch with Ryan Caputi in Folsom, CA." schema={schema}>
   <section class="px-5 py-20 md:py-28">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Services</p>
-      <h1 class="mt-5 text-6xl leading-none md:text-8xl">Choose the right starting point.</h1>
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Services
+    </p>
+    <h1 class="mt-5 text-6xl leading-none md:text-8xl">
+     Choose the right starting point.
+    </h1>
+   </div>
+   <div class="mx-auto mt-16 grid max-w-6xl gap-6 md:grid-cols-4">
+    <article class="border-t border-[#c4924a] bg-white p-7 shadow-sm">
+     <h2 class="text-4xl">
+      Individual Rolfing Sessions
+     </h2>
+     <p class="mt-5 leading-8 text-[#545454]/80">
+      Try Rolfing, work on a particular issue, or receive maintenance to keep your body healthy and feeling good.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-7 shadow-sm">
+     <h2 class="text-4xl">
+      Rolfing Ten Series
+     </h2>
+     <p class="mt-5 leading-8 text-[#545454]/80">
+      For people who want to invest in their health and body in a big way — the pinnacle sequence of Rolfing Structural Integration.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-7 shadow-sm">
+     <h2 class="text-4xl">
+      Somatic Experiencing
+     </h2>
+     <p class="mt-5 leading-8 text-[#545454]/80">
+      For fight/flight, chronic stress, anxiety, depression, or trauma that you want to address through a body-oriented approach.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-7 shadow-sm">
+     <h2 class="text-4xl">
+      NeuroAffective Touch
+     </h2>
+     <p class="mt-5 leading-8 text-[#545454]/80">
+      For gentle, consent-based somatic touch focused on regulation, embodiment, developmental patterns, and relational repair.
+     </p>
+    </article>
+   </div>
+   <!-- Pricing -->
+   <div class="mx-auto mt-16 max-w-3xl text-center">
+    <h2 class="text-4xl">
+     Pricing
+    </h2>
+    <div class="mt-6 space-y-1 text-xl">
+     <p>
+      <strong>
+       Rolfing Session:
+      </strong>
+      $270
+     </p>
+     <p class="mt-1 text-[#545454]/80">
+      No package deals available at this time.
+     </p>
+     <p class="mt-1 text-lg text-[#545454]/85">
+      Rolfing sessions range from 60 to 90 minutes and end organically based on the goals for that day.
+     </p>
+     <p class="mt-4">
+      <strong>
+       Somatic Experiencing Session:
+      </strong>
+      $230
+      <span class="text-base text-[#545454]/70">
+       (50 minutes)
+      </span>
+     </p>
     </div>
-    <div class="mx-auto mt-16 grid max-w-6xl gap-6 md:grid-cols-3">
-      {services.map(([title, text]) => <article class="border-t border-[#c4924a] bg-white p-7 shadow-sm"><h2 class="text-4xl">{title}</h2><p class="mt-5 leading-8 text-[#545454]/80">{text}</p></article>)}
-    </div>
-
-    <!-- Pricing -->
-    <div class="mx-auto mt-16 max-w-3xl text-center">
-      <h2 class="text-4xl">Pricing</h2>
-      <div class="mt-6 space-y-1 text-xl">
-        <p><strong>Rolfing Session:</strong> $270</p>
-        <p class="mt-1 text-[#545454]/80">No package deals available at this time.</p>
-        <p class="mt-1 text-lg text-[#545454]/85">Rolfing sessions range from 60 to 90 minutes and end organically based on the goals for that day.</p>
-
-        <p class="mt-4"><strong>Somatic Experiencing Session:</strong> $230 <span class="text-base text-[#545454]/70">(50 minutes)</span></p>
-      </div>
-    </div>
-
-    <div class="mx-auto mt-12 max-w-3xl rounded-3xl bg-[#f8f6f2] p-7 text-center">
-      <h2 class="text-4xl">Current availability</h2>
-      <p class="mt-4 text-xl leading-8 text-[#545454]/85">Ryan is often booked several weeks in advance. If you do not see an appointment right away, join the Square waitlist when booking — cancellations and schedule shifts often create earlier openings.</p>
-      <a href="https://rolfing-106793.square.site" class="mt-7 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]">Book or join the waitlist</a>
-    </div>
+   </div>
+   <div class="mx-auto mt-12 max-w-3xl rounded-3xl bg-[#f8f6f2] p-7 text-center">
+    <h2 class="text-4xl">
+     Ready to schedule?
+    </h2>
+    <p class="mt-4 text-xl leading-8 text-[#545454]/85">
+     Choose the session type that fits your goals and book online through Square.
+    </p>
+    <a class="mt-7 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     Book online
+    </a>
+   </div>
   </section>
 </Layout>

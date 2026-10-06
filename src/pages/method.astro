@@ -1,107 +1,379 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const steps = [
-  ['/images/process/01-collaboration.jpg', 'Client-practitioner collaboration', 'The process depends on communication, feedback, and the Rolfer’s ability to notice what the body is communicating.'],
-  ['/images/process/02-history-body-map.jpg', 'Getting to know you', 'Your history matters. Injuries, stress, childhood, birth, surgeries, and old compensation patterns can all shape what is happening now.'],
-  ['/images/process/03-posture-assessment.jpg', 'Assessing your posture', 'Every session includes assessment — standing, moving, and sensing how your body organizes itself.'],
-  ['/images/process/04-treatment-plan.jpg', 'Making a plan', 'Ryan communicates an initial treatment plan based on your goals, your assessment, and what your body needs.'],
-  ['/images/process/05-skilled-contact.jpg', 'The hands-on work', 'Each contact is deliberate and informed: slow enough to listen, specific enough to matter, and grounded in advanced palpation and anatomy.'],
-  ['/images/process/06-moving-freely.jpg', 'Moving freely', 'Progress is tracked through movement: sitting, standing, walking, and noticing what feels lighter or easier.'],
-  ['/images/process/07-embodiment.jpg', 'Cultivating embodiment', 'Rolfing helps people reconnect with body sensation — a practical compass for avoiding injury and living with more awareness.'],
-  ['/images/process/08-integration-support.jpg', 'Wrapping up', 'Sessions close with support for integration: stretches, exercises, education, referrals, or maintenance recommendations.'],
-];
-const tenSeries = [
-  ['/images/ten-series/01-breath-outer-legs.jpg', 'Breath + outer legs', 'Opening breath and beginning the body’s relationship to ground support.'],
-  ['/images/ten-series/02-feet-lower-legs.jpg', 'Feet + lower legs', 'Building a more adaptable foundation through the feet, ankles, and lower legs.'],
-  ['/images/ten-series/03-side-body-balance.jpg', 'Side body balance', 'Helping the front and back of the body relate through the side line.'],
-  ['/images/ten-series/04-pelvic-floor-adductors.jpg', 'Pelvic floor + adductors', 'Working with deep support through the inner legs and pelvic base.'],
-  ['/images/ten-series/05-centerline-support.jpg', 'Front body + psoas', 'Clarifying the deep front line that connects breath, pelvis, and legs.'],
-  ['/images/ten-series/06-back-body-sacrum.jpg', 'Back body + sacrum', 'Supporting the back line through the legs, sacrum, spine, and breath.'],
-  ['/images/ten-series/07-neck-cranium.jpg', 'Neck + cranium', 'Refining the relationship between the head, neck, jaw, and upper spine.'],
-  ['/images/ten-series/08-pelvic-girdle.jpg', 'Pelvic girdle', 'Integrating lower-body movement through the pelvis, legs, and spine.'],
-  ['/images/ten-series/09-shoulder-girdle.jpg', 'Shoulder girdle', 'Integrating upper-body support through the ribs, shoulders, arms, and neck.'],
-  ['/images/ten-series/10-integration.jpg', 'Integration', 'Bringing the whole body into a more coherent, connected pattern.'],
-];
 ---
 <Layout title="Rolfing Structural Integration in Folsom | Ryan’s Method" description="Learn Ryan Caputi’s Rolfing Structural Integration method in Folsom, including assessment, hands-on fascia work, movement, embodiment, and the Rolfing Ten Series.">
   <section class="bg-[#f8f6f2] px-5 py-20">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Process</p>
-      <h2 class="mt-4 text-5xl md:text-6xl">What does the Rolfing process include?</h2>
-    </div>
-    <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {steps.map(([image, title, text], i) => (
-        <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
-          <img src={image} alt={`Abstract illustration for Rolfing process step ${i + 1}: ${title}`} loading="lazy" class="aspect-[4/3] w-full object-cover" />
-          <div class="p-6">
-            <p class="text-sm text-[#c4924a]">{String(i+1).padStart(2,'0')}</p>
-            <h3 class="mt-2 text-2xl md:text-3xl">{title}</h3>
-            <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
-          </div>
-        </article>
-      ))}
-    </div>
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Process
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     What does the Rolfing process include?
+    </h2>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 1: Client-practitioner collaboration" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/01-collaboration.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       01
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Client-practitioner collaboration
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       The process depends on communication, feedback, and the Rolfer’s ability to notice what the body is communicating.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 2: Getting to know you" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/02-history-body-map.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       02
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Getting to know you
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Your history matters. Injuries, stress, childhood, birth, surgeries, and old compensation patterns can all shape what is happening now.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 3: Assessing your posture" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/03-posture-assessment.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       03
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Assessing your posture
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Every session includes assessment — standing, moving, and sensing how your body organizes itself.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 4: Making a plan" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/04-treatment-plan.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       04
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Making a plan
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Ryan communicates an initial treatment plan based on your goals, your assessment, and what your body needs.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 5: The hands-on work" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/05-skilled-contact.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       05
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       The hands-on work
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Each contact is deliberate and informed: slow enough to listen, specific enough to matter, and grounded in advanced palpation and anatomy.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 6: Moving freely" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/06-moving-freely.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       06
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Moving freely
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Progress is tracked through movement: sitting, standing, walking, and noticing what feels lighter or easier.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 7: Cultivating embodiment" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/07-embodiment.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       07
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Cultivating embodiment
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Rolfing helps people reconnect with body sensation — a practical compass for avoiding injury and living with more awareness.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing process step 8: Wrapping up" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/process/08-integration-support.jpg"/>
+     <div class="p-6">
+      <p class="text-sm text-[#c4924a]">
+       08
+      </p>
+      <h3 class="mt-2 text-2xl md:text-3xl">
+       Wrapping up
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Sessions close with support for integration: stretches, exercises, education, referrals, or maintenance recommendations.
+      </p>
+     </div>
+    </article>
+   </div>
   </section>
 
   <section class="px-5 py-20 md:py-28">
-    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-      <div>
-        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Rolfing Structural Integration</p>
-        <h1 class="mt-5 text-6xl leading-none md:text-8xl">A multi-session approach.</h1>
-        <div class="prose mt-8 text-xl text-[#545454]/85">
-          <p>Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.</p>
-          <p>Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.</p>
-        </div>
-      </div>
-      <img src="/images/app-concepts/web/series-stages.webp" alt="Abstract illustration of structural change developing across a multi-session Rolfing series" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" />
+   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
+    <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Educated touch
+     </p>
+     <h1 class="mt-5 text-5xl md:text-6xl">
+      A higher level of touch.
+     </h1>
+     <div class="prose mt-8 text-xl text-[#545454]/85">
+      <p>
+       Think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.
+      </p>
+      <p>
+       Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.
+      </p>
+      <p>
+       This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.
+      </p>
+     </div>
     </div>
+   </div>
   </section>
 
   <section class="px-5 py-20">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">The Ten-Series</p>
-      <h2 class="mt-4 text-5xl md:text-6xl">The classic Rolfing recipe.</h2>
-      <div class="prose mx-auto mt-6 max-w-3xl text-xl text-[#545454]/85">
-        <p>People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.</p>
-        <p>Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.</p>
-        <p>But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.</p>
-      </div>
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     The Ten-Series
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     The classic Rolfing recipe.
+    </h2>
+    <div class="prose mx-auto mt-6 max-w-3xl text-xl text-[#545454]/85">
+     <p>
+      People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.
+     </p>
+     <p>
+      Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.
+     </p>
+     <p>
+      But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.
+     </p>
     </div>
-    <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
-      {tenSeries.map(([image, title, text], i) => (
-        <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
-          <img src={image} alt={`Abstract illustration for Rolfing session ${i + 1}: ${title}`} loading="lazy" class="aspect-[4/3] w-full object-cover" />
-          <div class="p-5">
-            <p class="text-sm text-[#c4924a]">{String(i+1).padStart(2,'0')}</p>
-            <h3 class="mt-2 text-2xl">{title}</h3>
-            <p class="mt-3 text-base leading-7 text-[#545454]/80">{text}</p>
-          </div>
-        </article>
-      ))}
-    </div>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 1: Breath + outer legs" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/01-breath-outer-legs.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       01
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Breath + outer legs
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Opening breath and beginning the body’s relationship to ground support.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 2: Feet + lower legs" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/02-feet-lower-legs.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       02
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Feet + lower legs
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Building a more adaptable foundation through the feet, ankles, and lower legs.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 3: Side body balance" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/03-side-body-balance.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       03
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Side body balance
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Helping the front and back of the body relate through the side line.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 4: Pelvic floor + adductors" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/04-pelvic-floor-adductors.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       04
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Pelvic floor + adductors
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Working with deep support through the inner legs and pelvic base.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 5: Front body + psoas" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/05-centerline-support.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       05
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Front body + psoas
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Clarifying the deep front line that connects breath, pelvis, and legs.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 6: Back body + sacrum" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/06-back-body-sacrum.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       06
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Back body + sacrum
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Supporting the back line through the legs, sacrum, spine, and breath.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 7: Neck + cranium" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/07-neck-cranium.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       07
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Neck + cranium
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Refining the relationship between the head, neck, jaw, and upper spine.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 8: Pelvic girdle" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/08-pelvic-girdle.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       08
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Pelvic girdle
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Integrating lower-body movement through the pelvis, legs, and spine.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 9: Shoulder girdle" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/09-shoulder-girdle.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       09
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Shoulder girdle
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Integrating upper-body support through the ribs, shoulders, arms, and neck.
+      </p>
+     </div>
+    </article>
+    <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+     <img alt="Abstract illustration for Rolfing session 10: Integration" class="aspect-[4/3] w-full object-cover" loading="lazy" src="/images/ten-series/10-integration.jpg"/>
+     <div class="p-5">
+      <p class="text-sm text-[#c4924a]">
+       10
+      </p>
+      <h3 class="mt-2 text-2xl">
+       Integration
+      </h3>
+      <p class="mt-3 text-base leading-7 text-[#545454]/80">
+       Bringing the whole body into a more coherent, connected pattern.
+      </p>
+     </div>
+    </article>
+   </div>
   </section>
 
   <section class="px-5 py-20">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Who benefits?</p>
-      <h2 class="mt-4 text-5xl md:text-6xl">Rolfing is for people who want real change.</h2>
-    </div>
-    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
-      {[
-        ['Chronic and acute pain', 'Rolfing aims to address root causes — the structural patterns that keep discomfort returning.'],
-        ['Athletes and performers', 'Improve flexibility, coordination, recovery, and movement efficiency for bodies that work hard.'],
-        ['Injury and surgery recovery', 'Restore balance around impacted tissues and compensation patterns after injury or surgery.'],
-        ['High-stress jobs', 'Reduce chronic tension and strain from repetitive work, posture, and physical demand.'],
-        ['Sedentary lifestyles', 'Address back, neck, hip, and shoulder issues from long hours sitting or working at a computer.'],
-        ['Personal growth', 'Reconnecting with the body can support vitality, embodiment, and wiser choices.'],
-      ].map(([title, text]) => (
-        <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
-          <h3 class="text-3xl">{title}</h3>
-          <p class="mt-4 leading-8 text-[#545454]/80">{text}</p>
-        </article>
-      ))}
-    </div>
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Who benefits?
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     Rolfing is for people who want real change.
+    </h2>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      Chronic and acute pain
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Rolfing aims to address root causes — the structural patterns that keep discomfort returning.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      Athletes and performers
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Improve flexibility, coordination, recovery, and movement efficiency for bodies that work hard.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      Injury and surgery recovery
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Restore balance around impacted tissues and compensation patterns after injury or surgery.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      High-stress jobs
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Reduce chronic tension and strain from repetitive work, posture, and physical demand.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      Sedentary lifestyles
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Address back, neck, hip, and shoulder issues from long hours sitting or working at a computer.
+     </p>
+    </article>
+    <article class="border-t border-[#c4924a] bg-white p-6 shadow-sm">
+     <h3 class="text-3xl">
+      Personal growth
+     </h3>
+     <p class="mt-4 leading-8 text-[#545454]/80">
+      Reconnecting with the body can support vitality, embodiment, and wiser choices.
+     </p>
+    </article>
+   </div>
   </section>
-
-
 </Layout>
