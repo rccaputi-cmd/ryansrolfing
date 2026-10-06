@@ -1,252 +1,66 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is Ryan’s Rolfing close to Sacramento?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Ryan works from 101 Parkshore Drive in Folsom, serving clients from Sacramento, El Dorado County, and the greater Sacramento area."
-        }
+
+const book = 'https://rolfing-106793.square.site';
+const map = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where did the Sacramento office go?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ryan used to see clients at 945 University Ave in Sacramento. The practice is now at 101 Parkshore Drive in Folsom, CA 95630.',
       },
-      {
-        "@type": "Question",
-        "name": "What does Rolfing help with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "People often seek Rolfing for chronic pain, posture, restricted movement, old injury patterns, breathing limitations, and a desire to feel more at home in their body."
-        }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Folsom office far from Sacramento?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It is an easy drive from Sacramento. The office is near Highway 50, East Bidwell Street, and Folsom Lake Crossing.',
       },
-      {
-        "@type": "Question",
-        "name": "How is Rolfing different from massage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Massage often focuses on relaxation and muscle tension. Rolfing Structural Integration studies whole-body patterns, fascia, posture, gravity, movement, and how one area of the body influences another."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Rolfing Structural Integration near Sacramento, CA",
-    "description": "Rolfing Structural Integration and Somatic Experiencing near Sacramento, CA with Certified Rolfer Ryan Caputi in Folsom.",
-    "provider": {
-      "@id": "https://ryansrolfing.com/#business"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Sacramento"
-    },
-    "serviceType": "Rolfing Structural Integration",
-    "url": "https://ryansrolfing.com/serving/sacramento-rolfing/"
-  }
-];
+  ],
+};
 ---
-<Layout title="Rolfing near Sacramento, CA | Ryan’s Rolfing" description="Rolfing Structural Integration and Somatic Experiencing near Sacramento, CA with Certified Rolfer Ryan Caputi in Folsom." schema={schema}>
+<Layout
+  title="We Moved to Folsom from Sacramento | Ryan’s Rolfing"
+  description="Ryan’s Rolfing has moved from 945 University Ave, Sacramento to 101 Parkshore Drive in Folsom. An easy drive from Sacramento. Book in Folsom."
+  schema={schema}
+>
   <nav aria-label="Breadcrumb" class="px-5 pt-8">
-   <ol class="mx-auto flex max-w-6xl flex-wrap items-center gap-2 text-sm text-[#545454]/70">
-    <li>
-     <a class="hover:text-[#c4924a]" href="/">
-      Home
-     </a>
-    </li>
-    <li class="flex items-center gap-2">
-     <span aria-hidden="true">
-      /
-     </span>
-     <a class="hover:text-[#c4924a]" href="/serving/">
-      Service Areas
-     </a>
-    </li>
-    <li class="flex items-center gap-2">
-     <span aria-hidden="true">
-      /
-     </span>
-     <span aria-current="page">
-      Sacramento
-     </span>
-    </li>
-   </ol>
+    <ol class="mx-auto flex max-w-3xl flex-wrap items-center gap-2 text-sm text-[#545454]/70">
+      <li><a class="hover:text-[#c4924a]" href="/">Home</a></li>
+      <li class="flex items-center gap-2"><span aria-hidden="true">/</span><a class="hover:text-[#c4924a]" href="/serving/">Service Areas</a></li>
+      <li class="flex items-center gap-2"><span aria-hidden="true">/</span><span aria-current="page">Formerly Sacramento</span></li>
+    </ol>
   </nav>
 
-  <script type="application/ld+json" is:inline>
-   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ryansrolfing.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://ryansrolfing.com/serving/"},{"@type":"ListItem","position":3,"name":"Sacramento"}]}
-  </script>
-
-  <section class="px-5 py-20 md:py-28">
-   <div class="mx-auto max-w-4xl text-center">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Serving Sacramento
-    </p>
-    <h1 class="mt-5 text-5xl leading-none md:text-7xl">
-     Rolfing Structural Integration near Sacramento, CA.
-    </h1>
-    <p class="mx-auto mt-7 max-w-3xl text-xl leading-9 text-[#545454]/85">
-     Ryan’s Folsom office serves Sacramento-area clients seeking Rolfing Structural Integration, trauma-informed bodywork, and Somatic Experiencing.
-    </p>
-    <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-     <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
-      Book a session
-     </a>
-     <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/contact">
-      Ask a question
-     </a>
+  <section class="px-5 py-16 md:py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Formerly Sacramento</p>
+      <h1 class="mt-5 text-5xl leading-tight md:text-7xl">The office has moved to Folsom.</h1>
+      <div class="prose mt-8 text-xl text-[#545454]/85">
+        <p>Ryan used to see clients at 945 University Ave in Sacramento. The practice is no longer at that address.</p>
+        <p>Ryan’s Rolfing is now at 101 Parkshore Drive, Folsom, CA 95630. It is an easy drive from Sacramento. The office is near Highway 50, East Bidwell Street, and Folsom Lake Crossing.</p>
+        <p>The work is the same: Rolfing Structural Integration, and Somatic Experiencing when that is the better fit. Who it helps, what a session is like, and how a first visit goes are on the Folsom page.</p>
+        <p>If you still have the old Sacramento address saved, use 101 Parkshore Drive instead.</p>
+      </div>
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+        <a href="/serving/folsom-rolfing/" class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">See the Folsom page</a>
+        <a href={book} class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]">Book a session</a>
+      </div>
+      <p class="mt-8 text-lg leading-8 text-[#545454]/80">
+        <a class="underline decoration-[#c4924a] underline-offset-4" href={map}>Map to 101 Parkshore Drive</a>
+        <span aria-hidden="true"> · </span>
+        <a class="underline decoration-[#c4924a] underline-offset-4" href="/contact/">Contact</a>
+        <span aria-hidden="true"> · </span>
+        <a class="underline decoration-[#c4924a] underline-offset-4" href="/faq/">FAQ</a>
+      </p>
     </div>
-   </div>
-  </section>
-
-  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
-    <article class="rounded-[2rem] bg-white p-7 shadow-sm">
-     <h2 class="text-3xl">
-      Rolfing Structural Integration
-     </h2>
-     <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-      Hands-on structural bodywork for posture, chronic pain, breath, gait, mobility, and whole-body organization.
-     </p>
-    </article>
-    <article class="rounded-[2rem] bg-white p-7 shadow-sm">
-     <h2 class="text-3xl">
-      Somatic Experiencing
-     </h2>
-     <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-      Gentle, body-oriented support for stress, trauma, overwhelm, boundaries, and nervous-system regulation.
-     </p>
-    </article>
-    <article class="rounded-[2rem] bg-white p-7 shadow-sm">
-     <h2 class="text-3xl">
-      NeuroAffective Touch
-     </h2>
-     <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-      Consent-based somatic touch for regulation, developmental patterns, embodiment, and relational repair.
-     </p>
-    </article>
-   </div>
-  </section>
-
-  <section class="px-5 py-20">
-   <div class="mx-auto max-w-4xl">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Why clients make the drive
-    </p>
-    <h2 class="mt-4 text-5xl md:text-6xl">
-     A detailed, whole-body approach.
-    </h2>
-    <div class="prose mt-8 text-xl text-[#545454]/85">
-     <p>
-      This Sacramento page is framed honestly: Ryan’s office is in Folsom, not downtown Sacramento. It is for Sacramento-area clients who are willing to travel for a Certified Rolfer with a detailed structural and somatic approach.
-     </p>
-     <p>
-      Ryan looks beyond isolated symptoms. The painful area may be part of a larger pattern involving the feet, pelvis, ribs, spine, breath, old injuries, and the nervous system.
-     </p>
-     <p>
-      Sessions are careful, collaborative, and specific. The aim is not to force posture into place, but to help the body reorganize with more support, space, and choice.
-     </p>
-    </div>
-   </div>
-  </section>
-
-  <section class="bg-white px-5 py-20">
-   <div class="mx-auto max-w-6xl">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Helpful Rolfing articles
-    </p>
-    <h2 class="mt-4 text-5xl md:text-6xl">
-     Learn more before making the drive.
-    </h2>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-     <a class="block rounded-3xl bg-[#f8f6f2] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-jaw-neck-headache-connection/">
-      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
-       Jaw, neck, and headaches
-      </p>
-      <h3 class="mt-4 text-3xl leading-tight">
-       The Jaw, Neck &amp; Headache Connection
-      </h3>
-      <p class="mt-4 leading-8 text-[#545454]/80">
-       How Rolfing looks at jaw tension, neck pain, headaches, migraines, shoulders, ribs, breath, and posture as connected patterns.
-      </p>
-     </a>
-     <a class="block rounded-3xl bg-[#f8f6f2] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-for-back-pain-folsom/">
-      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
-       Back pain and bodywork
-      </p>
-      <h3 class="mt-4 text-3xl leading-tight">
-       Rolfing for Back Pain in Folsom
-      </h3>
-      <p class="mt-4 leading-8 text-[#545454]/80">
-       How Rolfing looks beyond the painful spot to posture, breath, fascia, movement, and whole-body support.
-      </p>
-     </a>
-     <a class="block rounded-3xl bg-[#f8f6f2] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-for-posture-folsom/">
-      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
-       Posture and movement
-      </p>
-      <h3 class="mt-4 text-3xl leading-tight">
-       Rolfing for Posture in Folsom
-      </h3>
-      <p class="mt-4 leading-8 text-[#545454]/80">
-       A practical look at posture as support, adaptability, breath, and movement — not rigid correction.
-      </p>
-     </a>
-    </div>
-   </div>
-  </section>
-
-  <section class="border-t border-[#e8e1d7] bg-white px-5 py-20">
-   <div class="mx-auto max-w-4xl">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Local questions
-    </p>
-    <h2 class="mt-4 text-5xl md:text-6xl">
-     Common questions from Sacramento clients
-    </h2>
-    <div class="mt-10 divide-y divide-[#e8e1d7] border-y border-[#e8e1d7]">
-     <details class="group py-6">
-      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
-       <span class="flex items-center justify-between gap-6">
-        Is Ryan’s Rolfing close to Sacramento?
-        <span class="text-[#c4924a] transition group-open:rotate-45">
-         +
-        </span>
-       </span>
-      </summary>
-      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-       Yes. Ryan works from 101 Parkshore Drive in Folsom, serving clients from Sacramento, El Dorado County, and the greater Sacramento area.
-      </p>
-     </details>
-     <details class="group py-6">
-      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
-       <span class="flex items-center justify-between gap-6">
-        What does Rolfing help with?
-        <span class="text-[#c4924a] transition group-open:rotate-45">
-         +
-        </span>
-       </span>
-      </summary>
-      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-       People often seek Rolfing for chronic pain, posture, restricted movement, old injury patterns, breathing limitations, and a desire to feel more at home in their body.
-      </p>
-     </details>
-     <details class="group py-6">
-      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
-       <span class="flex items-center justify-between gap-6">
-        How is Rolfing different from massage?
-        <span class="text-[#c4924a] transition group-open:rotate-45">
-         +
-        </span>
-       </span>
-      </summary>
-      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
-       Massage often focuses on relaxation and muscle tension. Rolfing Structural Integration studies whole-body patterns, fascia, posture, gravity, movement, and how one area of the body influences another.
-      </p>
-     </details>
-    </div>
-   </div>
   </section>
 </Layout>
