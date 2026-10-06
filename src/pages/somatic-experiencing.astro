@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
+import GoogleReviewCard from '../components/GoogleReviewCard.astro';
+import { somaticQuotes } from '../data/google-reviews';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -51,7 +54,8 @@ const schema = [
        Instead of forcing a story, pushing through pain, or trying to think your way out of survival responses, SE helps you notice what is happening in the body — slowly, safely, and with support.
       </p>
      </div>
-     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+     <GoogleRatingBadge class="mt-8" />
+     <div class="mt-5 flex flex-col gap-3 sm:flex-row">
       <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
        Book a session
       </a>
@@ -266,6 +270,23 @@ const schema = [
    </div>
   </section>
 
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20" aria-labelledby="se-google-reviews-heading">
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#8b642f]">
+     Google reviews
+    </p>
+    <h2 id="se-google-reviews-heading" class="mt-4 text-5xl md:text-6xl">
+     A sense of ease that lasts.
+    </h2>
+    <p class="mx-auto mt-6 max-w-2xl text-xl leading-9 text-[#545454]">
+     These Google reviews are about working with Ryan. They don’t mention Somatic Experiencing by name.
+    </p>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
+    {somaticQuotes.map((review) => <GoogleReviewCard quote={review.quote} attribution={review.attribution} />)}
+   </div>
+  </section>
+
   <section class="px-5 py-20">
    <div class="mx-auto max-w-4xl rounded-[2rem] bg-[#545454] p-8 text-center text-white md:p-12">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
@@ -277,7 +298,8 @@ const schema = [
     <p class="mx-auto mt-6 max-w-2xl text-xl leading-9 text-white/80">
      If you are curious whether Somatic Experiencing is a good fit, book a session or reach out with questions. The work can begin simply: with breath, sensation, orientation, boundary, and a little more room to be here.
     </p>
-    <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+    <GoogleRatingBadge tone="dark" align="center" class="mt-8" />
+    <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
      <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
       Book online
      </a>

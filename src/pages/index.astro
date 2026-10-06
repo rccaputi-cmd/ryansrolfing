@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
+import GoogleReviewsSection from '../components/GoogleReviewsSection.astro';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -54,7 +56,8 @@ const schema = [
      <p class="mt-7 max-w-xl text-2xl leading-9 text-[#545454]/85">
       Rolfing Structural Integration helps transform the factors that keep your body stuck in chronic pain and restricted movement patterns.
      </p>
-     <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+     <GoogleRatingBadge class="mt-8" />
+     <div class="mt-5 flex flex-col gap-3 sm:flex-row">
       <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
        Book a session
       </a>
@@ -265,6 +268,8 @@ const schema = [
     </a>
    </div>
   </section>
+
+  <GoogleReviewsSection />
 
   <section class="border-t border-[#e8e1d7] bg-white px-5 py-20">
    <div class="mx-auto max-w-4xl">
