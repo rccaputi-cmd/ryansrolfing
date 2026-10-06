@@ -1,119 +1,448 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Rolfing Structural Integration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rolfing Structural Integration is a form of structural bodywork that works with fascia, posture, breath, movement, and whole-body organization. It is often used by people seeking help with chronic pain, restricted movement, postural strain, or a deeper sense of embodiment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Rolfing different from massage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Massage often focuses on relaxation and muscle tension. Rolfing looks at whole-body patterns: how the feet, legs, pelvis, ribs, spine, breath, and old injuries influence each other in gravity and movement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Ryan’s Rolfing located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ryan’s Rolfing is located at 101 Parkshore Drive in Folsom, California, serving clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, El Dorado County, and Sacramento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Ryan offer Somatic Experiencing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Ryan offers Somatic Experiencing-informed support for stress, trauma, overwhelm, boundaries, and nervous-system regulation, alongside his Rolfing Structural Integration practice."
+        }
+      }
+    ]
+  }
+];
 ---
-<Layout title="Ryan’s Rolfing | Rolfing Structural Integration in Folsom, CA" description="Certified Rolfer Ryan Caputi offers Rolfing Structural Integration and Somatic Experiencing in Folsom, CA for chronic pain, posture, movement, stress, and embodiment.">
+<Layout title="Ryan’s Rolfing | Rolfing Structural Integration in Folsom, CA" description="Certified Rolfer Ryan Caputi offers Rolfing Structural Integration and Somatic Experiencing in Folsom, CA for chronic pain, posture, movement, stress, trauma-informed bodywork, and embodiment." schema={schema}>
   <section class="bg-white">
-    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:grid-cols-[.95fr_1.05fr] md:gap-12 md:py-24">
-      <div class="order-2 md:order-1">
-        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Rolfing Structural Integration</p>
-        <h1 class="mt-5 text-6xl leading-none tracking-tight md:text-8xl">Put your body in good hands.</h1>
-        <p class="mt-7 max-w-xl text-2xl leading-9 text-[#545454]/85">Rolfing Structural Integration helps transform the factors that keep your body stuck in chronic pain and restricted movement patterns.</p>
-        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a href="https://rolfing-106793.square.site" class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]">Book a session</a>
-          <a href="/method" class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]">Explore the method</a>
-        </div>
-      </div>
-      <div class="order-1 md:order-2">
-        <img src="/images/hero-outdoor.jpg" alt="Ryan outdoors in a calm natural setting" class="aspect-[4/5] w-full rounded-t-full object-cover shadow-xl" />
-      </div>
-      <p class="order-3 rounded-2xl bg-[#f8f6f2] p-5 text-lg leading-7 text-[#545454]/85 md:col-span-2 md:max-w-3xl">
-        Ryan is often booked several weeks in advance. If the online calendar looks full, please use Square’s waitlist option — openings do come up, and waitlist clients are often able to get in sooner.
-      </p>
+   <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:grid-cols-[.95fr_1.05fr] md:gap-12 md:py-24">
+    <div class="order-2 md:order-1">
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Rolfing Structural Integration
+     </p>
+     <h1 class="mt-5 text-6xl leading-none tracking-tight md:text-8xl">
+      Put your body in good hands.
+     </h1>
+     <p class="mt-7 max-w-xl text-2xl leading-9 text-[#545454]/85">
+      Rolfing Structural Integration helps transform the factors that keep your body stuck in chronic pain and restricted movement patterns.
+     </p>
+     <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+      <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+       Book a session
+      </a>
+      <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/method">
+       Explore the method
+      </a>
+     </div>
     </div>
+    <div class="order-1 md:order-2">
+     <img alt="Ryan outdoors in a calm natural setting" class="aspect-[4/5] w-full rounded-t-full object-cover shadow-xl" src="/images/hero-outdoor.jpg"/>
+    </div>
+   </div>
   </section>
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
-      <div class="md:order-2">
-        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Rolfing principles</p>
-        <h2 class="mt-4 text-5xl md:text-6xl">The body is an interconnected whole.</h2>
-        <div class="prose mt-7 text-xl text-[#545454]/85">
-          <p>Rolfing looks beyond isolated symptoms. Pain, posture, breath, balance, and movement are all part of a larger pattern of relationship.</p>
-          <p>Ryan studies how the ribs influence the spine, how the pelvis influences the legs, how old injuries shape present-day movement, and how the body organizes around strain.</p>
-          <p>The goal is not to force the body into an ideal shape. It is to understand the pattern clearly enough that the right contact, sequence, and support can help the body reorganize with more ease.</p>
-        </div>
-      </div>
-      <div class="md:order-1">
-        <img src="/images/interconnected-whole-section-new.webp" alt="Anatomical illustration showing the body as an interconnected whole" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl" />
-      </div>
+   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
+    <div class="md:order-2">
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Rolfing principles
+     </p>
+     <h2 class="mt-4 text-5xl md:text-6xl">
+      The body is an interconnected whole.
+     </h2>
+     <div class="prose mt-7 text-xl text-[#545454]/85">
+      <p>
+       Rolfing looks beyond isolated symptoms. Pain, posture, breath, balance, and movement are all part of a larger pattern of relationship.
+      </p>
+      <p>
+       Ryan studies how the ribs influence the spine, how the pelvis influences the legs, how old injuries shape present-day movement, and how the body organizes around strain.
+      </p>
+      <p>
+       The goal is not to force the body into an ideal shape. It is to understand the pattern clearly enough that the right contact, sequence, and support can help the body reorganize with more ease.
+      </p>
+     </div>
     </div>
+    <div class="md:order-1">
+     <img alt="Anatomical illustration showing the body as an interconnected whole" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl" src="/images/interconnected-whole-section-new.webp"/>
+    </div>
+   </div>
   </section>
 
   <section class="bg-white px-5 py-20">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Whole-body relationships</p>
-      <h2 class="mt-4 text-5xl md:text-6xl">The painful spot is often part of a larger pattern.</h2>
-      <p class="mt-6 text-xl leading-9 text-[#545454]/85">Pain often shows up in one place, but the pattern behind it may involve the feet, pelvis, ribs, spine, breath, or old compensation from an injury years ago. Rolfing follows those relationships so the body can change as a connected system, not a collection of separate parts.</p>
-    </div>
-    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
-      {[
-        ['/images/app-concepts/web/symptom-vs-pattern.webp', 'Symptoms and patterns', 'The painful area matters — but it may be the visible edge of a larger whole-body pattern.'],
-        ['/images/app-concepts/web/gravity-support.webp', 'More ease, less effort', 'When the body organizes through structural harmony, movement can feel lighter, freer, and more spacious.'],
-        ['/images/app-concepts/web/ripple-effect.webp', 'The ripple effect', 'A change in one area can ripple through posture, gait, breathing, and how you feel yourself in space.'],
-      ].map(([image, title, text]) => (
-        <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-          <img src={image} alt="" loading="lazy" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" />
-          <div class="p-4 md:p-6">
-            <h3 class="text-2xl md:text-3xl">{title}</h3>
-            <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">{text}</p>
-          </div>
-        </article>
-      ))}
-    </div>
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Whole-body relationships
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     The painful spot is often part of a larger pattern.
+    </h2>
+    <p class="mt-6 text-xl leading-9 text-[#545454]/85">
+     Pain often shows up in one place, but the pattern behind it may involve the feet, pelvis, ribs, spine, breath, or old compensation from an injury years ago. Rolfing follows those relationships so the body can change as a connected system, not a collection of separate parts.
+    </p>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
+     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/symptom-vs-pattern.webp"/>
+     <div class="p-4 md:p-6">
+      <h3 class="text-2xl md:text-3xl">
+       Symptoms and patterns
+      </h3>
+      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
+       The painful area matters — but it may be the visible edge of a larger whole-body pattern.
+      </p>
+     </div>
+    </article>
+    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
+     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/gravity-support.webp"/>
+     <div class="p-4 md:p-6">
+      <h3 class="text-2xl md:text-3xl">
+       More ease, less effort
+      </h3>
+      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
+       When the body organizes through structural harmony, movement can feel lighter, freer, and more spacious.
+      </p>
+     </div>
+    </article>
+    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
+     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/ripple-effect.webp"/>
+     <div class="p-4 md:p-6">
+      <h3 class="text-2xl md:text-3xl">
+       The ripple effect
+      </h3>
+      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
+       A change in one area can ripple through posture, gait, breathing, and how you feel yourself in space.
+      </p>
+     </div>
+    </article>
+   </div>
   </section>
 
   <section class="px-5 py-20">
-    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-      <img src="/images/braille-touch-rolfing-concept.jpg" alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" loading="lazy" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" />
-      <div>
-        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Educated touch</p>
-        <h2 class="mt-4 text-5xl md:text-6xl">Reading the body through touch.</h2>
-        <div class="prose mt-8 text-xl text-[#545454]/85">
-          <p>Think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.</p>
-          <p>Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.</p>
-          <p>This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.</p>
-        </div>
-      </div>
+   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Rolfing Structural Integration
+     </p>
+     <h2 class="mt-4 text-5xl md:text-6xl">
+      A multi-session approach.
+     </h2>
+     <div class="prose mt-8 text-xl text-[#545454]/85">
+      <p>
+       Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.
+      </p>
+      <p>
+       Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.
+      </p>
+     </div>
     </div>
+    <img alt="Abstract illustration of structural change developing across a multi-session Rolfing series" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/app-concepts/web/series-stages.webp"/>
+   </div>
   </section>
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Client experiences</p>
-      <h2 class="mt-4 text-5xl md:text-6xl">Hear from people who have worked with Ryan.</h2>
+   <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.8fr_1.2fr] md:items-start">
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Specialized support
+     </p>
+     <h2 class="mt-4 text-5xl md:text-6xl">
+      Jaw, headaches, migraines, and neck tension.
+     </h2>
+     <p class="mt-6 text-xl leading-9 text-[#545454]/85">
+      Many clients come in after trying massage, chiropractic, dental appliances, stretching, or physical therapy and still feeling stuck. Ryan’s Rolfing looks at how the jaw, neck, shoulders, ribs, spine, breath, and nervous system relate as one connected system.
+     </p>
     </div>
-    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
-      {[
-        ['“I came to Ryan with a list of about 10 things I wanted to work on with my body and signed up for 10 sessions. During each session, Ryan went above and beyond. He took the time to explain what he was doing and how it would benefit me. I found it very relaxing with no pain or discomfort.”', 'Chris F.'],
-        ['“Ryan is helping me to recover function from previous injuries and effects of aging. 3 sessions in and so much progress. He is very professional and talented at what he does. Much more than a massage or chiropractor can do for me.”', 'Lianne V.'],
-        ['“Ryan is an excellent practitioner. I was highly referred to Ryan for chronic pain. He is professional and I feel comfortable when being worked on. I have felt relief for longer duration.”', 'Alejandra G.'],
-      ].map(([quote, name]) => (
-        <figure class="flex h-full flex-col justify-between bg-white p-7 shadow-sm">
-          <blockquote class="text-xl leading-8 text-[#545454]/85">{quote}</blockquote>
-          <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">— {name}</figcaption>
-        </figure>
-      ))}
+    <div class="grid gap-5">
+     <a class="block rounded-[1.75rem] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-jaw-pain-tmj-folsom/">
+      <h3 class="text-3xl leading-tight">
+       Jaw Pain &amp; TMJ Tension
+      </h3>
+      <p class="mt-3 text-lg leading-8 text-[#545454]/82">
+       Support for clenching patterns, jaw strain, temple tension, and the neck/shoulder relationships that often travel with TMJ-related discomfort.
+      </p>
+      <p class="mt-5 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+       Learn more →
+      </p>
+     </a>
+     <a class="block rounded-[1.75rem] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-headaches-migraines-folsom/">
+      <h3 class="text-3xl leading-tight">
+       Headaches &amp; Migraines
+      </h3>
+      <p class="mt-3 text-lg leading-8 text-[#545454]/82">
+       A structural approach for headache and migraine-related tension patterns involving the jaw, neck, shoulders, ribs, breath, posture, and stress physiology.
+      </p>
+      <p class="mt-5 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+       Learn more →
+      </p>
+     </a>
+     <a class="block rounded-[1.75rem] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-neck-pain-folsom/">
+      <h3 class="text-3xl leading-tight">
+       Neck Pain
+      </h3>
+      <p class="mt-3 text-lg leading-8 text-[#545454]/82">
+       Whole-body Rolfing for recurring neck tension, upper-back compression, shoulder strain, posture patterns, and related jaw or headache symptoms.
+      </p>
+      <p class="mt-5 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+       Learn more →
+      </p>
+     </a>
     </div>
-    <div class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
-      <a href="https://g.co/kgs/uVF626Q" class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white">More Google reviews</a>
-      <a href="https://www.yelp.com/biz/ryans-rolfing-folsom" class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white">Yelp reviews</a>
-    </div>
+   </div>
   </section>
 
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Client experiences
+     </p>
+     <h2 class="mt-4 text-5xl md:text-6xl">
+      Hear from people who have worked with Ryan.
+     </h2>
+    </div>
+    <img alt="Ryan smiling while working with a client during a Rolfing session" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/client-experience-option-1.jpg"/>
+   </div>
+   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+    <figure class="flex h-full flex-col justify-between bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “I came to Ryan with a list of about 10 things I wanted to work on with my body and signed up for 10 sessions. During each session, Ryan went above and beyond. He took the time to explain what he was doing and how it would benefit me. I found it very relaxing with no pain or discomfort.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Chris F.
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Ryan is helping me to recover function from previous injuries and effects of aging. 3 sessions in and so much progress. He is very professional and talented at what he does. Much more than a massage or chiropractor can do for me.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Lianne V.
+     </figcaption>
+    </figure>
+    <figure class="flex h-full flex-col justify-between bg-white p-7 shadow-sm">
+     <blockquote class="text-xl leading-8 text-[#545454]/85">
+      “Ryan is an excellent practitioner. I was highly referred to Ryan for chronic pain. He is professional and I feel comfortable when being worked on. I have felt relief for longer duration.”
+     </blockquote>
+     <figcaption class="mt-8 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      — Alejandra G.
+     </figcaption>
+    </figure>
+   </div>
+   <div class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://g.co/kgs/uVF626Q">
+     More Google reviews
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://www.yelp.com/biz/ryans-rolfing-folsom">
+     Yelp reviews
+    </a>
+   </div>
+  </section>
+
+  <section class="border-t border-[#e8e1d7] bg-white px-5 py-20">
+   <div class="mx-auto max-w-4xl">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Rolfing FAQ
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     Common questions before starting
+    </h2>
+    <div class="mt-10 divide-y divide-[#e8e1d7] border-y border-[#e8e1d7]">
+     <details class="group py-6">
+      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
+       <span class="flex items-center justify-between gap-6">
+        What is Rolfing Structural Integration?
+        <span class="text-[#c4924a] transition group-open:rotate-45">
+         +
+        </span>
+       </span>
+      </summary>
+      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
+       Rolfing Structural Integration is a form of structural bodywork that works with fascia, posture, breath, movement, and whole-body organization. It is often used by people seeking help with chronic pain, restricted movement, postural strain, or a deeper sense of embodiment.
+      </p>
+     </details>
+     <details class="group py-6">
+      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
+       <span class="flex items-center justify-between gap-6">
+        How is Rolfing different from massage?
+        <span class="text-[#c4924a] transition group-open:rotate-45">
+         +
+        </span>
+       </span>
+      </summary>
+      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
+       Massage often focuses on relaxation and muscle tension. Rolfing looks at whole-body patterns: how the feet, legs, pelvis, ribs, spine, breath, and old injuries influence each other in gravity and movement.
+      </p>
+     </details>
+     <details class="group py-6">
+      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
+       <span class="flex items-center justify-between gap-6">
+        Where is Ryan’s Rolfing located?
+        <span class="text-[#c4924a] transition group-open:rotate-45">
+         +
+        </span>
+       </span>
+      </summary>
+      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
+       Ryan’s Rolfing is located at 101 Parkshore Drive in Folsom, California, serving clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, El Dorado County, and Sacramento.
+      </p>
+     </details>
+     <details class="group py-6">
+      <summary class="cursor-pointer list-none text-2xl text-[#545454] marker:hidden">
+       <span class="flex items-center justify-between gap-6">
+        Does Ryan offer Somatic Experiencing?
+        <span class="text-[#c4924a] transition group-open:rotate-45">
+         +
+        </span>
+       </span>
+      </summary>
+      <p class="mt-4 text-lg leading-8 text-[#545454]/80">
+       Yes. Ryan offers Somatic Experiencing-informed support for stress, trauma, overwhelm, boundaries, and nervous-system regulation, alongside his Rolfing Structural Integration practice.
+      </p>
+     </details>
+    </div>
+   </div>
+  </section>
+
+  <section class="bg-white px-5 py-16">
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Serving the region
+    </p>
+    <h2 class="mt-3 text-4xl">
+     Rolfing in Folsom and El Dorado County.
+    </h2>
+   </div>
+   <div class="mx-auto mt-8 flex max-w-5xl flex-wrap justify-center gap-3">
+    <a class="rounded-full border border-[#c4924a] px-5 py-2 text-sm text-[#545454] transition hover:bg-[#f8f6f2]" href="/serving/el-dorado-hills-rolfing">
+     El Dorado Hills
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-5 py-2 text-sm text-[#545454] transition hover:bg-[#f8f6f2]" href="/serving/shingle-springs-rolfing">
+     Shingle Springs
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-5 py-2 text-sm text-[#545454] transition hover:bg-[#f8f6f2]" href="/serving/cameron-park-rolfing">
+     Cameron Park
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-5 py-2 text-sm text-[#545454] transition hover:bg-[#f8f6f2]" href="/serving/placerville-rolfing">
+     Placerville
+    </a>
+    <a class="rounded-full border border-[#c4924a] px-5 py-2 text-sm text-[#545454] transition hover:bg-[#f8f6f2]" href="/serving/sacramento-rolfing">
+     Sacramento
+    </a>
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-16">
+   <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Learn before you book
+    </p>
+    <h2 class="mt-3 text-4xl">
+     Latest Rolfing articles.
+    </h2>
+   </div>
+   <div class="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-3">
+    <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-jaw-neck-headache-connection/">
+     <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+      Jaw, neck, and headaches
+     </p>
+     <h3 class="mt-4 text-2xl leading-tight">
+      The Jaw, Neck &amp; Headache Connection
+     </h3>
+     <p class="mt-4 text-[#545454]/80">
+      How Rolfing looks at jaw tension, neck pain, headaches, migraines, shoulders, ribs, breath, and posture as connected patterns.
+     </p>
+     <p class="mt-6 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      Read article →
+     </p>
+    </a>
+    <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-for-back-pain-folsom/">
+     <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+      Back pain and bodywork
+     </p>
+     <h3 class="mt-4 text-2xl leading-tight">
+      Rolfing for Back Pain in Folsom
+     </h3>
+     <p class="mt-4 text-[#545454]/80">
+      How Rolfing looks beyond the painful spot to posture, breath, fascia, movement, and whole-body support.
+     </p>
+     <p class="mt-6 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      Read article →
+     </p>
+    </a>
+    <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/blog/rolfing-for-posture-folsom/">
+     <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+      Posture and movement
+     </p>
+     <h3 class="mt-4 text-2xl leading-tight">
+      Rolfing for Posture in Folsom
+     </h3>
+     <p class="mt-4 text-[#545454]/80">
+      A practical look at posture as support, adaptability, breath, and movement — not rigid correction.
+     </p>
+     <p class="mt-6 text-sm uppercase tracking-[0.18em] text-[#c4924a]">
+      Read article →
+     </p>
+    </a>
+   </div>
+   <div class="mx-auto mt-8 text-center">
+    <a class="inline-block rounded-full border border-[#c4924a] px-6 py-3 text-sm text-[#545454] hover:bg-white" href="/blog/">
+     View all articles
+    </a>
+   </div>
+  </section>
 
   <section class="bg-[#545454] px-5 py-20 text-white">
-    <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.8fr_1.2fr] md:items-center">
-      <div>
-        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Services</p>
-        <h2 class="mt-4 text-5xl text-white md:text-6xl">Choose the entry point that fits.</h2>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-3">
-        {[
-          ['Individual Rolfing Sessions', '/services'],
-          ['Rolfing Ten Series', '/method'],
-          ['Somatic Experiencing', '/somatic-experiencing'],
-        ].map(([item, href]) => <a href={href} class="border border-white/20 p-6 text-2xl transition hover:border-[#c4924a] hover:bg-white/5">{item}</a>)}
-      </div>
+   <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.8fr_1.2fr] md:items-center">
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Services
+     </p>
+     <h2 class="mt-4 text-5xl text-white md:text-6xl">
+      Choose the entry point that fits.
+     </h2>
     </div>
+    <div class="grid gap-4 sm:grid-cols-3">
+     <a class="border border-white/20 p-6 text-2xl transition hover:border-[#c4924a] hover:bg-white/5" href="/services">
+      Individual Rolfing Sessions
+     </a>
+     <a class="border border-white/20 p-6 text-2xl transition hover:border-[#c4924a] hover:bg-white/5" href="/method">
+      Rolfing Ten Series
+     </a>
+     <a class="border border-white/20 p-6 text-2xl transition hover:border-[#c4924a] hover:bg-white/5" href="/somatic-experiencing">
+      Somatic Experiencing
+     </a>
+     <a class="border border-white/20 p-6 text-2xl transition hover:border-[#c4924a] hover:bg-white/5" href="/neuroaffective-touch">
+      NeuroAffective Touch
+     </a>
+    </div>
+   </div>
   </section>
 </Layout>
