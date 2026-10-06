@@ -6,7 +6,7 @@ import GoogleReviewCard from "./GoogleReviewCard.astro";
 <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20" aria-labelledby="google-reviews-heading">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#8b642f]">Google reviews</p>
-    <h2 id="google-reviews-heading" class="mt-4 text-5xl md:text-6xl">Hear from people who have worked with Ryan.</h2>
+    <h2 id="google-reviews-heading" class="mt-4 text-5xl md:text-6xl">More from the Google listing.</h2>
   </div>
   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
     {homepageQuotes.map((review) => <GoogleReviewCard quote={review.quote} attribution={review.attribution} />)}
