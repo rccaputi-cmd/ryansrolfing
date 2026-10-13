@@ -1,0 +1,19 @@
+---
+interface Props {
+  quote: string;
+  attribution: string;
+  rounded?: boolean;
+}
+
+const { quote, attribution, rounded = false } = Astro.props;
+---
+
+<figure class:list={["flex h-full flex-col justify-between bg-white p-5 shadow-sm md:p-7", rounded && "rounded-3xl"]}>
+  <blockquote class="text-lg leading-8 text-[#545454] md:text-xl">
+    <p>“{quote}”</p>
+  </blockquote>
+  <figcaption class="mt-6 text-sm uppercase tracking-[0.18em] md:mt-8">
+    <span class="text-[#8b642f]">— {attribution}</span>
+    <span class="mt-2 block tracking-[0.16em] text-[#545454]">Google review</span>
+  </figcaption>
+</figure>

@@ -1,0 +1,64 @@
+---
+import GoogleReviewCard from "./GoogleReviewCard.astro";
+
+interface Quote {
+  id: string;
+  quote: string;
+  attribution: string;
+}
+
+interface Props {
+  quotes: Quote[];
+  /** How many cards to show before the toggle. */
+  initial?: number;
+  rounded?: boolean;
+}
+
+const { quotes, initial = 6, rounded = false } = Astro.props;
+const visible = quotes.slice(0, initial);
+const more = quotes.slice(initial);
+const listId = `more-reviews-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+  {visible.map((review) => <GoogleReviewCard quote={review.quote} attribution={review.attribution} rounded={rounded} />)}
+</div>
+{
+  more.length > 0 && (
+    <div class="mx-auto mt-8 max-w-6xl" data-review-more>
+      <button
+        type="button"
+        class="mx-auto flex cursor-pointer rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8b642f]"
+        data-review-toggle
+        aria-expanded="false"
+        aria-controls={listId}
+      >
+        Show {more.length} more reviews
+      </button>
+      <div id={listId} class="mt-6 gap-6 md:grid-cols-2 lg:grid-cols-3" data-review-extra hidden>
+        {more.map((review) => <GoogleReviewCard quote={review.quote} attribution={review.attribution} rounded={rounded} />)}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  document.querySelectorAll("[data-review-more]").forEach((root) => {
+    const extra = root.querySelector("[data-review-extra]");
+    const button = root.querySelector("[data-review-toggle]");
+    if (!(extra instanceof HTMLElement) || !(button instanceof HTMLButtonElement)) return;
+    const moreLabel = button.textContent?.trim() ?? "Show more reviews";
+    button.addEventListener("click", () => {
+      const willOpen = extra.hasAttribute("hidden");
+      if (willOpen) {
+        extra.removeAttribute("hidden");
+        extra.classList.add("grid");
+      } else {
+        extra.setAttribute("hidden", "");
+        extra.classList.remove("grid");
+      }
+      button.setAttribute("aria-expanded", String(willOpen));
+      button.textContent = willOpen ? "Show fewer reviews" : moreLabel;
+    });
+  });
+</script>

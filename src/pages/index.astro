@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
+import ReviewQuoteList from '../components/ReviewQuoteList.astro';
+import { googleReviews, homepageQuotes } from '../data/google-reviews';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -54,7 +57,8 @@ const schema = [
      <p class="mt-7 max-w-xl text-2xl leading-9 text-[#545454]/85">
       Rolfing Structural Integration helps transform the factors that keep your body stuck in chronic pain and restricted movement patterns.
      </p>
-     <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+     <GoogleRatingBadge class="mt-8" />
+     <div class="mt-5 flex flex-col gap-3 sm:flex-row">
       <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
        Book a session
       </a>
@@ -256,9 +260,14 @@ const schema = [
      </figcaption>
     </figure>
    </div>
-   <div class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
-    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://g.co/kgs/uVF626Q">
-     More Google reviews
+   <div class="mt-6">
+    <ReviewQuoteList quotes={homepageQuotes} initial={3} />
+   </div>
+   <GoogleRatingBadge align="center" class="mt-10" />
+   <div class="mx-auto mt-6 flex max-w-4xl flex-col items-center justify-center gap-3 text-center sm:flex-row">
+    <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8b642f]" href={googleReviews.url} target="_blank" rel="noopener noreferrer">
+     Read all {googleReviews.reviewCount} reviews on Google
+     <span class="sr-only"> (opens in a new tab)</span>
     </a>
     <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://www.yelp.com/biz/ryans-rolfing-folsom">
      Yelp reviews
