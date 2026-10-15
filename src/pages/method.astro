@@ -1,7 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SessionPhoto from '../components/SessionPhoto.astro';
+import ribcage from '../assets/pages/photos/rolfing-ribcage-work.jpg';
+import hip from '../assets/pages/photos/rolfing-hip-hands-closeup.jpg';
+import skeleton from '../assets/pages/photos/anatomy-teaching-skeleton.jpg';
+
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
+const photos = [
+  { src: ribcage, alt: 'Ryan working with the ribcage and breath' },
+  { src: hip, alt: 'Hands-on fascia work at the hip' },
+  { src: skeleton, alt: 'Explaining how the spine and ribs connect' },
+];
 ---
-<Layout title="Rolfing Structural Integration in Folsom | Ryan’s Method" description="Learn Ryan Caputi’s Rolfing Structural Integration method in Folsom, including assessment, hands-on fascia work, movement, embodiment, and the Rolfing Ten Series.">
+<Layout title="Rolfing Structural Integration in Folsom, CA | Ryan’s Method" description="Folsom, CA. Learn Ryan Caputi’s Rolfing Structural Integration method, including assessment, hands-on fascia work, movement, embodiment, and the Rolfing Ten Series.">
+  <section class="px-5 py-20 md:py-28">
+   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
+    <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
+    <div>
+     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+      Rolfing® Structural Integration · Folsom, CA
+     </p>
+     <h1 class="mt-5 text-5xl md:text-6xl">
+      A higher level of touch.
+     </h1>
+     <div class="prose mt-8 text-xl text-[#545454]/85">
+      <p>
+       Here in Folsom, think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.
+      </p>
+      <p>
+       Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.
+      </p>
+      <p>
+       This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-16">
+   <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    {photos.map((photo) => (
+     <figure>
+      <SessionPhoto src={photo.src} alt={photo.alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[center_30%]" />
+      <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photo.alt}</figcaption>
+     </figure>
+    ))}
+   </div>
+  </section>
+
   <section class="bg-[#f8f6f2] px-5 py-20">
    <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
@@ -124,31 +171,6 @@ import Layout from '../layouts/Layout.astro';
       </p>
      </div>
     </article>
-   </div>
-  </section>
-
-  <section class="px-5 py-20 md:py-28">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-    <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
-    <div>
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Educated touch
-     </p>
-     <h1 class="mt-5 text-5xl md:text-6xl">
-      A higher level of touch.
-     </h1>
-     <div class="prose mt-8 text-xl text-[#545454]/85">
-      <p>
-       Think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.
-      </p>
-      <p>
-       Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.
-      </p>
-      <p>
-       This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.
-      </p>
-     </div>
-    </div>
    </div>
   </section>
 
@@ -374,6 +396,34 @@ import Layout from '../layouts/Layout.astro';
       Reconnecting with the body can support vitality, embodiment, and wiser choices.
      </p>
     </article>
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+   <div class="mx-auto max-w-3xl">
+    <h2 class="text-5xl md:text-6xl">
+     Right here in Folsom
+    </h2>
+    <p class="mt-6 text-xl leading-9 text-[#545454]/85">
+     My office is at 101 Parkshore Drive, Folsom, close to Lake Natoma and the American River Parkway. Easy to reach from El Dorado Hills, Cameron Park, Orangevale, and Roseville.
+    </p>
+    <p class="mt-6 text-xl leading-9 text-[#545454]/85">
+     Some people pair Rolfing with <a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href="/somatic-experiencing/">Somatic Experiencing®</a> or <a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href="/neuroaffective-touch/">NeuroAffective Touch®</a>.
+    </p>
+    <a class="mt-6 inline-block rounded-xl bg-white px-4 py-3 text-[#545454] hover:text-[#c4924a]" href={mapsUrl}>
+     101 Parkshore Drive, Folsom, CA 95630
+    </a>
+   </div>
+  </section>
+
+  <section class="bg-[#545454] px-5 py-20 text-white">
+   <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-5xl text-white md:text-6xl">
+     Book a Rolfing session
+    </h2>
+    <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     Book online
+    </a>
    </div>
   </section>
 </Layout>
