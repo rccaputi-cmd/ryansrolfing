@@ -1,34 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
+import SessionPhoto from '../components/SessionPhoto.astro';
+import skeleton from '../assets/pages/photos/anatomy-teaching-skeleton.jpg';
+
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
+
+const doors = [
+  { label: 'Rolfing', text: 'Structure and movement', href: '/method/' },
+  { label: 'Somatic Experiencing®', text: 'Stress and survival responses', href: '/somatic-experiencing/' },
+  { label: 'NeuroAffective Touch®', text: 'How you take in support and contact', href: '/neuroaffective-touch/' },
+];
 ---
-<Layout title="About Ryan Caputi | Certified Rolfer in Folsom, CA" description="Meet Ryan Caputi, Certified Rolfer in Folsom, CA with over a decade of experience in Rolfing, osteopathic manual medicine study, Craniosacral Therapy, and Somatic Experiencing.">
+<Layout title="About Ryan Caputi | Certified Rolfer in Folsom, CA" description="Folsom, CA. Meet Ryan Caputi, Certified Rolfer, and his Somatic Experiencing® training, NeuroAffective Touch® Foundation Training, and structural bodywork at 101 Parkshore Drive.">
   <section class="px-5 py-20 md:py-28">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
-    <img alt="Ryan Caputi portrait" class="aspect-[4/5] w-full rounded-t-full object-cover shadow-xl" src="/images/about-portrait.jpg"/>
-    <div>
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      About Ryan
-     </p>
-     <h1 class="mt-5 text-6xl leading-none md:text-8xl">
-      A genuinely dedicated Rolfer.
-     </h1>
-     <div class="prose mt-8 text-xl text-[#545454]/85">
-      <p>
-       Hi, I’m Ryan. I’m a Certified Rolfer with over a decade of experience helping people work through chronic pain and long-standing patterns of tension, strain, and restricted movement.
-      </p>
-      <p>
-       I’ve traveled around the country to deepen my Rolfing practice with continuing education courses in Hybrid Osteopathic-Influenced Manual Therapy Principles, Somatic Experiencing Professional Certification, NeuroAffective Touch Certification, and Levels 1 &amp; 2 of Upledger Craniosacral Therapy.
-      </p>
-      <p>
-       My love of embodiment practices such as yoga and meditation led me to discover Rolfing. It has taken my understanding of the body to incredible heights, and I’ve dedicated myself to this craft I love.
-      </p>
-     </div>
-     <GoogleRatingBadge class="mt-8" />
-     <a class="mt-4 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
-      Book your first session
-     </a>
+    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
+      <img alt="Ryan Caputi portrait" class="aspect-[4/5] w-full rounded-t-full object-cover shadow-xl" src="/images/about-portrait.jpg"/>
+      <div>
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">About Ryan · Folsom, CA</p>
+        <h1 class="mt-5 text-6xl leading-none md:text-8xl">A genuinely dedicated Rolfer.</h1>
+        <div class="prose mt-8 text-xl text-[#545454]/85">
+          <p>Hi, I’m Ryan. I’m a Certified Rolfer with over a decade of experience helping people work through chronic pain and long-standing patterns of tension, strain, and restricted movement.</p>
+          <p>I see clients at 101 Parkshore Drive in Folsom, close to Lake Natoma and the American River Parkway.</p>
+          <p>I’ve traveled around the country to deepen my Rolfing practice with continuing education in Hybrid Osteopathic-Influenced Manual Therapy Principles, the Somatic Experiencing® Professional Training (SEI), NeuroAffective Touch® Foundation Training, and Levels 1 &amp; 2 of Upledger Craniosacral Therapy.</p>
+        </div>
+        <p class="mt-6 text-lg leading-8 text-[#545454]/85">
+          <a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href={mapsUrl}>101 Parkshore Drive, Folsom, CA 95630</a>
+          <span class="mt-2 block">Easy to reach from El Dorado Hills, Cameron Park, Orangevale, and Roseville.</span>
+        </p>
+        <GoogleRatingBadge class="mt-8" />
+        <a class="mt-4 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">Book your first session</a>
+      </div>
     </div>
-   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-white px-5 py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">How I work</p>
+        <h2 class="mt-4 text-5xl md:text-6xl">Three doors into the same body.</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {doors.map((door) => (
+          <a class="border-t border-[#c4924a] bg-[#f8f6f2] p-7 transition hover:bg-white" href={door.href}>
+            <h3 class="text-3xl">{door.label}</h3>
+            <p class="mt-4 text-xl leading-8 text-[#545454]/85">{door.text}</p>
+          </a>
+        ))}
+      </div>
+      <p class="mx-auto mt-10 max-w-2xl text-center text-xl leading-9 text-[#545454]/85">Which one fits best depends on you. Often I blend them.</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8f6f2] px-5 py-20">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+      <SessionPhoto
+        src={skeleton}
+        alt="Ryan explaining spinal anatomy on a skeleton model."
+        sizes="(min-width: 768px) 46vw, calc(100vw - 2.5rem)"
+        class="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
+      />
+      <div class="prose text-xl text-[#545454]/85">
+        <p>My love of embodiment practices such as yoga and meditation led me to discover Rolfing. It has taken my understanding of the body to incredible heights, and I’ve dedicated myself to this craft I love.</p>
+      </div>
+    </div>
   </section>
 </Layout>
