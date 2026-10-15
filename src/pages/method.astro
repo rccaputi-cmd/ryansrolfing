@@ -40,12 +40,18 @@ const photos = [
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-16">
    <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-    {photos.map((photo) => (
-     <figure>
-      <SessionPhoto src={photo.src} alt={photo.alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[center_30%]" />
-      <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photo.alt}</figcaption>
-     </figure>
-    ))}
+    <figure>
+     <SessionPhoto src={photos[0].src} alt={photos[0].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[0].alt}</figcaption>
+    </figure>
+    <figure>
+     <SessionPhoto src={photos[1].src} alt={photos[1].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[1].alt}</figcaption>
+    </figure>
+    <figure>
+     <SessionPhoto src={photos[2].src} alt={photos[2].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[68%_center]" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[2].alt}</figcaption>
+    </figure>
    </div>
   </section>
 
