@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import ReviewQuoteList from '../components/ReviewQuoteList.astro';
 import { googleReviews, testimonialQuotes } from '../data/google-reviews';
@@ -102,7 +103,7 @@ const schema = [
   }
 ];
 ---
-<Layout title="Rolfing Reviews & Testimonials in Folsom | Ryan’s Rolfing" description="Read client testimonials and reviews for Ryan’s Rolfing in Folsom, CA. Rolfing Structural Integration, posture support, chronic pain bodywork, and somatic care." schema={schema}>
+<Layout title="Rolfing Reviews & Testimonials in Folsom | Ryan’s Rolfing" description="Client reviews for Ryan’s Rolfing in Folsom, CA. Rolfing, posture support, chronic pain bodywork, and somatic care." schema={schema}>
   <section class="px-5 py-20 md:py-28">
    <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
@@ -191,7 +192,7 @@ const schema = [
     <a class="rounded-full border border-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#545454] hover:bg-white" href="https://www.yelp.com/biz/ryans-rolfing-folsom">
      Read Yelp reviews
     </a>
-    <a class="rounded-full bg-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+    <a class="rounded-full bg-[#c4924a] px-6 py-3 text-sm uppercase tracking-[0.16em] text-white hover:bg-[#9b7139]" href={bookingUrl('testimonials')}>
      Book online
     </a>
    </div>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -48,7 +49,7 @@ const schema = [
   }
 ];
 ---
-<Layout title="Rolfing in El Dorado Hills, CA | Ryan’s Rolfing" description="Rolfing Structural Integration, Somatic Experiencing, and trauma-informed bodywork near El Dorado Hills, CA with Certified Rolfer Ryan Caputi in nearby Folsom." schema={schema}>
+<Layout title="Rolfing in El Dorado Hills, CA | Ryan’s Rolfing" description="Rolfing, Somatic Experiencing, and trauma-informed bodywork near El Dorado Hills, CA, with Ryan Caputi in Folsom." schema={schema}>
   <nav aria-label="Breadcrumb" class="px-5 pt-8">
    <ol class="mx-auto flex max-w-6xl flex-wrap items-center gap-2 text-sm text-[#545454]/70">
     <li>
@@ -91,7 +92,7 @@ const schema = [
      Ryan’s Folsom office is a short drive from El Dorado Hills for people looking for skilled Rolfing Structural Integration, structural bodywork, and nervous-system-informed care.
     </p>
     <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-     <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookingUrl('serving-el-dorado-hills-rolfing')}>
       Book a session
      </a>
      <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/contact">

@@ -1,0 +1,11 @@
+---
+// Ryan's official Microsoft Clarity tag. Production builds only (`astro build`).
+// `astro dev` leaves it out. Netlify deploy previews run a production build, so the tag is present there.
+const claritySnippet = `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "z4yo2vi3do");`;
+---
+
+{
+  import.meta.env.PROD && (
+    <script type="text/javascript" is:inline set:html={claritySnippet} />
+  )
+}

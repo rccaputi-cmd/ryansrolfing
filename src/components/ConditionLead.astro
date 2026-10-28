@@ -1,0 +1,30 @@
+---
+import { reviewsById } from "../data/google-reviews";
+import { bookingUrl } from "../lib/booking";
+
+interface Props {
+  /** Id from src/data/google-reviews.ts. The quote is used verbatim. */
+  reviewId: string;
+  /** utm_content value. Use the page slug so the booking traces to this page. */
+  bookingContent: string;
+}
+
+const { reviewId, bookingContent } = Astro.props;
+const review = reviewsById([reviewId])[0];
+const href = bookingUrl(bookingContent);
+---
+
+<div class="mt-6">
+  <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={href}>
+    Book a session
+  </a>
+  <figure class="mt-5 max-w-xl border-l-2 border-[#c4924a] pl-4">
+    <blockquote class="text-base leading-7 text-[#545454] md:text-lg md:leading-8">
+      <p>“{review.quote}”</p>
+    </blockquote>
+    <figcaption class="mt-2 text-sm uppercase tracking-[0.16em] text-[#8b642f]">
+      — {review.attribution}
+      <span class="tracking-[0.14em] text-[#545454]">· Google review</span>
+    </figcaption>
+  </figure>
+</div>

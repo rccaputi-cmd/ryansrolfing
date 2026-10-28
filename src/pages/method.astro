@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import SessionPhoto from '../components/SessionPhoto.astro';
 import ribcage from '../assets/pages/photos/rolfing-ribcage-work.jpg';
 import hip from '../assets/pages/photos/rolfing-hip-hands-closeup.jpg';
@@ -12,7 +13,7 @@ const photos = [
   { src: skeleton, alt: 'Explaining how the spine and ribs connect' },
 ];
 ---
-<Layout title="Rolfing Structural Integration in Folsom, CA | Ryan’s Method" description="Folsom, CA. Learn Ryan Caputi’s Rolfing Structural Integration method, including assessment, hands-on fascia work, movement, embodiment, and the Rolfing Ten Series.">
+<Layout title="Rolfing Structural Integration in Folsom, CA | Ryan’s Method" description="Folsom, CA. Ryan Caputi’s Rolfing method: assessment, hands-on fascia work, movement, embodiment, and the Ten Series.">
   <section class="px-5 py-20 md:py-28">
    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
     <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
@@ -427,7 +428,7 @@ const photos = [
     <h2 class="text-5xl text-white md:text-6xl">
      Book a Rolfing session
     </h2>
-    <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+    <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookingUrl('method')}>
      Book online
     </a>
    </div>
