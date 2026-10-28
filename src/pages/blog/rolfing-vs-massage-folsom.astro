@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -214,7 +215,7 @@ const schema = [
     <p>
      If you are not sure whether Rolfing or massage is the right next step, start with the question: do you want short-term relief, or do you want to explore the deeper pattern behind what keeps happening?
     </p>
-    <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+    <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('blog-rolfing-vs-massage-folsom')}>
      Book a Rolfing session
     </a>
    </section>

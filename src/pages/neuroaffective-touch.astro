@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
 import heroStones from '../assets/pages/neuroaffective-touch/nat-hero-river-stones-4x5.jpg';
@@ -10,7 +11,8 @@ import natoma from '../assets/pages/neuroaffective-touch/nat-card-natoma-mist-4x
 import portrait from '../assets/pages/photos/ryan-portrait-studio.jpg';
 
 const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
-const bookUrl = 'https://rolfing-106793.square.site';
+const heroBookUrl = bookingUrl('neuroaffective-touch');
+const closeBookUrl = bookingUrl('neuroaffective-touch-close');
 
 const facts = [
   { title: 'You stay clothed', text: 'Always.' },
@@ -141,7 +143,7 @@ const schema = [
           <p>For many people, the first lessons about safety come through the body. NeuroAffective Touch® is a way of working with that early layer, using gentle, consented touch and plenty of listening.</p>
         </div>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookUrl}>Book a session</a>
+          <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={heroBookUrl}>Book a session</a>
           <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/contact/">Ask a question</a>
         </div>
         <p class="mt-5 text-sm uppercase tracking-[0.16em] text-[#545454]">Clothed · Touch optional</p>
@@ -378,7 +380,7 @@ const schema = [
     <div class="mx-auto max-w-4xl rounded-[1.5rem] bg-[#545454] px-8 py-16 text-center text-white md:px-16">
       <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Start when you’re ready</p>
       <h2 class="mt-4 text-5xl text-white md:text-6xl">Send a question. Book a session. Or just come in and see how it feels.</h2>
-      <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookUrl}>Book a session</a>
+      <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={closeBookUrl}>Book a session</a>
       <p class="mt-6 text-lg text-white/85">Clothed · touch optional · <a class="underline decoration-white/40 underline-offset-4 hover:text-white" href={mapsUrl}>101 Parkshore Drive, Folsom, CA 95630</a></p>
       <p class="mt-4 text-lg text-white/80">Never touched before? We can start with talking only. <a class="underline decoration-white/40 underline-offset-4 hover:text-white" href="/contact/">Ask a question first</a></p>
       <p class="mx-auto mt-10 max-w-3xl text-sm leading-7 text-white/70">NeuroAffective Touch® is offered as wellness, bodywork, and nervous-system support. It’s not a substitute for medical care, psychotherapy, or emergency mental health support. Results vary.</p>
