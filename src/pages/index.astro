@@ -4,15 +4,14 @@ import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import ReviewQuoteList from '../components/ReviewQuoteList.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
+import ClientExperiencePhotos from '../components/ClientExperiencePhotos.astro';
 import { googleReviews, homepageQuotes } from '../data/google-reviews';
 import shoulderSmile from '../assets/homepage/session-shoulder-smile.jpg';
 import abdomenFascia from '../assets/homepage/session-abdomen-fascia.jpg';
 import shoulderWork from '../assets/homepage/session-shoulder-work.jpg';
 import studioWide from '../assets/homepage/session-studio-wide.jpg';
-import hipCloseup from '../assets/homepage/hands-on-hip-closeup.jpg';
 import kneeLeg from '../assets/homepage/session-knee-leg.jpg';
 import handsOnBack from '../assets/homepage/hands-on-back.jpg';
-import seatedBack from '../assets/homepage/seated-back-work.jpg';
 
 const sessionStrip = [
   {
@@ -208,8 +207,8 @@ const schema = [
   </section>
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
-    <div>
+   <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
       Client experiences
      </p>
@@ -217,10 +216,7 @@ const schema = [
       Hear from people who have worked with Ryan.
      </h2>
     </div>
-    <div class="grid grid-cols-2 gap-3 sm:gap-4">
-     <SessionPhoto src={seatedBack} alt="Ryan Caputi seated beside a client, doing hands-on Rolfing work on their back" sizes="(min-width: 768px) 26vw, 46vw" class="aspect-[2/3] w-full rounded-[1.5rem] object-cover shadow-lg" />
-     <SessionPhoto src={hipCloseup} alt="Close-up of Ryan Caputi's hands doing Rolfing work along a client's hip" sizes="(min-width: 768px) 26vw, 46vw" class="aspect-[2/3] w-full rounded-[1.5rem] object-cover shadow-lg" />
-    </div>
+    <ClientExperiencePhotos class="mt-10 md:mt-12" />
    </div>
    <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
     <figure class="flex h-full flex-col justify-between bg-white p-7 shadow-sm">
