@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
 
-const book = 'https://rolfing-106793.square.site';
+const book = bookingUrl('serving-sacramento-rolfing');
 const map = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
 
 const schema = {

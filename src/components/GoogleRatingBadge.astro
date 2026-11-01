@@ -1,0 +1,44 @@
+---
+import { googleReviews } from "../data/google-reviews";
+
+interface Props {
+  class?: string;
+  tone?: "light" | "dark";
+  align?: "start" | "center";
+}
+
+const { class: className = "", tone = "light", align = "start" } = Astro.props;
+const ratingText = googleReviews.rating.toFixed(1);
+const starLabel = `${ratingText} out of 5 stars`;
+---
+
+<a
+  href={googleReviews.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[
+    "flex w-fit max-w-full items-center gap-2 rounded-full border px-4 py-2 text-sm leading-5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+    tone === "dark"
+      ? "border-white/30 bg-white/10 text-white hover:bg-white/15 focus-visible:outline-white"
+      : "border-[#e8e1d7] bg-[#f8f6f2] text-[#545454] hover:border-[#8b642f] focus-visible:outline-[#8b642f]",
+    align === "center" && "mx-auto",
+    className,
+  ]}
+>
+  <svg
+    viewBox="0 0 20 20"
+    class:list={["h-4 w-4 shrink-0", tone === "dark" ? "text-white" : "text-[#8b642f]"]}
+    role="img"
+    aria-label={starLabel}
+  >
+    <path
+      fill="currentColor"
+      d="M10 1.4 12.35 6.9l5.95.55-4.5 3.9 1.35 5.85L10 14.4l-5.15 2.8 1.35-5.85-4.5-3.9 5.95-.55L10 1.4Z"
+    ></path>
+  </svg>
+  <span>
+    <span aria-hidden="true">{ratingText} · </span>
+    <span>{googleReviews.reviewCount} Google reviews</span>
+    <span class="sr-only"> (opens in a new tab)</span>
+  </span>
+</a>

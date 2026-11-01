@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -91,7 +92,7 @@ const schema = [
      Ryan’s Rolfing is based in Folsom, at 101 Parkshore Drive. Sessions are Rolfing Structural Integration — people often call this Rolfing massage — plus Somatic Experiencing, craniosacral therapy, and NeuroAffective Touch.
     </p>
     <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-     <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookingUrl('serving-folsom-rolfing')}>
       Book a session
      </a>
      <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/contact/">
@@ -173,7 +174,7 @@ const schema = [
      <p>Athletic shorts, a sports bra, or other fitted comfortable clothes work well. Choose what feels workable. Ryan needs to see how you stand and move.</p>
      <p>You do not need a long story. What hurts, what you have already tried, and what you hope feels different is enough.</p>
      <p>Ryan is often booked several weeks out. If the calendar looks full, join the waitlist when you book. Earlier times do open up. More answers are on the <a href="/faq/">FAQ</a>.</p>
-     <p><a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white no-underline hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">Book a session</a></p>
+     <p><a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white no-underline hover:bg-[#9b7139]" href={bookingUrl('serving-folsom-rolfing-first-visit')}>Book a session</a></p>
     </div>
    </div>
   </section>
@@ -196,6 +197,55 @@ const schema = [
      <p>
       Sessions are careful, collaborative, and specific. The aim is not to force posture into place, but to help the body reorganize with more support, space, and choice.
      </p>
+    </div>
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
+   <div class="mx-auto max-w-6xl">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
+     Specialized support
+    </p>
+    <h2 class="mt-4 text-5xl md:text-6xl">
+     Jaw, headaches, and neck tension.
+    </h2>
+    <p class="mt-6 max-w-3xl text-xl leading-9 text-[#545454]/85">
+     Many clients come to 101 Parkshore Drive after trying massage, chiropractic, dental appliances, stretching, or physical therapy and still feeling stuck. These pages start from that same whole-body view.
+    </p>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+     <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-jaw-pain-tmj-folsom/">
+      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+       Jaw and TMJ
+      </p>
+      <h3 class="mt-4 text-3xl leading-tight">
+       Jaw Pain &amp; TMJ Tension
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Support for clenching patterns, jaw strain, temple tension, and the neck and shoulder relationships that often travel with TMJ-related discomfort.
+      </p>
+     </a>
+     <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-headaches-migraines-folsom/">
+      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+       Headaches
+      </p>
+      <h3 class="mt-4 text-3xl leading-tight">
+       Headaches &amp; Migraines
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       A structural approach for headache and migraine-related tension patterns involving the jaw, neck, shoulders, ribs, breath, posture, and stress physiology.
+      </p>
+     </a>
+     <a class="block rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/rolfing-for-neck-pain-folsom/">
+      <p class="text-xs uppercase tracking-[0.22em] text-[#c4924a]">
+       Neck
+      </p>
+      <h3 class="mt-4 text-3xl leading-tight">
+       Neck Pain
+      </h3>
+      <p class="mt-4 leading-8 text-[#545454]/80">
+       Whole-body Rolfing for recurring neck tension, upper-back compression, shoulder strain, posture patterns, and related jaw or headache symptoms.
+      </p>
+     </a>
     </div>
    </div>
   </section>

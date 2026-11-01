@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 
-const book = 'https://rolfing-106793.square.site';
+const book = bookingUrl('craniosacral-therapy-folsom');
 
 const schema = {
   '@context': 'https://schema.org',
