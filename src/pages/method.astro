@@ -15,45 +15,25 @@ const photos = [
 ];
 ---
 <Layout title="Rolfing Structural Integration in Folsom, CA | Ryan’s Method" description="Folsom, CA. Ryan Caputi’s Rolfing method: assessment, hands-on fascia work, movement, embodiment, and the Ten Series.">
-  <section class="px-5 py-20 md:py-28">
+  <section class="px-5 py-20">
    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-    <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
     <div>
      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing® Structural Integration · Folsom, CA
+      Rolfing Structural Integration
      </p>
-     <h1 class="mt-5 text-5xl md:text-6xl">
-      A higher level of touch.
-     </h1>
+     <h2 class="mt-4 text-5xl md:text-6xl">
+      A multi-session approach.
+     </h2>
      <div class="prose mt-8 text-xl text-[#545454]/85">
       <p>
-       Here in Folsom, think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.
+       Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.
       </p>
       <p>
-       Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.
-      </p>
-      <p>
-       This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.
+       Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.
       </p>
      </div>
     </div>
-   </div>
-  </section>
-
-  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-16">
-   <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-    <figure>
-     <SessionPhoto src={photos[0].src} alt={photos[0].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
-     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[0].alt}</figcaption>
-    </figure>
-    <figure>
-     <SessionPhoto src={photos[1].src} alt={photos[1].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
-     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[1].alt}</figcaption>
-    </figure>
-    <figure>
-     <SessionPhoto src={photos[2].src} alt={photos[2].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[68%_center]" />
-     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[2].alt}</figcaption>
-    </figure>
+    <SessionPhoto src={studioWide} alt="Ryan Caputi with a client during a Rolfing session in the studio" sizes="(min-width: 768px) 46vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" />
    </div>
   </section>
 
@@ -106,25 +86,45 @@ const photos = [
    </div>
   </section>
 
-  <section class="px-5 py-20">
+  <section class="px-5 py-20 md:py-28">
    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
+    <img alt="Fingertips reading raised tactile patterns as a metaphor for skilled Rolfing touch" class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" loading="lazy" src="/images/braille-touch-rolfing-concept.jpg"/>
     <div>
      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing Structural Integration
+      Rolfing® Structural Integration · Folsom, CA
      </p>
-     <h2 class="mt-4 text-5xl md:text-6xl">
-      A multi-session approach.
-     </h2>
+     <h1 class="mt-5 text-5xl md:text-6xl">
+      A higher level of touch.
+     </h1>
      <div class="prose mt-8 text-xl text-[#545454]/85">
       <p>
-       Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.
+       Here in Folsom, think of reading Braille. To an untrained hand, the page may feel like a field of tiny raised dots. To a trained reader, those minute changes in texture become language.
       </p>
       <p>
-       Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.
+       Rolfing touch works in a similar way. Ryan’s hands are trained to feel subtle differences in tissue texture, density, direction, tension, depth, and relationship — then translate those sensations through a detailed understanding of anatomy.
+      </p>
+      <p>
+       This is one of the differences between general massage and skilled structural bodywork. The touch is not only sensitive; it is educated. Like Braille, the information is already there. The skill is knowing how to read it.
       </p>
      </div>
     </div>
-    <SessionPhoto src={studioWide} alt="Ryan Caputi with a client during a Rolfing session in the studio" sizes="(min-width: 768px) 46vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" />
+   </div>
+  </section>
+
+  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-16">
+   <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    <figure>
+     <SessionPhoto src={photos[0].src} alt={photos[0].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[0].alt}</figcaption>
+    </figure>
+    <figure>
+     <SessionPhoto src={photos[1].src} alt={photos[1].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[1].alt}</figcaption>
+    </figure>
+    <figure>
+     <SessionPhoto src={photos[2].src} alt={photos[2].alt} sizes="(min-width: 768px) 30vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[68%_center]" />
+     <figcaption class="mt-3 text-center text-sm leading-6 text-[#545454]/80">{photos[2].alt}</figcaption>
+    </figure>
    </div>
   </section>
 

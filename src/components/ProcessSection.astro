@@ -5,7 +5,15 @@ import greeting from '../assets/process/gi01-greeting.jpg';
 import intake from '../assets/process/gi02-intake.jpg';
 import postureExam from '../assets/process/gi03-exam.jpg';
 import handsOnShoulders from '../assets/process/r09b-supine-trap.jpg';
+import movingFreely from '../assets/process/moving-freely.jpg';
+import embodiment from '../assets/process/embodiment.jpg';
 import closingWave from '../assets/process/gi13-close.jpg';
+
+type ProcessCredit = {
+  before: string;
+  linkText: string;
+  href: string;
+};
 
 type ProcessStep = {
   number: string;
@@ -16,6 +24,8 @@ type ProcessStep = {
   image?: ImageMetadata;
   /** Public illustration kept until a still is ready. */
   src?: string;
+  /** License line shown on the card, for a still that needs attribution. */
+  credit?: ProcessCredit;
 };
 
 const steps: ProcessStep[] = [
@@ -37,8 +47,13 @@ const steps: ProcessStep[] = [
     number: "03",
     title: "Assessing your posture",
     body: "Every session includes assessment — standing, moving, and sensing how your body organizes itself.",
-    alt: "Illustrated scene, seen over a practitioner’s shoulder, of a client standing barefoot while her posture is assessed. The client is an illustrated character.",
+    alt: "An illustration of Ryan observing a client's posture with a stylized skeleton overlay.",
     image: postureExam,
+    credit: {
+      before: "Skeleton illustration based on BodyParts3D, © 2008 DBCLS, ",
+      linkText: "CC BY-SA 2.1 JP",
+      href: "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    },
   },
   {
     number: "04",
@@ -47,20 +62,19 @@ const steps: ProcessStep[] = [
     alt: "Illustrated scene of a practitioner’s hands resting on the shoulders of a client lying on the table. The client is an illustrated character.",
     image: handsOnShoulders,
   },
-  // Public illustration until a still is ready. Swap `src` for an `image` import.
   {
     number: "05",
     title: "Moving freely",
     body: "Progress is tracked through movement: sitting, standing, walking, and noticing what feels lighter or easier.",
-    alt: "Abstract illustration for the Moving freely step of the Rolfing process",
-    src: "/images/process/06-moving-freely.jpg",
+    alt: "A client walking barefoot easily across a sunlit treatment room.",
+    image: movingFreely,
   },
   {
     number: "06",
     title: "Cultivating embodiment",
     body: "Rolfing helps people reconnect with body sensation — a practical compass for avoiding injury and living with more awareness.",
-    alt: "Abstract illustration for the Cultivating embodiment step of the Rolfing process",
-    src: "/images/process/07-embodiment.jpg",
+    alt: "A client standing with eyes closed, one hand on her sternum and one on her belly.",
+    image: embodiment,
   },
   {
     number: "07",
@@ -94,6 +108,11 @@ const steps: ProcessStep[] = [
           <p class="text-sm text-[#c4924a]">{step.number}</p>
           <h3 class="mt-2 text-2xl md:text-3xl">{step.title}</h3>
           <p class="mt-4 leading-8 text-[#545454]/80">{step.body}</p>
+          {step.credit && (
+            <p class="mt-4 text-sm leading-6 text-[#545454]/75">
+              {step.credit.before}<a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href={step.credit.href} rel="license noopener noreferrer" target="_blank">{step.credit.linkText}<span class="sr-only"> (opens in a new tab)</span></a>
+            </p>
+          )}
         </div>
       </article>
     ))}
