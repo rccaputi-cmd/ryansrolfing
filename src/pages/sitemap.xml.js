@@ -1,5 +1,6 @@
 const updated = '2026-10-15';
 const unchanged = '2026-05-27';
+const conditions = '2026-11-01';
 
 const pages = [
   ['', '1.0', unchanged],
@@ -16,6 +17,12 @@ const pages = [
   ['rolfing-for-jaw-pain-tmj-folsom/', '0.9', unchanged],
   ['rolfing-for-headaches-migraines-folsom/', '0.9', unchanged],
   ['rolfing-for-neck-pain-folsom/', '0.9', unchanged],
+  ['rolfing-for-shoulder-pain-folsom/', '0.9', conditions],
+  ['rolfing-for-back-pain-folsom/', '0.9', conditions],
+  ['rolfing-for-sciatica-folsom/', '0.9', conditions],
+  ['rolfing-for-scoliosis-folsom/', '0.9', conditions],
+  ['rolfing-for-knee-pain-folsom/', '0.9', conditions],
+  ['rolfing-for-ankle-foot-pain-folsom/', '0.9', conditions],
   ['blog/rolfing-vs-massage-folsom/', '0.8', unchanged],
   ['blog/rolfing-jaw-neck-headache-connection/', '0.85', unchanged],
   ['blog/rolfing-for-back-pain-folsom/', '0.85', unchanged],
