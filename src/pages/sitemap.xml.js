@@ -6,6 +6,7 @@ const pages = [
   ['method/', '0.9', updated],
   ['services/', '0.9', updated],
   ['somatic-experiencing/', '0.9', updated],
+  ['craniosacral-therapy-folsom/', '0.9', updated],
   ['neuroaffective-touch/', '0.85', updated],
   ['about/', '0.7', updated],
   ['contact/', '0.8', updated],
@@ -22,12 +23,12 @@ const pages = [
   ['blog/what-to-expect-first-rolfing-session/', '0.75', unchanged],
   ['blog/rolfing-ten-series-folsom/', '0.8', unchanged],
   ['serving/', '0.75', unchanged],
-  ['serving/folsom-rolfing/', '0.85', unchanged],
+  ['serving/folsom-rolfing/', '0.85', updated],
   ['serving/el-dorado-hills-rolfing/', '0.75', unchanged],
   ['serving/shingle-springs-rolfing/', '0.75', unchanged],
   ['serving/cameron-park-rolfing/', '0.75', unchanged],
   ['serving/placerville-rolfing/', '0.75', unchanged],
-  ['serving/sacramento-rolfing/', '0.75', unchanged],
+  ['serving/sacramento-rolfing/', '0.5', updated],
 ];
 
 export async function GET() {
