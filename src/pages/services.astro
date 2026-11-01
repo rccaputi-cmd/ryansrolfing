@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
 import seCard from '../assets/pages/somatic-experiencing/se-card-lone-oak-4x5.jpg';
@@ -189,7 +190,7 @@ const schema = [
      Choose the session type that fits your goals and book online through Square.
     </p>
     <GoogleRatingBadge align="center" class="mt-6" />
-    <a class="mt-4 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+    <a class="mt-4 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('services')}>
      Book online
     </a>
    </div>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import ReviewQuoteList from '../components/ReviewQuoteList.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
@@ -72,7 +73,7 @@ const schema = [
   }
 ];
 ---
-<Layout title="Ryan’s Rolfing | Rolfing Structural Integration in Folsom, CA" description="Certified Rolfer Ryan Caputi offers Rolfing Structural Integration and Somatic Experiencing in Folsom, CA for chronic pain, posture, movement, stress, trauma-informed bodywork, and embodiment." schema={schema}>
+<Layout title="Ryan’s Rolfing | Rolfing Structural Integration in Folsom, CA" description="Rolfing and Somatic Experiencing in Folsom, CA with Certified Rolfer Ryan Caputi. For chronic pain, posture, movement, stress, and embodiment." schema={schema}>
   <section class="bg-white">
    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:grid-cols-[.95fr_1.05fr] md:gap-12 md:py-24">
     <div class="order-2 md:order-1">
@@ -87,7 +88,7 @@ const schema = [
      </p>
      <GoogleRatingBadge class="mt-8" />
      <div class="mt-5 flex flex-col gap-3 sm:flex-row">
-      <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+      <a class="rounded-full bg-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookingUrl('home')}>
        Book a session
       </a>
       <a class="rounded-full border border-[#c4924a] px-8 py-4 text-center text-sm uppercase tracking-[0.18em] text-[#545454] transition hover:bg-[#f8f6f2]" href="/method">

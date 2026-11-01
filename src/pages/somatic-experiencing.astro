@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { bookingUrl } from '../lib/booking';
 import SessionPhoto from '../components/SessionPhoto.astro';
 import heroDeer from '../assets/pages/somatic-experiencing/se-hero-meadow-deer-4x5.jpg';
 import deerSettled from '../assets/pages/somatic-experiencing/se-section-3-deer-settled-4x3.jpg';
@@ -8,7 +9,7 @@ import oakLight from '../assets/pages/somatic-experiencing/se-section-2-oak-ligh
 import loneOak from '../assets/pages/somatic-experiencing/se-card-lone-oak-4x5.jpg';
 
 const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=101+Parkshore+Drive+Folsom+CA+95630';
-const bookUrl = 'https://rolfing-106793.square.site';
+const bookUrl = bookingUrl('somatic-experiencing');
 
 const experiences = [
   {
@@ -144,7 +145,7 @@ const schema = [
 ---
 <Layout
   title="Somatic Experiencing® in Folsom, CA | Somatic Bodywork | Ryan’s Rolfing"
-  description="Gentle, body-based Somatic Experiencing® in Folsom for stress and overwhelm that lives in the body. 50 or 75 minutes with Ryan Caputi, 101 Parkshore Dr. You set the pace."
+  description="Somatic Experiencing® in Folsom for stress and overwhelm in the body. 50 or 75 minutes with Ryan Caputi at 101 Parkshore Dr."
   image="/images/og/se-og-1200x630.jpg"
   schema={schema}
 >

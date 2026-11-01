@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -50,7 +51,7 @@ const schema = [
   }
 ];
 ---
-<Layout title="Rolfing Service Areas near Folsom, CA | Ryan’s Rolfing" description="Ryan’s Rolfing serves Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, Sacramento, and nearby communities with Rolfing Structural Integration and somatic bodywork." schema={schema}>
+<Layout title="Rolfing Service Areas near Folsom, CA | Ryan’s Rolfing" description="Rolfing and somatic bodywork from Folsom for El Dorado Hills, Shingle Springs, Cameron Park, Placerville, Sacramento, and nearby." schema={schema}>
   <section class="px-5 py-20 md:py-28">
    <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
@@ -165,7 +166,7 @@ const schema = [
     <p class="mt-6 text-xl leading-9 text-white/82">
      The goal is not to create generic “near me” pages. Each location page helps people nearby understand what Ryan does, where the office is, and whether the drive makes sense for the kind of bodywork they are seeking.
     </p>
-    <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+    <a class="mt-8 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('serving')}>
      Book online
     </a>
    </div>

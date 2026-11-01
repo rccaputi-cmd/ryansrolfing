@@ -1,7 +1,8 @@
 ---
 import AppLayout from '../../layouts/AppLayout.astro';
+import { bookingUrl } from '../../lib/booking';
 const links = [
-  ['Book online', 'Schedule through Square.', 'https://rolfing-106793.square.site', '↗'],
+  ['Book online', 'Schedule through Square.', bookingUrl('app-book'), '↗'],
   ['Email Ryan', 'Questions, concerns, or follow-up.', 'mailto:info@ryansrolfing.com', '✉'],
   ['Leave a review', 'If the work has helped, reviews help others find it.', 'https://search.google.com/local/writereview?placeid=ChIJAYinBMHQmoARx9ruSYJx7yU', '★'],
 ];

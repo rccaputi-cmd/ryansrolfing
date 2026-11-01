@@ -1,12 +1,19 @@
 ---
 import '../styles/global.css';
+import Clarity from '../components/Clarity.astro';
+import { bookingUrl, pageSlug } from '../lib/booking';
 
 const {
   title = "Ryan’s Rolfing | Folsom Structural Bodywork",
   description = "Rolfing and Somatic Experiencing in Folsom, CA with Ryan Caputi. Structural bodywork for pain, posture, movement, stress, and whole-person change.",
   image = "/images/hero-outdoor.jpg",
   schema = [],
+  robots = "index, follow",
 } = Astro.props;
+
+const slug = pageSlug(Astro.url.pathname);
+const navBookingUrl = bookingUrl(`${slug}-nav`);
+const footerBookingUrl = bookingUrl(`${slug}-footer`);
 
 const siteUrl = "https://ryansrolfing.com";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
@@ -110,7 +117,7 @@ const nav = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Ryan’s Rolfing" />
     <meta property="og:title" content={title} />
@@ -130,6 +137,7 @@ const nav = [
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-rr-20260524-16.png" />
     <link rel="shortcut icon" href="/favicon-rr-20260524-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-rr-20260524.png" />
+    <Clarity />
   </head>
   <body>
     <div class="min-h-screen overflow-hidden">
@@ -153,7 +161,7 @@ const nav = [
               <a class="transition hover:text-[#c4924a]" href={item.href}>{item.label}</a>
             ))}
           </div>
-          <a href="https://rolfing-106793.square.site" class="rounded-full bg-[#c4924a] px-5 py-2 text-sm uppercase tracking-[0.14em] text-white shadow-sm transition hover:bg-[#9b7139]">Book</a>
+          <a href={navBookingUrl} class="rounded-full bg-[#c4924a] px-5 py-2 text-sm uppercase tracking-[0.14em] text-white shadow-sm transition hover:bg-[#9b7139]">Book</a>
         </nav>
         <div class="border-t border-[#e8e1d7] px-5 py-3 md:hidden" aria-label="Mobile navigation">
           <div class="grid grid-cols-3 gap-2 text-xs uppercase tracking-[0.16em] text-[#545454]">
@@ -194,7 +202,7 @@ const nav = [
           <div class="text-sm leading-7 text-white/75">
             <p class="text-white">Connect</p>
             <a class="hover:text-white" href="mailto:info@ryansrolfing.com">info@ryansrolfing.com</a><br />
-            <a class="hover:text-white" href="https://rolfing-106793.square.site">Book online</a><br />
+            <a class="hover:text-white" href={footerBookingUrl}>Book online</a><br />
             <a class="hover:text-white" href="/blog/">Articles</a> · <a class="hover:text-white" href="/faq/">FAQ</a> · <a class="hover:text-white" href="/testimonials/">Reviews</a>
           </div>
         </div>
