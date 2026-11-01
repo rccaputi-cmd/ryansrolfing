@@ -4,11 +4,12 @@ import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import ReviewQuoteList from '../components/ReviewQuoteList.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import TenSeriesSection from '../components/TenSeriesSection.astro';
 import { googleReviews, homepageQuotes } from '../data/google-reviews';
 import shoulderSmile from '../assets/homepage/session-shoulder-smile.jpg';
 import abdomenFascia from '../assets/homepage/session-abdomen-fascia.jpg';
 import shoulderWork from '../assets/homepage/session-shoulder-work.jpg';
-import studioWide from '../assets/homepage/session-studio-wide.jpg';
 import hipCloseup from '../assets/homepage/hands-on-hip-closeup.jpg';
 import kneeLeg from '../assets/homepage/session-knee-leg.jpg';
 import handsOnBack from '../assets/homepage/hands-on-back.jpg';
@@ -102,6 +103,10 @@ const schema = [
    </div>
   </section>
 
+  <ProcessSection />
+
+  <TenSeriesSection />
+
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
    <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
     <div class="md:order-2">
@@ -134,77 +139,6 @@ const schema = [
      </li>
     ))}
    </ul>
-  </section>
-
-  <section class="bg-white px-5 py-20">
-   <div class="mx-auto max-w-4xl text-center">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Whole-body relationships
-    </p>
-    <h2 class="mt-4 text-5xl md:text-6xl">
-     The painful spot is often part of a larger pattern.
-    </h2>
-    <p class="mt-6 text-xl leading-9 text-[#545454]/85">
-     Pain often shows up in one place, but the pattern behind it may involve the feet, pelvis, ribs, spine, breath, or old compensation from an injury years ago. Rolfing follows those relationships so the body can change as a connected system, not a collection of separate parts.
-    </p>
-   </div>
-   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/symptom-vs-pattern.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       Symptoms and patterns
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       The painful area matters — but it may be the visible edge of a larger whole-body pattern.
-      </p>
-     </div>
-    </article>
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/gravity-support.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       More ease, less effort
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       When the body organizes through structural harmony, movement can feel lighter, freer, and more spacious.
-      </p>
-     </div>
-    </article>
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/ripple-effect.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       The ripple effect
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       A change in one area can ripple through posture, gait, breathing, and how you feel yourself in space.
-      </p>
-     </div>
-    </article>
-   </div>
-  </section>
-
-  <section class="px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-    <div>
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing Structural Integration
-     </p>
-     <h2 class="mt-4 text-5xl md:text-6xl">
-      A multi-session approach.
-     </h2>
-     <div class="prose mt-8 text-xl text-[#545454]/85">
-      <p>
-       Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.
-      </p>
-      <p>
-       Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.
-      </p>
-     </div>
-    </div>
-    <SessionPhoto src={studioWide} alt="Ryan Caputi with a client during a Rolfing session in the studio" sizes="(min-width: 768px) 46vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" />
-   </div>
   </section>
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
