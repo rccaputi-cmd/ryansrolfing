@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,6 +101,7 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Headaches &amp; Migraines in Folsom
     </h1>
+    <ConditionLead reviewId="poppie-tanksley" bookingContent="rolfing-for-headaches-migraines-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
      Headaches and migraines can have many causes. When jaw tension, neck strain, posture, shoulder compression, breath holding, or stress are part of the picture, Rolfing offers a whole-body way to work with those patterns.
     </p>
@@ -210,7 +213,7 @@ const schema = [
      Headaches often travel with jaw tension and neck pain. The pages below, and the connection article, describe how Ryan looks at that pattern.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-headaches-migraines-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-jaw-pain-tmj-folsom/">

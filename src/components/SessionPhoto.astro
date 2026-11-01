@@ -7,9 +7,11 @@ interface Props {
   alt: string;
   sizes: string;
   class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
 }
 
-const { src, alt, sizes, class: className = '' } = Astro.props;
+const { src, alt, sizes, class: className = '', loading = 'lazy', fetchpriority } = Astro.props;
 
 const candidateWidths = [480, 768, 1024, 1280, 1600];
 const widths = candidateWidths.filter((width) => width < src.width);
@@ -23,7 +25,8 @@ widths.push(src.width);
   widths={widths}
   sizes={sizes}
   quality={80}
-  loading="lazy"
+  loading={loading}
+  fetchpriority={fetchpriority}
   decoding="async"
   class:list={[className, 'block']}
   pictureAttributes={{ class: 'block w-full' }}
