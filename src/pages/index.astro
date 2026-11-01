@@ -6,32 +6,12 @@ import ReviewQuoteList from '../components/ReviewQuoteList.astro';
 import SessionPhoto from '../components/SessionPhoto.astro';
 import { googleReviews, homepageQuotes } from '../data/google-reviews';
 import shoulderSmile from '../assets/homepage/session-shoulder-smile.jpg';
-import abdomenFascia from '../assets/homepage/session-abdomen-fascia.jpg';
-import shoulderWork from '../assets/homepage/session-shoulder-work.jpg';
 import studioWide from '../assets/homepage/session-studio-wide.jpg';
 import hipCloseup from '../assets/homepage/hands-on-hip-closeup.jpg';
-import kneeLeg from '../assets/homepage/session-knee-leg.jpg';
-import handsOnBack from '../assets/homepage/hands-on-back.jpg';
 import seatedBack from '../assets/homepage/seated-back-work.jpg';
+import spineRibs from '../assets/pages/photos/anatomy-teaching-skeleton.jpg';
 
-const sessionStrip = [
-  {
-    src: shoulderWork,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's shoulder and upper back",
-  },
-  {
-    src: abdomenFascia,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's abdomen",
-  },
-  {
-    src: handsOnBack,
-    alt: "Close-up of Ryan Caputi's hands doing Rolfing work on a client's back",
-  },
-  {
-    src: kneeLeg,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's knee and lower leg",
-  },
-];
+const spineRibsCaption = 'Explaining how the spine and ribs connect';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -127,13 +107,12 @@ const schema = [
      <SessionPhoto src={shoulderSmile} alt="Ryan smiling while working on a client's right shoulder during a Rolfing session" sizes="(min-width: 768px) 42vw, calc(100vw - 2.5rem)" class="aspect-[3/2] w-full rounded-[2rem] object-cover object-[center_76%] shadow-xl" />
     </div>
    </div>
-   <ul class="mx-auto mt-14 grid max-w-6xl grid-cols-2 gap-3 md:mt-16 md:grid-cols-4 md:gap-4" aria-label="Hands-on Rolfing sessions">
-    {sessionStrip.map((photo) => (
-     <li>
-      <SessionPhoto src={photo.src} alt={photo.alt} sizes="(min-width: 768px) 22vw, 46vw" class="aspect-[3/2] w-full rounded-[1.25rem] object-cover shadow-sm" />
-     </li>
-    ))}
-   </ul>
+   <figure class="mx-auto mt-14 max-w-6xl md:mt-16">
+    <SessionPhoto src={spineRibs} alt="A hand gesturing over an anatomical spine and ribcage model on a table" sizes="(min-width: 768px) 72rem, calc(100vw - 2.5rem)" class="aspect-[4/3] w-full rounded-[2rem] object-cover object-center shadow-md sm:aspect-[16/9]" />
+    <figcaption class="mt-4 text-center text-sm leading-6 text-[#545454]/80">
+     {spineRibsCaption}
+    </figcaption>
+   </figure>
   </section>
 
   <section class="bg-white px-5 py-20">
