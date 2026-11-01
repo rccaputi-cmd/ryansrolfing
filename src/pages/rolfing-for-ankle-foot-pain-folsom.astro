@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,6 +101,7 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Ankle &amp; Foot Pain in Folsom
     </h1>
+    <ConditionLead reviewId="armaan-nanjee" bookingContent="rolfing-for-ankle-foot-pain-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
      The feet meet the ground for you all day. When they are stiff, collapsed, or still guarding an old sprain, the knees, hips, and low back often pick up the extra work.
     </p>
@@ -112,7 +115,7 @@ const schema = [
       Foot and ankle pain can follow a sprain that never quite finished, the surfaces you stand on, or a habit of rolling to the outside or inside of the foot. The local ache matters. So does whether the lower leg, knee, and hip can let the foot adapt.
      </p>
      <p class="mt-5">
-      Rolfing includes the feet because the rest of the body stands on them. A low back or knee pattern sometimes quiets only after the foot has a clearer job.
+      Rolfing includes the feet because the rest of the body stands on them. Many clients report a low back or knee pattern may ease when the foot has a clearer job.
      </p>
     </section>
     <section>
@@ -134,7 +137,7 @@ const schema = [
       Rolfing is not podiatry or medical care. It does not treat fractures, stress fractures, infections, gout flares, or diabetic foot problems, and it will not rebuild a torn ligament. A hot, swollen, or newly injured ankle or foot needs a medical look before bodywork.
      </p>
      <p class="mt-5">
-      For recurring stiffness after an old sprain, or feet that seem to feed knee and back tension, Rolfing can be a practical way to work with the pattern. It is not a promise that the pain will resolve.
+      For recurring stiffness after an old sprain, or feet that seem to feed knee and back tension, Rolfing may be a practical way to work with the pattern. It is not a promise that the pain will resolve.
      </p>
     </section>
    </div>
@@ -204,7 +207,7 @@ const schema = [
      Ryan’s Rolfing is located at 101 Parkshore Drive, Folsom, CA 95630, and serves clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, and the greater Sacramento area.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-ankle-foot-pain-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-knee-pain-folsom/">

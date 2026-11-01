@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { bookingUrl } from '../../lib/booking';
+
+const bookUrl = bookingUrl('contact-thanks');
+---
+<Layout title="Message received | Ryan’s Rolfing in Folsom" description="Your note to Ryan’s Rolfing in Folsom was received. Book a session online, or Ryan will reply by email." robots="noindex, follow">
+  <section class="px-5 py-20 md:py-28">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Contact · Folsom, CA</p>
+      <h1 class="mt-5 text-6xl leading-none md:text-8xl">Thanks. I got your note.</h1>
+      <p class="mt-6 text-xl leading-9 text-[#545454]/85">I’ll reply by email. If you’d like to schedule now, booking is open.</p>
+      <a class="mt-10 inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:bg-[#9b7139]" href={bookUrl}>Book a session</a>
+      <p class="mt-8 text-lg leading-8 text-[#545454]/85">
+        <a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href="/contact/">Back to contact</a>
+      </p>
+    </div>
+  </section>
+</Layout>

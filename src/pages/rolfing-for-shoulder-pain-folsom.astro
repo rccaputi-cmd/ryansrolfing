@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,6 +101,7 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Shoulder Pain in Folsom
     </h1>
+    <ConditionLead reviewId="halley-miglietta" bookingContent="rolfing-for-shoulder-pain-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
      The shoulder moves a lot, and it depends on the ribs, neck, and shoulder blade for a place to move from. When that support is missing, the shoulder often grips.
     </p>
@@ -134,7 +137,7 @@ const schema = [
       Rolfing is not medical care for a rotator cuff tear, dislocation, fracture, or infection. It does not rebuild a torn tendon. If the shoulder is hot, swollen, unstable, or suddenly weak after an injury, see a doctor before bodywork.
      </p>
      <p class="mt-5">
-      For recurring strain tied to posture and how the arm is carried, Rolfing can be a practical complement to other care. It is not a promise that the pain will be gone.
+      For recurring strain tied to posture and how the arm is carried, Rolfing may be a practical complement to other care. It is not a promise that the pain will be gone.
      </p>
     </section>
    </div>
@@ -204,7 +207,7 @@ const schema = [
      Ryan’s Rolfing is located at 101 Parkshore Drive, Folsom, CA 95630, and serves clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, and the greater Sacramento area.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-shoulder-pain-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-neck-pain-folsom/">

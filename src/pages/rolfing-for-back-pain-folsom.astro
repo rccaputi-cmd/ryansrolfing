@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,6 +101,7 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Low Back Pain in Folsom
     </h1>
+    <ConditionLead reviewId="anita-arendt" bookingContent="rolfing-for-back-pain-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
      Low back pain often shows up where the body is carrying more than its share. Rolfing looks at the larger pattern: pelvis, hips, ribs, breath, legs, feet, and how you stand and sit through the day.
     </p>
@@ -112,7 +115,7 @@ const schema = [
       The low back sits between the pelvis and the rib cage. If the hips are stiff, the ribs barely move with breath, or the legs are not sharing the load, the lumbar area often braces to hold things together. Desk work, driving, lifting, and old injuries can all train that habit.
      </p>
      <p class="mt-5">
-      Many people get temporary relief from stretching, massage, adjustments, or rest, only to have the same ache return. That usually means the body is still using the same strategy for standing, sitting, and bracing. Rolfing Structural Integration works with those relationships so the low back has more help from the rest of the body.
+      Many people get temporary relief from stretching, massage, adjustments, or rest, only to have the same ache return. That usually means the body is still using the same strategy for standing, sitting, and bracing. Rolfing Structural Integration works with those relationships. Many clients report this may ease how much the low back has to do on its own.
      </p>
     </section>
     <section>
@@ -204,7 +207,7 @@ const schema = [
      Ryan’s Rolfing is located at 101 Parkshore Drive, Folsom, CA 95630, and serves clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, and the greater Sacramento area.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-back-pain-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-sciatica-folsom/">

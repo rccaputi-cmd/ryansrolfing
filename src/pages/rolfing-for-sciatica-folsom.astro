@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,6 +101,7 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Sciatica in Folsom
     </h1>
+    <ConditionLead reviewId="hillary-oneill" bookingContent="rolfing-for-sciatica-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
      Sciatica is a name people use for pain, tingling, or aching that travels from the low back or buttock into the leg. Rolfing does not treat the nerve. It looks at the pattern around it: pelvis, hips, low back, legs, and feet.
     </p>
@@ -204,7 +207,7 @@ const schema = [
      Ryan’s Rolfing is located at 101 Parkshore Drive, Folsom, CA 95630, and serves clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, and the greater Sacramento area.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-sciatica-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-back-pain-folsom/">

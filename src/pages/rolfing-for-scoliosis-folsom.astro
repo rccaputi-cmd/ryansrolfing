@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConditionLead from '../components/ConditionLead.astro';
+import { bookingUrl } from '../lib/booking';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -99,8 +101,9 @@ const schema = [
     <h1 class="mt-5 text-5xl leading-tight md:text-7xl">
      Rolfing for Scoliosis in Folsom
     </h1>
+    <ConditionLead reviewId="joann-de-tomasi" bookingContent="rolfing-for-scoliosis-folsom" />
     <p class="mt-7 text-xl leading-9 text-[#545454]/85">
-     A scoliosis curve is a shape of the spine. Rolfing does not straighten that curve, and it does not replace monitoring, bracing, or surgical care. It can be a way to work with the tension, breath, and balance that gather around it.
+     A scoliosis curve is a shape of the spine. Rolfing does not straighten that curve, and it does not replace monitoring, bracing, or surgical care. Many clients report it may help with the tension, breath, and balance that gather around it.
     </p>
    </div>
    <div class="mx-auto mt-16 max-w-3xl space-y-12 text-lg leading-9 text-[#545454]/85">
@@ -204,7 +207,7 @@ const schema = [
      Ryan’s Rolfing is located at 101 Parkshore Drive, Folsom, CA 95630, and serves clients from Folsom, El Dorado Hills, Shingle Springs, Cameron Park, Placerville, and the greater Sacramento area.
     </p>
     <div class="flex flex-wrap gap-4">
-     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href="https://rolfing-106793.square.site">
+     <a class="inline-block rounded-full bg-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-white hover:bg-[#9b7139]" href={bookingUrl('rolfing-for-scoliosis-folsom-end')}>
       Book a session
      </a>
      <a class="inline-block rounded-full border border-[#c4924a] px-8 py-4 text-sm uppercase tracking-[0.18em] text-[#c4924a] hover:bg-[#f8f6f2]" href="/rolfing-for-back-pain-folsom/">
