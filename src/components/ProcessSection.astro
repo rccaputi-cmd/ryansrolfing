@@ -24,6 +24,8 @@ type ProcessStep = {
   image?: ImageMetadata;
   /** Public illustration kept until a still is ready. */
   src?: string;
+  /** Extra object-position class when a reused illustration needs a different crop. */
+  imagePosition?: string;
   /** License line shown on the card, for a still that needs attribution. */
   credit?: ProcessCredit;
 };
@@ -64,20 +66,28 @@ const steps: ProcessStep[] = [
   },
   {
     number: "05",
+    title: "A series of sessions",
+    body: "Change builds over several sessions, each one picking up where the last left off. Most people start with the Ten-Series.",
+    alt: "Illustration of three figures in sequence, showing change building across a series of sessions.",
+    src: "/images/app-concepts/web/series-stages.webp",
+    imagePosition: "object-[center_28%]",
+  },
+  {
+    number: "06",
     title: "Moving freely",
     body: "Progress is tracked through movement: sitting, standing, walking, and noticing what feels lighter or easier.",
     alt: "A client walking barefoot easily across a sunlit treatment room.",
     image: movingFreely,
   },
   {
-    number: "06",
+    number: "07",
     title: "Cultivating embodiment",
     body: "Rolfing helps people reconnect with body sensation — a practical compass for avoiding injury and living with more awareness.",
     alt: "A client standing with eyes closed, one hand on her sternum and one on her belly.",
     image: embodiment,
   },
   {
-    number: "07",
+    number: "08",
     title: "Wrapping up",
     body: "Sessions close with support for integration: stretches, exercises, education, referrals, or maintenance recommendations.",
     alt: "Illustrated scene of a client waving goodbye on the garden path while the practitioner waves from the studio doorway. The client is an illustrated character.",
@@ -102,7 +112,7 @@ const steps: ProcessStep[] = [
             class="aspect-[4/3] w-full object-cover"
           />
         ) : (
-          <img alt={step.alt} class="aspect-[4/3] w-full object-cover" loading="lazy" src={step.src} />
+          <img alt={step.alt} class:list={["aspect-[4/3] w-full object-cover", step.imagePosition]} loading="lazy" src={step.src} />
         )}
         <div class="p-6">
           <p class="text-sm text-[#c4924a]">{step.number}</p>
