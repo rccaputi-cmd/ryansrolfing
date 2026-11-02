@@ -7,32 +7,9 @@ import SessionPhoto from '../components/SessionPhoto.astro';
 import ProcessSection from '../components/ProcessSection.astro';
 import TenSeriesSection from '../components/TenSeriesSection.astro';
 import { googleReviews, homepageQuotes } from '../data/google-reviews';
-import shoulderSmile from '../assets/homepage/session-shoulder-smile.jpg';
-import abdomenFascia from '../assets/homepage/session-abdomen-fascia.jpg';
-import shoulderWork from '../assets/homepage/session-shoulder-work.jpg';
 import hipCloseup from '../assets/homepage/hands-on-hip-closeup.jpg';
-import kneeLeg from '../assets/homepage/session-knee-leg.jpg';
-import handsOnBack from '../assets/homepage/hands-on-back.jpg';
 import seatedBack from '../assets/homepage/seated-back-work.jpg';
 
-const sessionStrip = [
-  {
-    src: shoulderWork,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's shoulder and upper back",
-  },
-  {
-    src: abdomenFascia,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's abdomen",
-  },
-  {
-    src: handsOnBack,
-    alt: "Close-up of Ryan Caputi's hands doing Rolfing work on a client's back",
-  },
-  {
-    src: kneeLeg,
-    alt: "Ryan Caputi doing hands-on Rolfing work on a client's knee and lower leg",
-  },
-];
 const schema = [
   {
     "@context": "https://schema.org",
@@ -161,40 +138,6 @@ const schema = [
      Yelp reviews
     </a>
    </div>
-  </section>
-
-  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
-    <div class="md:order-2">
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing principles
-     </p>
-     <h2 class="mt-4 text-5xl md:text-6xl">
-      The body is an interconnected whole.
-     </h2>
-     <div class="prose mt-7 text-xl text-[#545454]/85">
-      <p>
-       Rolfing looks beyond isolated symptoms. Pain, posture, breath, balance, and movement are all part of a larger pattern of relationship.
-      </p>
-      <p>
-       Ryan studies how the ribs influence the spine, how the pelvis influences the legs, how old injuries shape present-day movement, and how the body organizes around strain.
-      </p>
-      <p>
-       The goal is not to force the body into an ideal shape. It is to understand the pattern clearly enough that the right contact, sequence, and support can help the body reorganize with more ease.
-      </p>
-     </div>
-    </div>
-    <div class="md:order-1">
-     <SessionPhoto src={shoulderSmile} alt="Ryan smiling while working on a client's right shoulder during a Rolfing session" sizes="(min-width: 768px) 42vw, calc(100vw - 2.5rem)" class="aspect-[3/2] w-full rounded-[2rem] object-cover object-[center_76%] shadow-xl" />
-    </div>
-   </div>
-   <ul class="mx-auto mt-14 grid max-w-6xl grid-cols-2 gap-3 md:mt-16 md:grid-cols-4 md:gap-4" aria-label="Hands-on Rolfing sessions">
-    {sessionStrip.map((photo) => (
-     <li>
-      <SessionPhoto src={photo.src} alt={photo.alt} sizes="(min-width: 768px) 22vw, 46vw" class="aspect-[3/2] w-full rounded-[1.25rem] object-cover shadow-sm" />
-     </li>
-    ))}
-   </ul>
   </section>
 
   <section class="border-t border-[#e8e1d7] bg-white px-5 py-20">
