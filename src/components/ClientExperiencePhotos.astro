@@ -1,0 +1,90 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import skullDesktop from '../assets/homepage/client-experiences/skull-model-client-desktop.jpg';
+import skullMobile from '../assets/homepage/client-experiences/skull-model-client-mobile.jpg';
+import booksDesktop from '../assets/homepage/client-experiences/rolfing-books-desktop.jpg';
+import booksMobile from '../assets/homepage/client-experiences/rolfing-books-mobile.jpg';
+
+interface Props {
+  class?: string;
+  /** Load the lead photo immediately when it is the first image on the page. */
+  priority?: boolean;
+}
+
+const { class: className, priority = false } = Astro.props;
+
+const candidateWidths = [480, 768, 960, 1200, 1600];
+
+async function optimized(src: ImageMetadata) {
+  const widths = candidateWidths.filter((width) => width < src.width);
+  widths.push(src.width);
+  const image = await getImage({
+    src,
+    width: src.width,
+    widths,
+    format: 'webp',
+    quality: 80,
+  });
+  return {
+    src: image.src,
+    srcset: image.srcSet.attribute,
+    width: image.attributes.width,
+    height: image.attributes.height,
+  };
+}
+
+const skullWide = await optimized(skullDesktop);
+const skullLead = await optimized(skullMobile);
+const booksWide = await optimized(booksDesktop);
+const booksLead = await optimized(booksMobile);
+
+const skullAlt =
+  'Ryan Caputi holding a color-coded skull model while talking with a smiling client seated on the treatment table';
+const booksAlt =
+  'A turquoise clothbound book titled Rolfing resting on an atlas of human anatomy on a white-sheeted treatment table';
+---
+
+<div class:list={['grid items-stretch gap-3 sm:gap-4 md:grid-cols-[1.2fr_0.8fr]', className]}>
+  <div class="relative aspect-[16/9] min-w-0 overflow-hidden rounded-[1.5rem] bg-[#e8e1d7] shadow-lg md:aspect-[3/2]">
+    <picture class="absolute inset-0 block">
+      <source
+        media="(min-width: 768px)"
+        srcset={skullWide.srcset}
+        sizes="(min-width: 1280px) 682px, calc(60vw - 2rem)"
+        type="image/webp"
+      />
+      <source srcset={skullLead.srcset} sizes="calc(100vw - 2.5rem)" type="image/webp" />
+      <img
+        src={skullLead.src}
+        alt={skullAlt}
+        width={skullLead.width}
+        height={skullLead.height}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : undefined}
+        decoding="async"
+        class="h-full w-full object-cover"
+      />
+    </picture>
+  </div>
+  <div class="relative aspect-[4/3] min-w-0 overflow-hidden rounded-[1.5rem] bg-[#e8e1d7] shadow-lg md:aspect-auto md:h-full">
+    <picture class="absolute inset-0 block">
+      <source
+        media="(min-width: 768px)"
+        srcset={booksWide.srcset}
+        sizes="(min-width: 1280px) 454px, calc(40vw - 1.5rem)"
+        type="image/webp"
+      />
+      <source srcset={booksLead.srcset} sizes="calc(100vw - 2.5rem)" type="image/webp" />
+      <img
+        src={booksLead.src}
+        alt={booksAlt}
+        width={booksLead.width}
+        height={booksLead.height}
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover"
+      />
+    </picture>
+  </div>
+</div>
