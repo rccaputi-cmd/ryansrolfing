@@ -1,0 +1,130 @@
+---
+import type { ImageMetadata } from 'astro';
+import SessionPhoto from './SessionPhoto.astro';
+import greeting from '../assets/process/gi01-greeting.jpg';
+import intake from '../assets/process/gi02-intake.jpg';
+import postureExam from '../assets/process/gi03-exam.jpg';
+import handsOnShoulders from '../assets/process/r09b-supine-trap.jpg';
+import seriesSessions from '../assets/process/series-sessions.jpg';
+import movingFreely from '../assets/process/moving-freely.jpg';
+import embodiment from '../assets/process/embodiment.jpg';
+import closingWave from '../assets/process/gi13-close.jpg';
+
+type ProcessCredit = {
+  before: string;
+  linkText: string;
+  href: string;
+};
+
+type ProcessStep = {
+  number: string;
+  title: string;
+  body: string;
+  alt: string;
+  /** Optimized still in src/assets/process. Replace this to swap the photo. */
+  image?: ImageMetadata;
+  /** Public illustration kept until a still is ready. */
+  src?: string;
+  /** Extra object-position class when a reused illustration needs a different crop. */
+  imagePosition?: string;
+  /** License line shown on the card, for a still that needs attribution. */
+  credit?: ProcessCredit;
+};
+
+const steps: ProcessStep[] = [
+  {
+    number: "01",
+    title: "Client-practitioner collaboration",
+    body: "The process depends on communication, feedback, and the Rolfer’s ability to notice what the body is communicating.",
+    alt: "Illustrated scene of a practitioner and a client shaking hands at the open studio door. The client is an illustrated character.",
+    image: greeting,
+  },
+  {
+    number: "02",
+    title: "Getting to know you",
+    body: "Your history matters. Injuries, stress, childhood, birth, surgeries, and old compensation patterns can all shape what is happening now.",
+    alt: "Illustrated scene of a practitioner writing on a clipboard while a client, an illustrated character, sits across the table with a hand on her lower back.",
+    image: intake,
+  },
+  {
+    number: "03",
+    title: "Assessing your posture",
+    body: "Every session includes assessment — standing, moving, and sensing how your body organizes itself.",
+    alt: "An illustration of Ryan observing a client's posture with a stylized skeleton overlay.",
+    image: postureExam,
+    credit: {
+      before: "Skeleton illustration based on BodyParts3D, © 2008 DBCLS, ",
+      linkText: "CC BY-SA 2.1 JP",
+      href: "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    },
+  },
+  {
+    number: "04",
+    title: "The hands-on work",
+    body: "Each contact is deliberate and informed: slow enough to listen, specific enough to matter, and grounded in advanced palpation and anatomy.",
+    alt: "Ryan sinking his elbow into the hip of a side-lying client",
+    image: handsOnShoulders,
+  },
+  {
+    number: "05",
+    title: "A series of sessions",
+    body: "Change builds over several sessions, each one picking up where the last left off. Most people start with the Ten-Series.",
+    alt: "Ryan working on a client in several positions on the table across a series of sessions.",
+    image: seriesSessions,
+  },
+  {
+    number: "06",
+    title: "Moving freely",
+    body: "Progress is tracked through movement: sitting, standing, walking, and noticing what feels lighter or easier.",
+    alt: "A client walking barefoot easily across a sunlit treatment room.",
+    image: movingFreely,
+  },
+  {
+    number: "07",
+    title: "Cultivating embodiment",
+    body: "Rolfing helps people reconnect with body sensation — a practical compass for avoiding injury and living with more awareness.",
+    alt: "A client standing with eyes closed, one hand on her sternum and one on her belly.",
+    image: embodiment,
+  },
+  {
+    number: "08",
+    title: "Wrapping up",
+    body: "Sessions close with support for integration: stretches, exercises, education, referrals, or maintenance recommendations.",
+    alt: "Illustrated scene of a client waving goodbye on the garden path while the practitioner waves from the studio doorway. The client is an illustrated character.",
+    image: closingWave,
+  },
+];
+---
+
+<section class="bg-[#f8f6f2] px-5 py-20" aria-labelledby="rolfing-process-heading">
+  <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">Process</p>
+    <h2 id="rolfing-process-heading" class="mt-4 text-5xl md:text-6xl">What does the Rolfing process include?</h2>
+  </div>
+  <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {steps.map((step) => (
+      <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+        {step.image ? (
+          <SessionPhoto
+            src={step.image}
+            alt={step.alt}
+            sizes="(min-width: 1024px) 22vw, (min-width: 640px) 46vw, calc(100vw - 2.5rem)"
+            class="aspect-[4/3] w-full object-cover"
+          />
+        ) : (
+          <img alt={step.alt} class:list={["aspect-[4/3] w-full object-cover", step.imagePosition]} loading="lazy" src={step.src} />
+        )}
+        <div class="p-6">
+          <p class="text-sm text-[#c4924a]">{step.number}</p>
+          <h3 class="mt-2 text-2xl md:text-3xl">{step.title}</h3>
+          <p class="mt-4 leading-8 text-[#545454]/80">{step.body}</p>
+          {step.credit && (
+            <p class="mt-4 text-sm leading-6 text-[#545454]/75">
+              {step.credit.before}<a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href={step.credit.href} rel="license noopener noreferrer" target="_blank">{step.credit.linkText}<span class="sr-only"> (opens in a new tab)</span></a>
+            </p>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,103 @@
+---
+/** Session art is one field per card so a later still can replace the public illustration. */
+const intro = [
+  "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
+  "Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.",
+  "But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.",
+];
+
+const sessions = [
+  {
+    number: "01",
+    title: "Breath + outer legs",
+    body: "Opening breath and beginning the body’s relationship to ground support.",
+    alt: "Abstract illustration for Rolfing session 1: Breath + outer legs",
+    src: "/images/ten-series/01-breath-outer-legs.jpg",
+  },
+  {
+    number: "02",
+    title: "Feet + lower legs",
+    body: "Building a more adaptable foundation through the feet, ankles, and lower legs.",
+    alt: "Abstract illustration for Rolfing session 2: Feet + lower legs",
+    src: "/images/ten-series/02-feet-lower-legs.jpg",
+  },
+  {
+    number: "03",
+    title: "Side body balance",
+    body: "Helping the front and back of the body relate through the side line.",
+    alt: "Abstract illustration for Rolfing session 3: Side body balance",
+    src: "/images/ten-series/03-side-body-balance.jpg",
+  },
+  {
+    number: "04",
+    title: "Pelvic floor + adductors",
+    body: "Working with deep support through the inner legs and pelvic base.",
+    alt: "Abstract illustration for Rolfing session 4: Pelvic floor + adductors",
+    src: "/images/ten-series/04-pelvic-floor-adductors.jpg",
+  },
+  {
+    number: "05",
+    title: "Front body + psoas",
+    body: "Clarifying the deep front line that connects breath, pelvis, and legs.",
+    alt: "Abstract illustration for Rolfing session 5: Front body + psoas",
+    src: "/images/ten-series/05-centerline-support.jpg",
+  },
+  {
+    number: "06",
+    title: "Back body + sacrum",
+    body: "Supporting the back line through the legs, sacrum, spine, and breath.",
+    alt: "Abstract illustration for Rolfing session 6: Back body + sacrum",
+    src: "/images/ten-series/06-back-body-sacrum.jpg",
+  },
+  {
+    number: "07",
+    title: "Neck + cranium",
+    body: "Refining the relationship between the head, neck, jaw, and upper spine.",
+    alt: "Abstract illustration for Rolfing session 7: Neck + cranium",
+    src: "/images/ten-series/07-neck-cranium.jpg",
+  },
+  {
+    number: "08",
+    title: "Pelvic girdle",
+    body: "Integrating lower-body movement through the pelvis, legs, and spine.",
+    alt: "Abstract illustration for Rolfing session 8: Pelvic girdle",
+    src: "/images/ten-series/08-pelvic-girdle.jpg",
+  },
+  {
+    number: "09",
+    title: "Shoulder girdle",
+    body: "Integrating upper-body support through the ribs, shoulders, arms, and neck.",
+    alt: "Abstract illustration for Rolfing session 9: Shoulder girdle",
+    src: "/images/ten-series/09-shoulder-girdle.jpg",
+  },
+  {
+    number: "10",
+    title: "Integration",
+    body: "Bringing the whole body into a more coherent, connected pattern.",
+    alt: "Abstract illustration for Rolfing session 10: Integration",
+    src: "/images/ten-series/10-integration.jpg",
+  },
+];
+---
+
+<section class="px-5 py-20" aria-labelledby="ten-series-heading">
+  <div class="mx-auto max-w-4xl text-center">
+    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">The Ten-Series</p>
+    <h2 id="ten-series-heading" class="mt-4 text-5xl md:text-6xl">The classic Rolfing recipe.</h2>
+    <div class="prose mx-auto mt-6 max-w-3xl text-xl text-[#545454]/85">
+      {intro.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </div>
+  <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
+    {sessions.map((session) => (
+      <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+        <img alt={session.alt} class="aspect-[4/3] w-full object-cover" loading="lazy" src={session.src} />
+        <div class="p-5">
+          <p class="text-sm text-[#c4924a]">{session.number}</p>
+          <h3 class="mt-2 text-2xl">{session.title}</h3>
+          <p class="mt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

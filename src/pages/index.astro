@@ -3,14 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import { bookingUrl } from '../lib/booking';
 import GoogleRatingBadge from '../components/GoogleRatingBadge.astro';
 import ReviewQuoteList from '../components/ReviewQuoteList.astro';
-import SessionPhoto from '../components/SessionPhoto.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import TenSeriesSection from '../components/TenSeriesSection.astro';
 import ClientExperiencePhotos from '../components/ClientExperiencePhotos.astro';
 import { googleReviews, homepageQuotes } from '../data/google-reviews';
-import shoulderSmile from '../assets/homepage/session-shoulder-smile.jpg';
-import studioWide from '../assets/homepage/session-studio-wide.jpg';
-import spineRibs from '../assets/pages/photos/anatomy-teaching-skeleton.jpg';
 
-const spineRibsCaption = 'Explaining how the spine and ribs connect';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -81,109 +78,9 @@ const schema = [
    </div>
   </section>
 
-  <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
-    <div class="md:order-2">
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing principles
-     </p>
-     <h2 class="mt-4 text-5xl md:text-6xl">
-      The body is an interconnected whole.
-     </h2>
-     <div class="prose mt-7 text-xl text-[#545454]/85">
-      <p>
-       Rolfing looks beyond isolated symptoms. Pain, posture, breath, balance, and movement are all part of a larger pattern of relationship.
-      </p>
-      <p>
-       Ryan studies how the ribs influence the spine, how the pelvis influences the legs, how old injuries shape present-day movement, and how the body organizes around strain.
-      </p>
-      <p>
-       The goal is not to force the body into an ideal shape. It is to understand the pattern clearly enough that the right contact, sequence, and support can help the body reorganize with more ease.
-      </p>
-     </div>
-    </div>
-    <div class="md:order-1">
-     <SessionPhoto src={shoulderSmile} alt="Ryan smiling while working on a client's right shoulder during a Rolfing session" sizes="(min-width: 768px) 42vw, calc(100vw - 2.5rem)" class="aspect-[3/2] w-full rounded-[2rem] object-cover object-[center_76%] shadow-xl" />
-    </div>
-   </div>
-   <figure class="mx-auto mt-14 max-w-6xl md:mt-16">
-    <SessionPhoto src={spineRibs} alt="A hand gesturing over an anatomical spine and ribcage model on a table" sizes="(min-width: 768px) 72rem, calc(100vw - 2.5rem)" class="aspect-[4/3] w-full rounded-[2rem] object-cover object-center shadow-md sm:aspect-[16/9]" />
-    <figcaption class="mt-4 text-center text-sm leading-6 text-[#545454]/80">
-     {spineRibsCaption}
-    </figcaption>
-   </figure>
-  </section>
+  <ProcessSection />
 
-  <section class="bg-white px-5 py-20">
-   <div class="mx-auto max-w-4xl text-center">
-    <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-     Whole-body relationships
-    </p>
-    <h2 class="mt-4 text-5xl md:text-6xl">
-     The painful spot is often part of a larger pattern.
-    </h2>
-    <p class="mt-6 text-xl leading-9 text-[#545454]/85">
-     Pain often shows up in one place, but the pattern behind it may involve the feet, pelvis, ribs, spine, breath, or old compensation from an injury years ago. Rolfing follows those relationships so the body can change as a connected system, not a collection of separate parts.
-    </p>
-   </div>
-   <div class="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/symptom-vs-pattern.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       Symptoms and patterns
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       The painful area matters — but it may be the visible edge of a larger whole-body pattern.
-      </p>
-     </div>
-    </article>
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/gravity-support.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       More ease, less effort
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       When the body organizes through structural harmony, movement can feel lighter, freer, and more spacious.
-      </p>
-     </div>
-    </article>
-    <article class="grid grid-cols-[118px_1fr] overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-[#f8f6f2] shadow-sm md:block md:rounded-[2rem]">
-     <img alt="" class="h-full min-h-40 w-full object-cover md:aspect-[4/5] md:h-auto" loading="lazy" src="/images/app-concepts/web/ripple-effect.webp"/>
-     <div class="p-4 md:p-6">
-      <h3 class="text-2xl md:text-3xl">
-       The ripple effect
-      </h3>
-      <p class="mt-2 text-base leading-7 text-[#545454]/80 md:mt-3 md:text-lg md:leading-8">
-       A change in one area can ripple through posture, gait, breathing, and how you feel yourself in space.
-      </p>
-     </div>
-    </article>
-   </div>
-  </section>
-
-  <section class="px-5 py-20">
-   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[.95fr_1.05fr] md:items-center">
-    <div>
-     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">
-      Rolfing Structural Integration
-     </p>
-     <h2 class="mt-4 text-5xl md:text-6xl">
-      A multi-session approach.
-     </h2>
-     <div class="prose mt-8 text-xl text-[#545454]/85">
-      <p>
-       Receiving Rolfing typically involves multiple sessions because the body is complex. Each session is customized to address your posture, goals, and the work already accomplished.
-      </p>
-      <p>
-       Rolfing is known for the Ten-Series: a sequence that restores the biomechanics of different areas of the body so each session connects to the work before it.
-      </p>
-     </div>
-    </div>
-    <SessionPhoto src={studioWide} alt="Ryan Caputi with a client during a Rolfing session in the studio" sizes="(min-width: 768px) 46vw, calc(100vw - 2.5rem)" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-lg" />
-   </div>
-  </section>
+  <TenSeriesSection />
 
   <section class="border-y border-[#e8e1d7] bg-[#f8f6f2] px-5 py-20">
    <div class="mx-auto max-w-6xl">
