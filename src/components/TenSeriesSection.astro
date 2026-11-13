@@ -1,83 +1,115 @@
 ---
-/** Session art is one field per card so a later still can replace the public illustration. */
+import type { ImageMetadata } from 'astro';
+import SessionPhoto from './SessionPhoto.astro';
+import breath from '../assets/ten-series/01-breath-outer-legs.jpg';
+import feet from '../assets/ten-series/02-feet-lower-legs.jpg';
+import sideBody from '../assets/ten-series/03-side-body-balance.jpg';
+import innerLeg from '../assets/ten-series/04-pelvic-floor-adductors.jpg';
+import psoas from '../assets/ten-series/05-front-body-psoas.jpg';
+import backBody from '../assets/ten-series/06-back-body-sacrum.jpg';
+import headNeck from '../assets/ten-series/07-neck-cranium.jpg';
+
+/**
+ * Sessions 1–7 use the approved anatomy plates in src/assets (served as responsive WebP).
+ * Sessions 8–10 stay on the previous public illustrations until those plates are approved.
+ */
 const intro = [
   "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
   "Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.",
   "But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.",
 ];
 
-const sessions = [
+type Session = {
+  number: string;
+  title: string;
+  body: string;
+  alt: string;
+  image?: ImageMetadata;
+  src?: string;
+  width?: number;
+  height?: number;
+};
+
+const sessions: Session[] = [
   {
     number: "01",
     title: "Breath + outer legs",
     body: "Opening breath and beginning the body’s relationship to ground support.",
-    alt: "Abstract illustration for Rolfing session 1: Breath + outer legs",
-    src: "/images/ten-series/01-breath-outer-legs.jpg",
+    alt: "Anatomical view of the rib cage from behind, showing the intercostal muscles and the diaphragm",
+    image: breath,
   },
   {
     number: "02",
     title: "Feet + lower legs",
     body: "Building a more adaptable foundation through the feet, ankles, and lower legs.",
-    alt: "Abstract illustration for Rolfing session 2: Feet + lower legs",
-    src: "/images/ten-series/02-feet-lower-legs.jpg",
+    alt: "Anatomical side view of the lower leg, ankle, and foot, with the calf muscles, Achilles tendon, and bones of the foot",
+    image: feet,
   },
   {
     number: "03",
     title: "Side body balance",
     body: "Helping the front and back of the body relate through the side line.",
-    alt: "Abstract illustration for Rolfing session 3: Side body balance",
-    src: "/images/ten-series/03-side-body-balance.jpg",
+    alt: "Anatomical side view of the torso and hip, showing the ribs, spine, gluteal muscles, and the iliotibial band",
+    image: sideBody,
   },
   {
     number: "04",
     title: "Pelvic floor + adductors",
     body: "Working with deep support through the inner legs and pelvic base.",
-    alt: "Abstract illustration for Rolfing session 4: Pelvic floor + adductors",
-    src: "/images/ten-series/04-pelvic-floor-adductors.jpg",
+    alt: "Anatomical views of the inner-thigh adductors and the pelvic floor muscles within the pelvis",
+    image: innerLeg,
   },
   {
     number: "05",
     title: "Front body + psoas",
     body: "Clarifying the deep front line that connects breath, pelvis, and legs.",
-    alt: "Abstract illustration for Rolfing session 5: Front body + psoas",
-    src: "/images/ten-series/05-centerline-support.jpg",
+    alt: "Anatomical front view of the psoas and iliacus connecting the lumbar spine and pelvis to the thighs",
+    image: psoas,
   },
   {
     number: "06",
     title: "Back body + sacrum",
     body: "Supporting the back line through the legs, sacrum, spine, and breath.",
-    alt: "Abstract illustration for Rolfing session 6: Back body + sacrum",
-    src: "/images/ten-series/06-back-body-sacrum.jpg",
+    alt: "Anatomical back view of the spine and hamstrings, with a detail of the sacrum and pelvic ligaments",
+    image: backBody,
   },
   {
     number: "07",
     title: "Neck + cranium",
     body: "Refining the relationship between the head, neck, jaw, and upper spine.",
-    alt: "Abstract illustration for Rolfing session 7: Neck + cranium",
-    src: "/images/ten-series/07-neck-cranium.jpg",
+    alt: "Anatomical side view of the skull, jaw, and neck muscles, with a close-up of the jaw joint",
+    image: headNeck,
   },
   {
     number: "08",
     title: "Pelvic girdle",
     body: "Integrating lower-body movement through the pelvis, legs, and spine.",
-    alt: "Abstract illustration for Rolfing session 8: Pelvic girdle",
+    alt: "Anatomical drawing of the pelvis, lumbar spine, and legs, with lines tracing support through the pelvic girdle",
     src: "/images/ten-series/08-pelvic-girdle.jpg",
+    width: 1168,
+    height: 880,
   },
   {
     number: "09",
     title: "Shoulder girdle",
     body: "Integrating upper-body support through the ribs, shoulders, arms, and neck.",
-    alt: "Abstract illustration for Rolfing session 9: Shoulder girdle",
+    alt: "Anatomical drawing of the rib cage, collarbones, shoulders, and arms",
     src: "/images/ten-series/09-shoulder-girdle.jpg",
+    width: 1168,
+    height: 880,
   },
   {
     number: "10",
     title: "Integration",
     body: "Bringing the whole body into a more coherent, connected pattern.",
-    alt: "Abstract illustration for Rolfing session 10: Integration",
+    alt: "Anatomical drawing of a standing skeleton from head to feet, organized around a vertical line",
     src: "/images/ten-series/10-integration.jpg",
+    width: 1168,
+    height: 880,
   },
 ];
+
+const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100vw - 2.5rem)";
 ---
 
 <section class="px-5 py-20" aria-labelledby="ten-series-heading">
@@ -91,7 +123,25 @@ const sessions = [
   <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
     {sessions.map((session) => (
       <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
-        <img alt={session.alt} class="aspect-[4/3] w-full object-cover" loading="lazy" src={session.src} />
+        {session.image ? (
+          <SessionPhoto
+            src={session.image}
+            alt={session.alt}
+            sizes={imageSizes}
+            quality={90}
+            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+          />
+        ) : (
+          <img
+            alt={session.alt}
+            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+            width={session.width}
+            height={session.height}
+            loading="lazy"
+            decoding="async"
+            src={session.src}
+          />
+        )}
         <div class="p-5">
           <p class="text-sm text-[#c4924a]">{session.number}</p>
           <h3 class="mt-2 text-2xl">{session.title}</h3>
