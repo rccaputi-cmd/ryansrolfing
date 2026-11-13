@@ -8,10 +8,12 @@ import innerLeg from '../assets/ten-series/04-pelvic-floor-adductors.jpg';
 import psoas from '../assets/ten-series/05-front-body-psoas.jpg';
 import backBody from '../assets/ten-series/06-back-body-sacrum.jpg';
 import headNeck from '../assets/ten-series/07-neck-cranium.jpg';
+import pelvicGirdle from '../assets/ten-series/08-pelvic-girdle.jpg';
+import shoulderGirdle from '../assets/ten-series/09-shoulder-girdle.jpg';
 
 /**
- * Sessions 1–7 use the approved anatomy plates in src/assets (served as responsive WebP).
- * Sessions 8–10 stay on the previous public illustrations until those plates are approved.
+ * Sessions 1–9 use the approved anatomy plates in src/assets (served as responsive WebP).
+ * Session 10 stays on the previous public illustration until that plate is approved.
  */
 const intro = [
   "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
@@ -84,19 +86,15 @@ const sessions: Session[] = [
     number: "08",
     title: "Pelvic girdle",
     body: "Integrating lower-body movement through the pelvis, legs, and spine.",
-    alt: "Anatomical drawing of the pelvis, lumbar spine, and legs, with lines tracing support through the pelvic girdle",
-    src: "/images/ten-series/08-pelvic-girdle.jpg",
-    width: 1168,
-    height: 880,
+    alt: "Painted front view of the pelvis and low spine with the hip-flexor muscles rising beside the vertebrae, and the outer-hip and thigh muscles on each side.",
+    image: pelvicGirdle,
   },
   {
     number: "09",
     title: "Shoulder girdle",
     body: "Integrating upper-body support through the ribs, shoulders, arms, and neck.",
-    alt: "Anatomical drawing of the rib cage, collarbones, shoulders, and arms",
-    src: "/images/ten-series/09-shoulder-girdle.jpg",
-    width: 1168,
-    height: 880,
+    alt: "Painted front view of the shoulder girdle with the collarbones, breastbone and ribs, rounded chest muscles, a deltoid capping each shoulder and the biceps down each upper arm.",
+    image: shoulderGirdle,
   },
   {
     number: "10",
@@ -150,4 +148,7 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
       </article>
     ))}
   </div>
+  <p class="mx-auto mt-8 max-w-3xl text-center text-sm leading-6 text-[#545454]/75">
+    Sessions 8 and 9. Model: BodyParts3D © 2008 DBCLS, <a class="underline decoration-[#c4924a] underline-offset-4 hover:text-[#c4924a]" href="https://creativecommons.org/licenses/by-sa/2.1/jp/" rel="license noopener noreferrer" target="_blank">CC BY-SA 2.1 JP<span class="sr-only"> (opens in a new tab)</span></a>
+  </p>
 </section>
