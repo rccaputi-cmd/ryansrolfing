@@ -9,9 +9,11 @@ interface Props {
   class?: string;
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
+  /** WebP quality. Defaults to the site standard; raise it for fine linework. */
+  quality?: number;
 }
 
-const { src, alt, sizes, class: className = '', loading = 'lazy', fetchpriority } = Astro.props;
+const { src, alt, sizes, class: className = '', loading = 'lazy', fetchpriority, quality = 80 } = Astro.props;
 
 const candidateWidths = [480, 768, 1024, 1280, 1600];
 const widths = candidateWidths.filter((width) => width < src.width);
@@ -24,7 +26,7 @@ widths.push(src.width);
   formats={['webp']}
   widths={widths}
   sizes={sizes}
-  quality={80}
+  quality={quality}
   loading={loading}
   fetchpriority={fetchpriority}
   decoding="async"
