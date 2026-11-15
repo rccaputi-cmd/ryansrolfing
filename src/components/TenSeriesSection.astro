@@ -10,10 +10,10 @@ import backBody from '../assets/ten-series/06-back-body-sacrum.jpg';
 import headNeck from '../assets/ten-series/07-neck-cranium.jpg';
 import pelvicGirdle from '../assets/ten-series/08-pelvic-girdle.jpg';
 import shoulderGirdle from '../assets/ten-series/09-shoulder-girdle.jpg';
+import integration from '../assets/ten-series/10-integration.jpg';
 
 /**
- * Sessions 1–9 use the approved anatomy plates in src/assets (served as responsive WebP).
- * Session 10 stays on the previous public illustration until that plate is approved.
+ * Sessions 1–10 use the approved anatomy plates in src/assets (served as responsive WebP).
  */
 const intro = [
   "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
@@ -27,6 +27,8 @@ type Session = {
   body: string;
   alt: string;
   image?: ImageMetadata;
+  /** Plain note under the plate. Not a credit line. */
+  caption?: string;
   src?: string;
   width?: number;
   height?: number;
@@ -100,10 +102,9 @@ const sessions: Session[] = [
     number: "10",
     title: "Integration",
     body: "Bringing the whole body into a more coherent, connected pattern.",
-    alt: "Anatomical drawing of a standing skeleton from head to feet, organized around a vertical line",
-    src: "/images/ten-series/10-integration.jpg",
-    width: 1168,
-    height: 880,
+    alt: "Front view of a standing figure with the skin removed, showing the superficial fascia as a translucent cream layer mapped by fine, sparkling gold lines: bands across the head at the tentorium level, the neck, shoulders, elbows, wrists, diaphragm, navel and pelvis, knees and ankles, joined by a midline from the crown to the navel and lines down each arm and leg, with a flap folded back to show the muscles beneath.",
+    image: integration,
+    caption: "Gold lines illustrate how the fascia connects across the joints; they aren't structures you'd see in the body.",
   },
 ];
 
@@ -141,6 +142,7 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
           />
         )}
         <div class="p-5">
+          {session.caption && <p class="mb-3 text-sm leading-6 text-[#545454]/80">{session.caption}</p>}
           <p class="text-sm text-[#c4924a]">{session.number}</p>
           <h3 class="mt-2 text-2xl">{session.title}</h3>
           <p class="mt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
