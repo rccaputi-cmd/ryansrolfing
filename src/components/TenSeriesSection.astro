@@ -16,14 +16,15 @@ import integration from '../assets/ten-series/10-integration.jpg';
  * Sessions 1–10 use the approved anatomy plates in src/assets (served as responsive WebP).
  */
 const intro = [
+  "The Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it. It is the treasure of Rolfing.",
   "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
   "Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.",
-  "But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.",
 ];
 
 type Session = {
   number: string;
   title: string;
+  structures: string;
   body: string;
   alt: string;
   image?: ImageMetadata;
@@ -35,71 +36,81 @@ type Session = {
 const sessions: Session[] = [
   {
     number: "01",
-    title: "Breath + outer legs",
-    body: "Opening breath and beginning the body’s relationship to ground support.",
+    title: "Superficial Fascia",
+    structures: "Upper and lower body",
+    body: "We release the hold the superficial fascia has on the ribcage and breathing, and on the upper legs and hips. This opens the breath and starts building your connection to the ground.",
     alt: "Front view of the ribcage, showing the breastbone, the muscles between the ribs, the breathing muscle under the ribs, and neck muscles rising along the neck bones.",
     image: breath,
   },
   {
     number: "02",
-    title: "Feet + lower legs",
-    body: "Building a more adaptable foundation through the feet, ankles, and lower legs.",
+    title: "Feet + Lower Legs",
+    structures: "Feet, ankles, and lower legs",
+    body: "We build a more adaptable foundation through the feet, ankles and lower legs, so the body above has steadier support.",
     alt: "Outside view of a right foot and lower leg, showing the ankle and foot bones, the calf and shin muscles, and the tendons that run down to the toes.",
     image: feet,
   },
   {
     number: "03",
-    title: "Side body balance",
-    body: "Helping the front and back of the body relate through the side line.",
+    title: "Lumbar Spine",
+    structures: "Deeper hips, lateral lumbar spine (QL & obliques), shoulder girdle & neck",
+    body: "We free the sides of the body, from the hips through the low back to the shoulders and neck. This helps the front and back of the body relate.",
     alt: "Side view of the ribs, waist, hip and thigh, with a cutaway showing deep muscles beside the low spine and under the rim of the pelvis, the buttock muscles, and the pale band down the outer thigh.",
     image: sideBody,
   },
   {
     number: "04",
-    title: "Pelvic floor + adductors",
-    body: "Working with deep support through the inner legs and pelvic base.",
+    title: "Pelvic Floor + Adductors",
+    structures: "Inner legs and pelvic base",
+    body: "We work the inner legs and the base of the pelvis to wake up deep support from the ground up through the core.",
     alt: "Two views: at left, a hip and leg with the inner-thigh muscles, and without the pelvic floor, sacrum or low-back bones; at right, a half view of the pelvic floor, with the sacrum and low-back bones cut in section.",
     image: innerLeg,
   },
   {
     number: "05",
-    title: "Front body + psoas",
-    body: "Clarifying the deep front line that connects breath, pelvis, and legs.",
+    title: "Psoas and Hip Flexors",
+    structures: "Quads, hip flexors, and psoas",
+    body: "We free the deep front of the hips and the psoas, which links the legs, pelvis, spine and breath.",
     alt: "Front view of the lower ribs, spine and pelvis, showing the psoas and iliacus, the deep muscles that run from the spine and the inside of the pelvis down to the thighs, and the front thigh muscles below.",
     image: psoas,
   },
   {
     number: "06",
-    title: "Back body + sacrum",
-    body: "Supporting the back line through the legs, sacrum, spine, and breath.",
+    title: "Hamstrings, Sacrum, Spine",
+    structures: "Hamstrings, sacral ligaments, and deeper layers of the back",
+    body: "We release the back of the legs, the sacrum and the deep back muscles so the spine can lengthen and the pelvis can move freely.",
     alt: "Back view of a standing skeleton, with the back and hamstring muscles shown on the right, yellow nerves running down the spine and both legs, and an inset of the pelvis highlighting the ligaments around the sacrum.",
     image: backBody,
   },
   {
     number: "07",
-    title: "Neck + cranium",
-    body: "Refining the relationship between the head, neck, jaw, and upper spine.",
+    title: "Skull + Neck",
+    structures: "Neck, cranial bones, facial bones, and jaw",
+    body: "We ease tension in the neck, skull, face and jaw so the head can rest balanced on top of the spine.",
     alt: "Painted side view of a skull and neck with the main skull bones in different colours, the seven neck vertebrae stacked under the skull base above the collarbone, and a round inset of the jaw joint.",
     image: headNeck,
   },
   {
     number: "08",
-    title: "Pelvic girdle",
-    body: "Integrating lower-body movement through the pelvis, legs, and spine.",
+    title: "Pelvic Girdle",
+    structures: "Integration of the lower body",
+    body: "Integrating lower-body structures through the pelvis, legs, and spine.",
     alt: "Painted front view of the pelvis and low spine with the hip-flexor muscles rising beside the vertebrae, and the outer-hip and thigh muscles on each side.",
     image: pelvicGirdle,
   },
   {
     number: "09",
-    title: "Shoulder girdle",
-    body: "Integrating upper-body support through the ribs, shoulders, arms, and neck.",
+    title: "Shoulder Girdle",
+    structures: "Integration of the upper body",
+    body: "Integrating upper-body structures through the ribs, shoulders, arms, and neck.",
     alt: "Painted front view of the shoulder girdle with the collarbones, breastbone and ribs, rounded chest muscles, a deltoid capping each shoulder and the biceps down each upper arm.",
     image: shoulderGirdle,
   },
   {
     number: "10",
     title: "Integration",
-    body: "Bringing the whole body into a more coherent, connected pattern.",
+    structures: "The whole body",
+    body: "Integrating superficial fascia after deep change.",
     alt: "Front view of a standing figure with the skin removed, showing the superficial fascia as a translucent cream layer mapped by fine, sparkling gold lines: bands across the head at the tentorium level, the neck, shoulders, elbows, wrists, diaphragm, navel and pelvis, knees and ankles, joined by a midline from the crown to the navel and lines down each arm and leg, with a flap folded back to show the muscles beneath.",
     image: integration,
   },
@@ -111,38 +122,41 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
 <section class="px-5 py-20" aria-labelledby="ten-series-heading">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">The Ten-Series</p>
-    <h2 id="ten-series-heading" class="mt-4 text-5xl md:text-6xl">The classic Rolfing recipe.</h2>
+    <h2 id="ten-series-heading" class="mt-4 text-balance text-5xl leading-tight md:text-6xl">The Ten Sessions of Rolfing</h2>
     <div class="prose mx-auto mt-6 max-w-3xl text-xl text-[#545454]/85">
       {intro.map((paragraph) => <p>{paragraph}</p>)}
     </div>
   </div>
-  <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
+  <div class="mx-auto mt-14 grid min-w-0 max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
     {sessions.map((session) => (
-      <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
-        {session.image ? (
-          <SessionPhoto
-            src={session.image}
-            alt={session.alt}
-            sizes={imageSizes}
-            quality={90}
-            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
-          />
-        ) : (
-          <img
-            alt={session.alt}
-            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
-            width={session.width}
-            height={session.height}
-            loading="lazy"
-            decoding="async"
-            src={session.src}
-          />
-        )}
-        <div class="p-5">
-          <p class="text-sm text-[#c4924a]">{session.number}</p>
-          <h3 class="mt-2 text-2xl">{session.title}</h3>
-          <p class="mt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
+      <article class="row-span-4 grid min-w-0 grid-rows-subgrid gap-0 overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+        <div>
+          {session.image ? (
+            <SessionPhoto
+              src={session.image}
+              alt={session.alt}
+              sizes={imageSizes}
+              quality={90}
+              class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+            />
+          ) : (
+            <img
+              alt={session.alt}
+              class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+              width={session.width}
+              height={session.height}
+              loading="lazy"
+              decoding="async"
+              src={session.src}
+            />
+          )}
         </div>
+        <div class="px-5 pt-5">
+          <p class="text-sm text-[#c4924a]">{session.number}</p>
+          <h3 class="mt-2 break-words text-2xl leading-snug lg:text-xl">{session.title}</h3>
+        </div>
+        <p class="break-words px-5 pt-1.5 text-sm leading-5 text-[#545454]/65">{session.structures}</p>
+        <p class="px-5 pb-5 pt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
       </article>
     ))}
   </div>
