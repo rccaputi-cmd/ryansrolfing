@@ -16,9 +16,9 @@ import integration from '../assets/ten-series/10-integration.jpg';
  * Sessions 1–10 use the approved anatomy plates in src/assets (served as responsive WebP).
  */
 const intro = [
+  "The Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it. It is the treasure of Rolfing.",
   "People invest heavily in homes, furniture, cars, and tools they use every day. The Ten-Series is an investment in the body you live in every moment — how you stand, breathe, move, recover, and feel yourself from the inside.",
   "Not every person needs to do the full Ten-Series. Some clients come in for specific goals, acute issues, or selected pieces of the work.",
-  "But the Ten Series is the most complete way to experience Rolfing: a structured process for reorganizing the whole body over time. Each session has a purpose, and each step builds on the one before it.",
 ];
 
 type Session = {
@@ -35,8 +35,8 @@ type Session = {
 const sessions: Session[] = [
   {
     number: "01",
-    title: "Breath + outer legs",
-    body: "Opening breath and beginning the body’s relationship to ground support.",
+    title: "Superficial Fascia of the Upper and Lower Body",
+    body: "We release restrictions the superficial fascia has on the ribcage and breathing mechanism, as well as the upper legs and hips. This work opens the breath and begins the body’s relationship to ground support.",
     alt: "Front view of the ribcage, showing the breastbone, the muscles between the ribs, the breathing muscle under the ribs, and neck muscles rising along the neck bones.",
     image: breath,
   },
@@ -49,7 +49,7 @@ const sessions: Session[] = [
   },
   {
     number: "03",
-    title: "Side body balance",
+    title: "Deeper Hips + Lateral Lumbar Spine Attachments (QL & Obliques) + Deeper Freeing of the Shoulder Girdle & Neck",
     body: "Helping the front and back of the body relate through the side line.",
     alt: "Side view of the ribs, waist, hip and thigh, with a cutaway showing deep muscles beside the low spine and under the rim of the pelvis, the buttock muscles, and the pale band down the outer thigh.",
     image: sideBody,
@@ -63,21 +63,21 @@ const sessions: Session[] = [
   },
   {
     number: "05",
-    title: "Front body + psoas",
+    title: "Quads + Hip Flexors + Psoas (Deep Front Hip Structures)",
     body: "Clarifying the deep front line that connects breath, pelvis, and legs.",
     alt: "Front view of the lower ribs, spine and pelvis, showing the psoas and iliacus, the deep muscles that run from the spine and the inside of the pelvis down to the thighs, and the front thigh muscles below.",
     image: psoas,
   },
   {
     number: "06",
-    title: "Back body + sacrum",
+    title: "Hamstrings + Sacral Ligaments + Deeper Layers of Back",
     body: "Supporting the back line through the legs, sacrum, spine, and breath.",
     alt: "Back view of a standing skeleton, with the back and hamstring muscles shown on the right, yellow nerves running down the spine and both legs, and an inset of the pelvis highlighting the ligaments around the sacrum.",
     image: backBody,
   },
   {
     number: "07",
-    title: "Neck + cranium",
+    title: "Neck + Cranial Bones + Facial Bones + Jaw",
     body: "Refining the relationship between the head, neck, jaw, and upper spine.",
     alt: "Painted side view of a skull and neck with the main skull bones in different colours, the seven neck vertebrae stacked under the skull base above the collarbone, and a round inset of the jaw joint.",
     image: headNeck,
@@ -111,14 +111,14 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
 <section class="px-5 py-20" aria-labelledby="ten-series-heading">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-sm uppercase tracking-[0.28em] text-[#c4924a]">The Ten-Series</p>
-    <h2 id="ten-series-heading" class="mt-4 text-5xl md:text-6xl">The classic Rolfing recipe.</h2>
+    <h2 id="ten-series-heading" class="mt-4 text-balance text-5xl leading-tight md:text-6xl">The Ten Sessions of Rolfing</h2>
     <div class="prose mx-auto mt-6 max-w-3xl text-xl text-[#545454]/85">
       {intro.map((paragraph) => <p>{paragraph}</p>)}
     </div>
   </div>
   <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
     {sessions.map((session) => (
-      <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+      <article class="min-w-0 overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
         {session.image ? (
           <SessionPhoto
             src={session.image}
@@ -140,7 +140,7 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
         )}
         <div class="p-5">
           <p class="text-sm text-[#c4924a]">{session.number}</p>
-          <h3 class="mt-2 text-2xl">{session.title}</h3>
+          <h3 class="mt-2 text-balance break-words text-2xl leading-snug">{session.title}</h3>
           <p class="mt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
         </div>
       </article>
