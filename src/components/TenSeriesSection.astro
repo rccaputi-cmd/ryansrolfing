@@ -30,74 +30,78 @@ type Session = {
   height?: number;
 };
 
+// Sessions 08 and 09 intentionally share this description.
+const girdleBody =
+  "After the work of the first 7 sessions, we make a decision to work structures related to either the Pelvic Girdle or the Shoulder Girdles. These two sessions can be interchanged depending on what the body needs to further integrate the changes made.";
+
 const sessions: Session[] = [
   {
     number: "01",
-    title: "Breath + outer legs",
-    body: "Opening breath and beginning the body’s relationship to ground support.",
+    title: "Superficial Fascia",
+    body: "We release adhesions in the superficial fascia from the ribcage, hips and IT band attachments. This increases lung volume, oxygen/CO2 efficiency, and begins the work of freeing the legs and pelvis.",
     alt: "Front view of the ribcage, showing the breastbone, the muscles between the ribs, the breathing muscle under the ribs, and neck muscles rising along the neck bones.",
     image: breath,
   },
   {
     number: "02",
-    title: "Feet + lower legs",
-    body: "Building a more adaptable foundation through the feet, ankles, and lower legs.",
+    title: "Knee Joint + Lower Legs + Feet",
+    body: "We increase the adaptive capacity of the body’s foundation with work to the knees, lower legs, ankles, and feet.",
     alt: "Outside view of a right foot and lower leg, showing the ankle and foot bones, the calf and shin muscles, and the tendons that run down to the toes.",
     image: feet,
   },
   {
     number: "03",
-    title: "Side body balance",
-    body: "Helping the front and back of the body relate through the side line.",
+    title: "Deep Gluteals + Lumbar Spine + Scapula",
+    body: "We further mobilize the hips through deeper work. We cross the hip crest into deeper attachments to the lateral lumbar spine (QL) and free attachments to the ribs and scapula and release lower and upper segments of the trapezius.",
     alt: "Side view of the ribs, waist, hip and thigh, with a cutaway showing deep muscles beside the low spine and under the rim of the pelvis, the buttock muscles, and the pale band down the outer thigh.",
     image: sideBody,
   },
   {
     number: "04",
-    title: "Pelvic floor + adductors",
-    body: "Working with deep support through the inner legs and pelvic base.",
+    title: "Lower Pelvis + Adductors + MCL",
+    body: "We work the adductors and medial hamstrings of the inner legs and the base of the pelvis to free the often neglected but highly important attachments to the ischial tuberosities (sit bones) that can restrict hip and pelvis movement.",
     alt: "Two views: at left, a hip and leg with the inner-thigh muscles, and without the pelvic floor, sacrum or low-back bones; at right, a half view of the pelvic floor, with the sacrum and low-back bones cut in section.",
     image: innerLeg,
   },
   {
     number: "05",
-    title: "Front body + psoas",
-    body: "Clarifying the deep front line that connects breath, pelvis, and legs.",
+    title: "Psoas and Hip Flexors",
+    body: "We release the quads, hip flexors, the popular ilio-psoas. We can also free tension that is stored in the bones of the iliums (hips) themselves through intra-osseous work, as well as pubic bone displacements.",
     alt: "Front view of the lower ribs, spine and pelvis, showing the psoas and iliacus, the deep muscles that run from the spine and the inside of the pelvis down to the thighs, and the front thigh muscles below.",
     image: psoas,
   },
   {
     number: "06",
-    title: "Back body + sacrum",
-    body: "Supporting the back line through the legs, sacrum, spine, and breath.",
+    title: "Hamstrings, Sacrum, Spine",
+    body: "We work the hamstrings, deep hip rotators including the piriformis, moving to the ligaments of the sacrum and ilio-lumbar ligaments of L5-L4, and continue up the spine, freeing stuck segments of vertebrae themselves. We also free any segments of the thoracic spine where ribs are not properly articulating with the thoracic vertebrae.",
     alt: "Back view of a standing skeleton, with the back and hamstring muscles shown on the right, yellow nerves running down the spine and both legs, and an inset of the pelvis highlighting the ligaments around the sacrum.",
     image: backBody,
   },
   {
     number: "07",
-    title: "Neck + cranium",
-    body: "Refining the relationship between the head, neck, jaw, and upper spine.",
+    title: "Thoracic Inlet + Cervical Spine + Cranium + Jaw",
+    body: "We work attachments to the sternum, manubrium, upper ribs, and collar bones to free the thoracic inlet and lower neck. We clear the layers of the neck and throat and bring freedom to the base of the skull, jaw, facial bones, forehead, and crown.",
     alt: "Painted side view of a skull and neck with the main skull bones in different colours, the seven neck vertebrae stacked under the skull base above the collarbone, and a round inset of the jaw joint.",
     image: headNeck,
   },
   {
     number: "08",
-    title: "Pelvic girdle",
-    body: "Integrating lower-body movement through the pelvis, legs, and spine.",
+    title: "Pelvic Girdle",
+    body: girdleBody,
     alt: "Painted front view of the pelvis and low spine with the hip-flexor muscles rising beside the vertebrae, and the outer-hip and thigh muscles on each side.",
     image: pelvicGirdle,
   },
   {
     number: "09",
-    title: "Shoulder girdle",
-    body: "Integrating upper-body support through the ribs, shoulders, arms, and neck.",
+    title: "Shoulder Girdle",
+    body: girdleBody,
     alt: "Painted front view of the shoulder girdle with the collarbones, breastbone and ribs, rounded chest muscles, a deltoid capping each shoulder and the biceps down each upper arm.",
     image: shoulderGirdle,
   },
   {
     number: "10",
     title: "Integration",
-    body: "Bringing the whole body into a more coherent, connected pattern.",
+    body: "We return to the superficial fascia and integrate the most surface layer of the body with all of the change made below. Many believe that the superficial fascia is an important tissue that links communication pathways across the whole body. The skin, brain, and nerves all come from the same tissue when we form embryologically. Working the surface here also connects to the most deep.",
     alt: "Front view of a standing figure with the skin removed, showing the superficial fascia as a translucent cream layer mapped by fine, sparkling gold lines: bands across the head at the tentorium level, the neck, shoulders, elbows, wrists, diaphragm, navel and pelvis, knees and ankles, joined by a midline from the crown to the navel and lines down each arm and leg, with a flap folded back to show the muscles beneath.",
     image: integration,
   },
@@ -114,33 +118,35 @@ const imageSizes = "(min-width: 1024px) 220px, (min-width: 640px) 46vw, calc(100
       {intro.map((paragraph) => <p>{paragraph}</p>)}
     </div>
   </div>
-  <div class="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
+  <div class="mx-auto mt-14 grid min-w-0 max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
     {sessions.map((session) => (
-      <article class="overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
-        {session.image ? (
-          <SessionPhoto
-            src={session.image}
-            alt={session.alt}
-            sizes={imageSizes}
-            quality={90}
-            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
-          />
-        ) : (
-          <img
-            alt={session.alt}
-            class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
-            width={session.width}
-            height={session.height}
-            loading="lazy"
-            decoding="async"
-            src={session.src}
-          />
-        )}
-        <div class="p-5">
-          <p class="text-sm text-[#c4924a]">{session.number}</p>
-          <h3 class="mt-2 text-2xl">{session.title}</h3>
-          <p class="mt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
+      <article class="row-span-3 grid min-w-0 grid-rows-subgrid gap-0 overflow-hidden rounded-[1.5rem] border border-[#e8e1d7] bg-white shadow-sm">
+        <div class="min-w-0">
+          {session.image ? (
+            <SessionPhoto
+              src={session.image}
+              alt={session.alt}
+              sizes={imageSizes}
+              quality={90}
+              class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+            />
+          ) : (
+            <img
+              alt={session.alt}
+              class="aspect-[4/3] w-full bg-[#f4efe8] object-cover"
+              width={session.width}
+              height={session.height}
+              loading="lazy"
+              decoding="async"
+              src={session.src}
+            />
+          )}
         </div>
+        <div class="min-w-0 px-5 pt-5">
+          <p class="text-sm text-[#c4924a]">{session.number}</p>
+          <h3 class="mt-2 break-words text-2xl leading-snug lg:text-xl">{session.title}</h3>
+        </div>
+        <p class="min-w-0 break-words px-5 pb-5 pt-3 text-base leading-7 text-[#545454]/80">{session.body}</p>
       </article>
     ))}
   </div>
